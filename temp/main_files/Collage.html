@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!-- saved from url=(0181)https://static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/target/Collage/Collage.html?compId=comp-ig7r9uzi&deviceType=desktop&locale=ko&viewMode=site -->
+<html class="cssmasks"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style wix-style="" type="text/css">.Title{ font:normal normal normal 50px/1.4em eb garamond,serif; } .Menu{ font:normal normal normal 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif; } .Page-title{ font:normal normal normal 40px/1.4em fbbluegothicl,serif; } .Heading-XL{ font:normal normal normal 60px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif; } .Heading-L{ font:normal normal normal 45px/1.4em fbbluegothicl,serif; } .Heading-M{ font:normal normal normal 28px/1.4em eb garamond,serif; } .Heading-S{ font:normal normal normal 21px/1.4em raleway,sans-serif; } .Body-L{ font:normal normal normal 17px/1.4em fbbluegothicl,serif; } .Body-M{ font:normal normal normal 13px/1.4em fbbluegothicl,serif; } .Body-S{ font:normal normal normal 13px/1.4em raleway,sans-serif; } .Body-XS{ font:normal normal normal 12px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif; } }</style>
+	
+	<title></title>
+	<!--
+	 GENERATED FILE, DO NOT EDIT
+	 Collage-v0.110.4
+	-->
+	<script type="text/javascript" src="./jquery.min.js.다운로드"></script>
+	<script type="text/javascript" src="./lodash.min.js.다운로드"></script>
+	<script type="text/javascript" src="./jquery.hammer.min.js.다운로드"></script>
+	<script type="text/javascript" src="./jquery.easing.min.js.다운로드"></script>
+	<script type="text/javascript" src="./webfont.js.다운로드"></script>
+	<script type="text/javascript" src="./seedrandom.min.js.다운로드"></script>
+	<script type="text/javascript" src="./utils.js.다운로드"></script>
+	<script type="text/javascript" src="./app.proto.js.다운로드"></script>
+
+	<script type="text/javascript" src="./wix.min.js.다운로드"></script>
+	<link rel="stylesheet" type="text/css" href="./style.min.css">
+	<script type="text/javascript" src="./app.min.js.다운로드"></script>
+
+<link type="text/css" rel="stylesheet" href="./languages-woff2.css"><link type="text/css" rel="stylesheet" href="./wixMadefor.css"><style id="dynamic-style"></style></head><fatkun-drop-panel style="display: none;"><template shadowrootmode="open">
+    <style>
+        .fatkun-drop-area {
+            user-select: none;
+            font-family: "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", "å¾®è½¯é›…é»‘", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
+            font-weight: 400;
+            z-index: 2147483647;
+            position: fixed;
+            top: -999999px;
+            left: -999999px;
+            width: 400px;
+            text-align: center;
+            transition: background 0.1s ease-in-out, opacity 0.1s ease-in-out, transform 0.2s ease-in-out, border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+            opacity: 0;
+            padding: 0;
+            transform: translateY(10px);
+            border-radius: 10px;
+            box-sizing: border-box;
+            opacity: 1;
+            background: #fff;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .fatkun-drop-area.show {
+            transition: transform 50ms ease;
+            transform: translateY(0px);
+        }
+
+        #fatkun-drop-area-overlay {
+            z-index: 1147483646;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: rgba(33, 33, 33, 0.5);
+            user-select: none;
+            pointer-events: none;
+            transition: opacity 50ms ease;
+        }
+
+        #fatkun-drop-area-overlay.show {
+            opacity: 1;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content {
+            display: flex;
+            text-align: left;
+            flex-direction: row;
+            flex-shrink: initial;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-left-panel {
+            position: relative;
+            min-width: 200px;
+            width: 200px;
+            min-height: 200px;
+            align-items: center;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-left-panel .fatkun-drop-area-item {
+            text-align: center;
+            display: flex;
+            flex-shrink: initial;
+            flex-direction: row;
+            align-items: center;
+            background-color: #f1f2f4;
+            border-radius: 0;
+            padding: 0 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: auto !important;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-left-panel .fatkun-drop-area-item.dragenter {
+            background-color: #e1e2e4;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-left-panel .fatkun-drop-area-item .title {
+            font-size: 14px !important;
+            overflow: initial !important;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-right-panel {
+            padding: 5px;
+            flex: 1;
+            max-width: calc(100% - 200px);
+        }
+
+        .fatkun-drop-area.old-version {
+            width: 200px;
+        }
+
+        .fatkun-drop-area.old-version .fatkun-drop-area-content .fatkun-left-panel .fatkun-drop-area-item {
+            right: 0;
+        }
+
+        .fatkun-drop-area.old-version .fatkun-drop-area-content .fatkun-right-panel {
+            display: none;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-drop-area-item {
+            height: 32px;
+            display: flex !important;
+            align-items: center !important;
+            border-radius: 5px;
+            padding: 0 12px;
+            transition: all 80ms ease;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-right-panel .fatkun-drop-area-item .title {
+            align-self: flex-start !important;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-drop-area-item.all {
+            /*padding: 20px 12px;*/
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-drop-area-item.dragenter {
+            background-color: #f1f2f4;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .fatkun-drop-area-item * {
+            pointer-events: none;
+            flex-shrink: initial;
+            max-width: 100%;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content hr {
+            border: 0 !important;
+            height: 1px !important;
+            margin: 5px 0 !important;
+            background-color: #e9e9e9 !important;
+            display: block !important;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .icon {
+            height: 32px;
+            width: 32px;
+            line-height: 32px;
+            text-align: center;
+            margin: 0 auto 20px !important;
+            background: rgba(128, 128, 128, 0.20);
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .icon .fake-svg {
+            -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxM3B4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAxMyAxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5pY19kb3dubG9hZF9ub3JtYWw8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0i5paw54mI5pys5ouW5ou95qaC5b+1LS0t5ouW5ou96Kem5Y+RIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODE0LjAwMDAwMCwgLTM2Mi4wMDAwMDApIiBmaWxsPSIjMzMzMzMzIj4gICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzA5LjAwMDAwMCwgMjg5LjAwMDAwMCkiPiAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjUuMDAwMDAwLCA2MS4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC02IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2Ny40NTAwMDAsIDAuMDAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9ImFycm93LWRvd24iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyLjM1MDAwMCwgMTIuMzUwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJpY19kb3dubG9hZF9ub3JtYWwiIHBvaW50cz0iNi42NSAxMy43NzUgMC40NzUgNy42IDMuOCA3LjYgMy44IDAgOS41IDAgOS41IDcuNiAxMi44MjUgNy42Ij48L3BvbHlnb24+ICAgICAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICA8L2c+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+) no-repeat center center;
+            /*background: #333;*/
+            height: 32px;
+            width: 32px;
+            background: #666;
+            transition: all 0.3s ease-in-out;
+            animation: icon-jump 1.5s ease 0s infinite normal;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .title {
+            font-family: "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", "å¾®è½¯é›…é»‘", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
+            font-size: 12px !important;
+            font-weight: 400 !important;
+            line-height: 32px !important;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            text-overflow: ellipsis !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            color: #111 !important;
+            margin: 0 !important;
+            display: block !important;
+            transition: all 0.3s ease-in-out;
+            max-width: 100%;
+        }
+
+        .fatkun-drop-area .fatkun-drop-area-content .description {
+            font-family: "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", "å¾®è½¯é›…é»‘", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
+            font-size: 12px !important;
+            font-weight: 400 !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            margin-top: 12px !important;
+            margin-bottom: 0 !important;
+            line-height: 1.5 !important;
+            color: #111 !important;
+            opacity: 0.6;
+            transition: all 0.3s ease-in-out;
+            max-width: 100%;
+        }
+
+        .fatkun-drop-area.dragover {
+            opacity: 1;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            .fatkun-drop-area {
+                background: rgba(37, 37, 40, 0.98);
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+                border: none;
+            }
+
+            #fatkun-drop-area-overlay {
+                background: rgba(72, 72, 72, 0.3);
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .fatkun-right-panel {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .fatkun-right-panel .fatkun-drop-area-item.dragenter {
+                background-color: rgba(255, 255, 255, 0.10);
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .fatkun-left-panel .fatkun-drop-area-item {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .fatkun-left-panel .fatkun-drop-area-item.dragenter {
+                background-color: rgba(255, 255, 255, 0.10);
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content hr {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .title {
+                color: #fff !important;
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .description {
+                color: #fff !important;
+                opacity: 0.7;
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .icon {
+                background: rgba(255, 255, 255, 0.10);
+            }
+
+            .fatkun-drop-area .fatkun-drop-area-content .icon .fake-svg {
+                background: #fff;
+            }
+
+        }
+
+        @keyframes icon-jump {
+            0% {
+                transform: translateY(0);
+            }
+
+            20% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+
+            60% {
+                transform: translateY(-7px);
+            }
+
+            80% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .fatkun-drop-bottom-area {
+            font-family: "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", "å¾®è½¯é›…é»‘", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
+            font-weight: 400;
+            z-index: 2147483647;
+            position: fixed;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            height: 120px;
+            text-align: center;
+            transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out, border 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+            -webkit-perspective: 1000;
+            transform: translateY(100%);
+            background: #303034;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            box-sizing: border-box;
+        }
+
+        .fatkun-drop-bottom-area .fatkun-drop-area-content {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fatkun-drop-bottom-area .fatkun-drop-area-content .icon {
+            height: 44px;
+            width: 44px;
+            line-height: 44px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.20);
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            margin-right: 24px;
+        }
+
+        .fatkun-drop-bottom-area .fatkun-drop-area-content .icon .fake-svg {
+            -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxM3B4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAxMyAxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5pY19kb3dubG9hZF9ub3JtYWw8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0i5paw54mI5pys5ouW5ou95qaC5b+1LS0t5ouW5ou96Kem5Y+RIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODE0LjAwMDAwMCwgLTM2Mi4wMDAwMDApIiBmaWxsPSIjMzMzMzMzIj4gICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzA5LjAwMDAwMCwgMjg5LjAwMDAwMCkiPiAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjUuMDAwMDAwLCA2MS4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC02IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2Ny40NTAwMDAsIDAuMDAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9ImFycm93LWRvd24iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyLjM1MDAwMCwgMTIuMzUwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJpY19kb3dubG9hZF9ub3JtYWwiIHBvaW50cz0iNi42NSAxMy43NzUgMC40NzUgNy42IDMuOCA3LjYgMy44IDAgOS41IDAgOS41IDcuNiAxMi44MjUgNy42Ij48L3BvbHlnb24+ICAgICAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICA8L2c+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+) no-repeat center center;
+            height: 44px;
+            width: 44px;
+            background: #fff;
+            transition: all 0.3s ease-in-out;
+            animation: icon-jump 1s ease 0s infinite normal;
+        }
+
+        .fatkun-drop-bottom-area .fatkun-drop-area-content .title {
+            font-family: "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", "å¾®è½¯é›…é»‘", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
+            font-size: 18px !important;
+            font-weight: 500 !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            color: #fff !important;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .fatkun-drop-bottom-area.show {
+            opacity: 0.8;
+            transform: translateY(0) scale3d(1, 1, 1);
+        }
+
+        .fatkun-drop-bottom-area.dragover {
+            opacity: 0.95;
+        }
+        #fatkun-drop-panel-close-btn{
+            z-index: 1;
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 24px;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            line-height: 24px;
+        }
+    </style>
+
+    <div id="fatkun-drop-area" class="fatkun-drop-area old-version" style="left: 7px;top: 0;">
+        <div id="fatkun-drop-panel-close-btn">×</div>
+        <div class="fatkun-drop-area-content">
+            <div class="fatkun-left-panel">
+                <div class="fatkun-drop-area-item" folder-id="">
+                    <div>
+                        <div class="icon">
+                            <div class="fake-svg"></div>
+                        </div>
+                        <div class="title">Drag and drop</div>
+                        <div class="description">The image dropped here will be downloaded by Fatkun</div>
+                    </div>
+                </div>
+            </div>
+            <div class="fatkun-right-panel">
+                <div id="fatkun-drop-area-folders">
+                </div>
+                <div class="fatkun-drop-area-item" folder-id="choose">
+                    <div class="title">Choose folder...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fatkun-drop-area-overlay" class="" style="
+    opacity: 1;
+"></div>
+</template></fatkun-drop-panel>
+<body style="">
+<div id="wrapper">
+	<div id="viewport" class="grid" data-mode="site" style="text-align: center; height: auto;"><div id="packery" style="width: 980px; position: relative; height: 549px;"><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 0px; top: 0px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_7d2002da6e9447599e0cf2d9b3409cc4.jpeg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_7d2002da6e9447599e0cf2d9b3409cc4.jpeg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 245px; top: 0px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_c332d3bbdf8e4ce586382f2b1ca65d2e.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_c332d3bbdf8e4ce586382f2b1ca65d2e.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 490px; top: 0px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/603cae2713b247d18fa4b641bcb64149.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/603cae2713b247d18fa4b641bcb64149.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 735px; top: 0px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_c0a47be3b2ff45088485267dc606f5ef.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_c0a47be3b2ff45088485267dc606f5ef.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 0px; top: 183px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/85607039b8ac4f939ffcd7cb89f35cc9.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/85607039b8ac4f939ffcd7cb89f35cc9.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 245px; top: 183px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_84617564601a4a55af6f9dd83ba8092c.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_84617564601a4a55af6f9dd83ba8092c.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 490px; top: 183px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_a7173705f6eb49c69942c93e5cf24319.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_a7173705f6eb49c69942c93e5cf24319.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 735px; top: 183px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_76036c80a18b4c65a8cd68a0e03ff603.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_76036c80a18b4c65a8cd68a0e03ff603.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 0px; top: 366px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_6c17b0b263954fc59ac3b299529faa79.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_6c17b0b263954fc59ac3b299529faa79.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 245px; top: 366px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_7c90f5ecb486479480298490a5c4082e.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_7c90f5ecb486479480298490a5c4082e.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 490px; top: 366px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_066af2b1c41f405d9d1d9d884edc71ec.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_066af2b1c41f405d9d1d9d884edc71ec.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div><div class="item" style="height: 183px; width: 245px; cursor: pointer; position: absolute; left: 735px; top: 366px;"><div class="filler" style="background-image: url(&quot;https://static.wixstatic.com/media/a896d9_0122337c0dac4e478b7ec4e53fdf95bf.jpg/v1/fill/w_245,h_183,al_c,q_80,usm_0.66_1.00_0.01/a896d9_0122337c0dac4e478b7ec4e53fdf95bf.jpg&quot;); background-size: cover; inset: 0px;"></div><div class="details hide" style="left: 26px; right: 26px; top: 91px; display: none;"><h3 class="title" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 24px;"></h3><div class="desc" style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(47, 46, 46); font-size: 15px;"></div></div><div class="overlay" style="inset: 0px; display: block;"></div></div></div><div class="prev" style="display: none; background-color: white;"><div class="inner" style="background-color: black;"></div></div><div class="next" style="display: none; background-color: white;"><div class="inner" style="background-color: black;"></div></div><div class="alternativePrev" style="display: none;"></div><div class="alternativeNext" style="display: none;"></div></div>
+</div>
+<script type="text/javascript">
+	(function(SCOPE){
+		var viewport = $('#viewport');
+		var App = new CollageController(viewport, {});
+	}(window));
+</script>
+
+
+</body></html>

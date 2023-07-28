@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한페이지 내에서 링크</title>
+    <style>
+        html{
+            scroll-behavior: smooth;   
+            /* 스무스하게 이동 */ 
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        인라인 요소 특징
+            1. 왼쪽에서오른쪽 가로배치(줄바꿈x)
+            2. 가로,세로크기 = 콘텐츠크기 
+            3. 인라인요소는 블록레벨 요소를 자식으로 가질수없음 (a태그예외)
+            , 
+        #: 현재 페이지 (꼭대기)
+        <a href=" #값 | URL | 파일 | 메일 | 전번">
+        글로벌속성: id, class, title (모든태그에 다 사용할수있기때문)
+        링크에 아이디 걸어두면 눌렀을때 그 위치로 이동 
+
+     -->
+    <ul>
+        <li><a href="#section1">섹션1</a></li>  
+        <li><a href="#section2">섹션2</a></li>
+    </ul>
+    <h1>한 페이지 내에서 링크</h1>
+    <h2 id="section1">섹션1</h2>
+    <p>(로렘입숨:테스트용 글자)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem tempora aliquid delectus, rerum consequatur soluta error esse ipsum nam! Eaque exercitationem fugit nesciunt facilis labore necessitatibus recusandae voluptas consequatur excepturi.</p>
+    <h2 id="section2">섹션2</h2>
+    <p>lorem100</p> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A recusandae non quo odio nesciunt sequi, harum aspernatur vel natus commodi eveniet iure pariatur repudiandae minus facilis doloribus sit similique dolore doloremque perspiciatis repellat tempore saepe necessitatibus tenetur? Reprehenderit est porro excepturi, numquam harum quibusdam magnam aperiam in facere placeat molestias inventore error nulla consequuntur deleniti officiis laboriosam quis perspiciatis rerum iste sequi qui! Doloremque commodi nostrum enim alias voluptates aut culpa praesentium dolores! Beatae facere tenetur perferendis aliquam veritatis? Reiciendis dolorem in id nostrum aut exercitationem? Iure delectus, optio eius, ex repudiandae quo deleniti ad nesciunt fuga iusto, nihil sint.</p>
+
+    <h2>푸터</h2>
+    <a href="#top">위로가기</a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--클릭: 이미지 바꾸기-->
+    <button onclick="document.getElementById('bulb').src ='./img/bulbon.webp' ">turn on the light</button>
+    <img id="bulb" src="./img/bulboff.webp" alt="꺼진전구" width="350px" height="300px">
+    <button onclick="document.getElementById('bulb').src = './img/bulboff.webp' ">turn off the light</button>
+
+    <!--클릭: 글자확대-->
+    <p id="demo">javascript can change the style of an Element</p>
+    <button onclick="document.getElementById('demo').style.fontSize = '30px' ">click</button>
+
+    <!--클릭: 글자 사라지기-->
+    <p id="disappear">사라져볼게</p>
+    <button onclick="document.getElementById('disappear').style = 'display: none' "> 얍 </button> <br>
+
+    <!--클릭: 글자 나타내기-->
+    <p id="appear" style="display: none;">얍</p>
+    <button onclick="document.getElementById('appear').style= 'display: block' "> 내가 나타나볼게 </button>
+
+    <!--클릭: 글자 나타내기-->
+    <p id="function"> script로 바꿔볼게 </p>
+    <button type="button" onclick="myfunction()"> click</button>
+
+    <script>
+        const myfunction = () => {
+            document.getElementById('function').innerHTML =  '짠';
+        }
+    </script>
+
+안녕하세요 반갑습니다 
+
+</body>
+</html>

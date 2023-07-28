@@ -13,6 +13,21 @@
     <!-- 파일 이름에 공백 사용하지 말 것!! -->
     <h2>비디오</h2>
     <!-- 
+        <video>
+            <source src = "비디오.mp4" type="video/mp4">
+            <source src = "비디오.webm" type="video/webm">
+            <source src = "비디오.ogv" type="video/ogv">
+            - 이렇게 여러개 연결시켜놓는이유: 지원안되는서버가있기에 다걸어놓는것
+            - ogv가 화질 제일떨어짐 
+            - 지원환경 edge, safari를 젤 중요하게봐야함/ 
+            - https://caniuse.com/ 지원되는지안되는지 확인해보는사이트
+
+        <audio>
+            <source>
+        <iframe> : 외부파일
+        - 비디오자동플레이는 오디오빼고해야함(시각장애인을위해)
+
+       
         비디오 소스: 
         1. assets/video/mov_bbb.mp4
         2. Big Buck Bunny(빅 벅 버니): https://www.youtube.com/embed/YE7VzlLtp-4
@@ -32,14 +47,33 @@
         4. controls: 컨트롤
      -->
 
-    <!-- video와 source 태그로 비디오를 삽입해 보세요. -->
-    <video>
+    <!-- video와 source 태그로 비디오를 삽입해 보세요.
+        - 비디오자동플레이는 오디오빼고해야함(시각장애인을위해)
+        - width height는 css에서하는게 바람직
+        - 태그: controls재생창  autoplay자동재생  muted음소거 loop반복재생  -->
+    <video controls autoplay muted loop poster="video/intto.jpg" pre>
+        <source src="../assets/video/mov_bbb.mp4" type="video/mp4">
+        <source src="../assets/video/mov_bbb.ogv" type="video/ogv">
+        <p>이 브라우저는 video 요소를 지원하지않습니다.</p>
         Your browser does not support HTML video.
     </video>
 
 
-    <h2>유튜브 비디오</h2>
-    <!-- 유튜브 비디오를 iframe 태그로 삽입해 보세요. -->
+    <h2>유튜브  / 비메오</h2>
+    <!-- 
+        유투브 삽입하는방법
+        : 유투브 동영상퍼가기 소스를 붙여넣기하면 끝
+     -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ikXjUEnpc3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- 
+        비메오 삽입하는방법
+        : 1. https://vimeo.com/categories 사이트들어가기
+          2. 동영상 공유하기 클릭 - 임베드복붙 끝
+          3. 옵션으로 더 상세하게 가능
+     -->
+     <iframe src="https://player.vimeo.com/video/380157225? h=4805c0a262&color=ff0179&byline=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/380157225">Facing It by Sam Gainsborough</a> from <a href="https://vimeo.com/samgainsborough">Sam Gainsborough</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        
 
 
     <!-- 
@@ -48,27 +82,36 @@
         2. assets/audio/Good_Morning!_Reed_Mathis.mp3
 
         오디오 타입:
-        1. audio/ogg
-        2. audio/mpeg
-        3. audio/wav
+        1. audio/ogg 
+        2. audio/mpeg 
+        3. audio/wav 
 
         오디오 속성:
         1. autoplay: 자동 실행
         2. muted: 음소거
         3. loop: 무한 반복
         4. controls: 컨트롤
+
+        <audio autoplay muted loop controls>
+            <source src = "오디오.mp3" type="audio/mpeg">
+        </audio>
      -->
 
     <h2>오디오</h2>
-     <!-- 1번 오디오 소스를 이용하여 audio와 source 태그로 오디오를 삽입해 보세요. -->
-    <audio>
+     <!--   - audio만쓰면 아무것도안보임
+            - 보일수있게 controls쓰기 / loop 반복재생 / autoplay 자동재생 -->
+    <audio controls loop autoplay>
+        <source src="../assets/mov_bbb (online-audio-converter.com).mp3" type="audio/mpeg">
+        <source src="../assets/mov_bbb (online-audio-converter.com).ogv" type="audio/ogg">
         Your browser does not support the audio element.
+        당신의 브라우저는 오디오 요소를 지원하지 않는다. 
     </audio>
 
     <!-- 2번 오디오 소스를 이용하여 배경 음악을 삽입해 보세요. -->
     <audio autoplay>
-        Your browser does not support the audio element.
+        <source src="../assets/mov_bbb (online-audio-converter.com).mp3" type="audio/mpeg">
     </audio>
+
 </body>
 
 </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와로브스키</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .wrap {
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+
+        }
+        header {
+            width: 20%;
+            height: 400px;
+            float: left;
+            position: relative;
+            border-right: 1px solid black;
+        }
+        header .logo{
+            background-image: url(./assets/workplace.jpg);
+            width: auto;
+            height: 30%;
+        }
+        nav .menu{
+            width: auto;
+            height: 45px;
+            text-align: center;
+            padding: 24px;
+            background-color: beige;
+        }
+        .container .slide{
+            width: 479px;
+            height: 198px;
+           float: left;
+           top: auto;
+            border-bottom: 1px solid black;
+            background-image: url(./assets/images/gallery2.jpg);
+        }
+        .container .twoblock{
+            display: flex;
+            border-bottom: 1px solid black;
+            margin: 0;
+        }   
+        .container .twoblock div{
+            padding: 30px;
+        }
+        footer > div {
+            float: left;
+            width: 270px;
+            height: 119px;
+            border-right: 1px solid black;
+        }
+        footer .three {
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"></div>
+            <nav>
+                <div class="menu">메뉴1</div>
+                <div class="menu">메뉴2</div>
+                <div class="menu">메뉴3</div>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="slide"></div>
+            <ul class="twoblock">
+                <div class="notice">공지사항</div>
+                <div class="gallery">갤러리</div>
+                <div class="shortcut">바로가기</div>
+            </ul>
+        </div>
+        <footer>
+            <div>copyright</div>
+            <ul class="three">
+                <div>sns</div>
+                <div>familySite</div>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
