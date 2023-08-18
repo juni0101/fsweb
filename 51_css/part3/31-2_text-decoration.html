@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            <밑줄색상지정기능 추가됨-ver css3.x>
+            text-decoration-color 색
+            text-decoration-thickkness 두께
+                값:px, % 
+            text-decoration-line 위치
+                값: underline, overline,line-through
+            text-decoration-style 선종류
+                값: solid, dotted, dashed, double, wavy 
+
+            <속기형 -ver css1>
+            text-decoration: line color style thickness; (순서상관X)
+            
+        */
+
+
+
+        /* .tdn에 텍스트 장식을 제거해 보세요. */
+        .tdn {
+            text-decoration: none;
+        }
+
+        /* .tdu에 텍스트 밑줄을 지정해 보세요. */
+        .tdu {
+            text-decoration: underline;
+            text-decoration-thickness: 100%; /* %는 글자크기기준 */
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+
+            text-decoration: underline 1% wavy purple; 
+        }
+
+        /* .tdo에 텍스트 윗줄을 지정해 보세요. */
+        .tdo {
+            text-decoration: overline;
+        }
+
+        /* .tdl에 텍스트 취소선을 지정해 보세요. */
+        .tdl {
+            text-decoration: line-through;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>텍스트 장식(꾸밈)</h1>
+    <p class="tdn">text-decoration: none;</p>
+    <a href="#" class="tdn">text-decoration: none;</a>
+    <p class="tdu">text-decoration: underline;</p>
+    <a href="#" class="tdu">text-decoration: underline;</a>
+    <p class="tdo">text-decoration: overline;</p>
+    <a href="#" class="tdo">text-decoration: overline;</a>
+    <p class="tdl">text-decoration: line-through;</p>
+    <a href="#" class="tdl">text-decoration: line-through;</a>
+</body>
+</html>

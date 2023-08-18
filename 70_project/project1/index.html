@@ -4,88 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신전떡볶이</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <header>
-        <h1><a href="#"><img src="../images/sinjun/logo.png" alt=""></a></h1>
-        <nav class="gnb">
-            <ul class="main">
-                <li>
-                    <a href="">신전떡볶이</a>
-                    <ul class="sub">
-                        <li><a href="#">인사말</a></li>
-                        <li><a href="#">브랜드</a></li>
-                        <li><a href="#">캐릭터</a></li>
-                        <li><a href="#">찾아오시는 길</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">메뉴</a>
-                    <ul class="sub">
-                        <li><a href="#">떡볶이</a></li>
-                        <li><a href="#">튀김</a></li>
-                        <li><a href="#">라이스</a></li>
-                        <li><a href="#">기타</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">프랜차이즈</a>
-                    <ul class="sub">
-                        <li><a href="#">신전의 약속</a></li>
-                        <li><a href="#">일반형 인테리어</a></li>
-                        <li><a href="#">고급형 인테리어</a></li>
-                        <li><a href="#">명예의 전당</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">커뮤니티</a>
-                    <ul class="sub">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">고객의 소리</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div id="sec1" class="sec">
-        <div class="slide">
-            <ul>
-                <li><a href="#"><img src="../images/sinjun/main1_1200.jpg" alt=""></a></li>
-                <li><a href="#"><img src="../images/sinjun/main2_1200.png" alt=""></a></li>
-                <li><a href="#"><img src="../images/sinjun/main3_1200.png" alt=""></a></li>
-            </ul>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt=""></a></h1>
+            <nav id="gnb">
+                <ul class="main">
+                    <li>
+                        <a href="">신전떡볶이</a>
+                        <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">캐릭터</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴</a>
+                        <ul class="sub">
+                            <li><a href="#">떡볶이</a></li>
+                            <li><a href="#">튀김</a></li>
+                            <li><a href="#">라이스</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">프랜차이즈</a>
+                        <ul class="sub">
+                            <li><a href="#">신전의 약속</a></li>
+                            <li><a href="#">일반형 인테리어</a></li>
+                            <li><a href="#">고급형 인테리어</a></li>
+                            <li><a href="#">명예의 전당</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="s#">FAQ</a></li>
+                            <li><a href="#">고객의 소리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="sec1" class="sec">
+            <div id="slide">
+                <ul>
+                    <li><a href="#"><img src="images/main1_1200.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/main2_1200.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/main3_1200.png" alt=""></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+         <!-- 모달창
+            모달은 화면전체 가리킴
+            팝업은 내용 -->
+            <div id="modal">
+                <div class="popup">
+                    <h2 class="pop">신전떡볶이 리뉴얼안내</h2>
+                    <span class="pop">고객님들의 더욱 편리하고 안전한 식사를 위해 쇼핑몰 리뉴얼이 진행됩니다. 리뉴얼 기간 중에는 상품 구매 및 결제가 불가하니 이점 참고 부탁드립니다. 신전떡볶이를 이용해주시는 고객님들께 감사드리며, 더 나은 서비스로 다시 찾아뵙겠습니다. 감사합니다.</span><br>
+                    <button class="pop">닫기</button>
+                </div>
+            </div>
+        <div id="contents">
+            <div id="tabs">
+                <!-- 공지사항 -->
+                <label for="btn1">공지사항</label>
+                <input type="radio" id="btn1" name="btn" checked>
+                <div id="tabs1">
+                    <ul>
+                        <li><a href=""><span>떡볶이양념 최초 HACCP 인증</span>2023.01.12</a></li>
+                        <li><a href=""><span>떡볶이 프랜차이즈 업계 위생안전시설</span>2023.02.12</a></li>
+                        <li><a href=""><span>체계적인 물류관리시스템</span>2023.02.12</a></li>
+                        <li><a href=""><span>세계로 나아가는 신전떡볶이</span>2023.03.12</a></li>
+                    </ul>
+                </div>
+                <!-- 갤러리 -->
+                <label for="btn2">갤러리</label>
+                <input type="radio" id="btn2" name="btn">
+        
+                <div id="tabs2">
+                    <a href="#"><img src="images/menu1.png" alt=""></a>
+                    <a href="#"><img src="images/menu2.png" alt=""></a>
+                    <a href="#"><img src="images/menu3.png" alt=""></a>
+                </div>
+            </div> <!-- tabs -->
 
-    <div id="contents">
-        <div class="tabs">공지사항/갤러리
-            <img src="../images/sinjun/menu1.png" alt="">
-            <img src="../images/sinjun/menu2.png" alt="">
-            <img src="../images/sinjun/menu3.png" alt="">
-        </div>
-        <div class="banner">
-            <a href="#"><img src="../images/sinjun/sub1.png" alt=""></a>
-        </div>
-        <div class="shortcut">
-            <a href="#"><img src="../images/sinjun/sub2.png" alt=""></a>
-        </div>
-    </div>
-
-    <footer>
-        <div class="blogo"><a href="#"><img src="../images/sinjun/logo.png" alt=""></a></div>
-        <div class="copy">
-            <p>대구광역시 북구 관음로 43E-mail : sinjeon@sinjeon.co.kr</p>
-            <p>Copyright © SINJEON FOOD SYS all rights reserved.</p>
-        <div class="sns">
-            <ul>
-                <li><a href="#"><img src="../images/sinjun/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="../images/sinjun/인스타그램.png" alt=""></a></li>
-                <li><a href="#"><img src="../images/sinjun/youtube.png" alt=""></a></li>
-            </ul>
-        </div>
-    </footer>
+            <div class="banner">
+                <a href="#"><img src="images/sub1.png" alt=""></a>
+            </div>
+            <div class="shortcut">
+                <a href="#"><img src="images/sub2.png" alt=""></a>
+            </div> 
+        </div> 
+        <footer> 
+            <div class="blogo"><a href="#"><img src="images/logo.png" alt=""></a> 
+            </div> 
+            <div class="copy"> 
+                <p>대구광역시 북구 관음로 43E-mail : sinjeon@sinjeon.co.kr</p> 
+                <p>Copyright © SINJEON FOOD SYS all rights reserved.</p>
+            </div>
+            <div class="sns"> 
+                <ul>
+                    <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/인스타그램.png" alt=""></a></li>
+                    <li id="youtube"><a href="#"><img src="images/youtube.png" alt=""></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div> 
 </body>
 </html>

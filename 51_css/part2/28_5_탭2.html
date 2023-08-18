@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        /* reset(초기화) */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 탭 */
+        /* 버튼 */
+        #tabs .btn li {
+            /* float:left; */
+            display: inline-block;
+            background-color: lightgreen;
+            padding: 8px 16px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 내용 공통 */
+        #tabs div {
+            position: absolute;
+            top: 40px;
+            width: 400px;
+            height: 160px;
+        }
+
+        /* 공지사항 */
+        #tab1 {
+            background-color: lightblue;
+        }
+
+        #tab1 li {
+            border-bottom: 1px solid red;
+            padding-bottom: 8px;
+            margin: 8px 0;
+        }
+
+        #tab1 span {
+            display: inline-block;
+            width: 310px;
+        }
+
+        /* 갤러리 */
+        #tabs #tab2 {
+            /* box-sizing: border-box; */
+            /* width: calc(400px - 32px); */
+            background-color: lightcoral;
+            padding: 24px 16px;
+        }
+        #tab2 a {
+            margin: 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 탭 -->
+    <div id="tabs">
+        <ul class="btn">
+            <li><a href="#tabs1">공지사항</a></li>
+            <li><a href="#tabs2">갤러리</a></li>
+        </ul>
+        <div id="tabs1">
+            <ul>
+                <li><a href=""><span>떡볶이양념 최초 HACCP 인증</span>2023.01.12</a></li>
+                <li><a href=""><span>떡볶이 프랜차이즈 업계 최초 HACCP 위생안전시설</span>날짜</a></li>
+                <li><a href=""><span>체계적인 물류관리시스템</span>2023.02.12</a></li>
+                <li><a href=""><span>세계로 나아가는 신전떡볶이</span>2023.03.12s</a></li>
+            </ul>
+        </div>
+        <div id="tabs2">
+            <a href="#"><img src="../images/sinjun/menu1.png" alt=""></a>
+            <a href="#"><img src="../images/sinjun/menu2.png" alt=""></a>
+            <a href="#"><img src="../images/sinjun/menu3.png" alt=""></a>
+        </div>
+    </div> <!-- tabs -->
+</body>
+
+</html>
+
+
+
+
+<!--  내가 스스로만든거
+    
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        
+        .btn {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            padding: 8px 12px;
+            border: 1px solid black;
+        }
+        li:hover {
+            background-color: rgb(252, 63, 63);
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        #contents {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+            padding: 8px 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="tabs">
+        <ul class="btn">
+            <li><a href="#tabs1">메뉴1</a></li>
+            <li><a href="#tabs2">메뉴2</a></li>
+        </ul>
+        <div id="contents">
+            <div id="tabs1">첫번째 내용</div>
+            <div id="tabs2">두번째 내용</div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+
+

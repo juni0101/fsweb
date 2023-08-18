@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p {font-size: 3rem;}
+
+        /* 
+            텍스트 그림자: 
+            text-shadow: 가로 세로 흐림 퍼짐 색  inset(얘쓰면 안쪽그림자 쓸수있음)
+            색의 기본값: 글자색 
+        */
+
+        /* 
+            x위치: 2px
+            y위치: 2px
+            blur: 4px
+            color: black
+        */
+        .ts1 {
+            color: rgb(255, 255, 255);
+            text-shadow: 3px 3px 2px #000 ; 
+        }
+
+        /* 
+            x위치: 1px, 0, 0
+            y위치: 1px, 0, 0
+            blur: 2px, 25px, 5px
+            color: black, blue, darkblue
+        */
+        .ts2 {
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 2px #000,
+                        0 0 25px blue,
+                        0 0 5px rgb(252, 31, 204);
+        }
+
+
+        /* 
+            텍스트 주위에 테두리 효과 
+            x위치: -1px, 0, 1px, 0
+            y위치: 0, 1px, 0, -1px
+            blur: 없음.
+            color: 모두 black
+        */
+        .ts3 {
+            color: rgb(182, 182, 182);
+            text-shadow: -1px 0 black,
+                        0 1px rgb(255, 0, 0),
+                        1px 0 rgb(57, 2, 255),
+                        0 -1px rgb(253, 26, 223);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>텍스트 그림자 효과</h1>
+    <p class="ts1">text-shadow</p>
+    <p class="ts2">text-shadow</p>
+    <p class="ts3">text-shadow</p>
+</body>
+</html>

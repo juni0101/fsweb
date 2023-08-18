@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            <표현할수있는 색>
+            : 단일색, 그라디언트, 패턴 
+
+            <background-color>
+                background-clip     시작위치
+
+            <background-image>          -패턴으로나타남 
+                background-repeat       반복
+                        값: repeat(기본값), no-repeat, repeat-x, repeat-y
+                background-position     위치
+                        값: px, %, 키워드
+                        x위치: left, right, center
+                        y위치: top, bottom, center
+                background-size         크기
+                    값: px, %, 키워드
+                    키워드:contain(), cover 
+                background-attachment   패럴렉스이미지 , 모바일에서는 js쓸수밖에없음 
+                background-origin       시작위치 
+            background-blend-mode   합성방식 (이거는 유일하게 색,이미지 둘다 합성가능)
+
+            속기형
+            background : color image repeat position/ size origin clip blend; 
+            다 순서없는데 유일하게 size는 꼭 포지션/슬래시 뒤에 써야함 
+        */
+
+        div {
+            width: 500px;
+            height: 350px;
+            border: 1px solid red;
+            background-image: url(../star.png),
+             url(../../70_project/im_img/bg1.png);   /* 더 앞에보이는것을 순서앞으로 */
+            background-repeat: no-repeat, no-repeat;
+            background-size: 30px, 500px;
+
+            /* background-image:url(), url(), ... */
+            /* 첫 번째로 기록한 url이 위로 지정된다. */
+
+            /* bg3.png와 bg1.jpg 두 개의 이미지를 하나의 배경 이미지 속성으로 지정하시오. */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>멀티 배경 이미지</h1>
+    <div></div>
+</html>

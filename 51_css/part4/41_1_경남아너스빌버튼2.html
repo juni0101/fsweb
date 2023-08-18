@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경남아너스빌</title>
+    <style>
+        a {
+            position: relative;
+            display:inline-block;
+            background: #0F2244;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 46px;
+            width: 170px;
+            height: 46px;
+            overflow: hidden;
+        }
+        a:hover .bg{
+            transform: translateX(0);
+        }
+        span {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 170px;
+            height: 46px;
+        }
+        .bg {
+            position: absolute;
+            background: #92847e;
+            transition: .3s;
+            transform: translateX(-170px);
+
+        }
+    </style>
+</head>
+<body>
+    <a href="#">
+        <!--
+             <span>&nbsp;</span>  
+            위에있는 이걸쓰지않기위해서는 ::before 과 ::after이 필요한거임
+         -->
+         <span class= 'bg'>&nbsp;</span> 
+        <span class="tit">브랜드 스토리</span>
+    </a>
+</body>
+</html>

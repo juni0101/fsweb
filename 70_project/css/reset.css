@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+}
+html, body, h1, h2, h3, p, ul {
+    margin: 0;
+}
+ul {
+    padding: 0;
+}
+input {
+      border: 1px solid rgba(128, 128, 128, 0.397);
+      padding: 0;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+li {
+    list-style: none;
+}
+a {
+    color: black;
+}

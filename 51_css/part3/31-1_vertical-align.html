@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* display 속성이 inline, inline-block 요소에 적용된다. */
+        p {text-decoration: underline overline; 
+            font-size: 3rem; /* 부모를따로 지정안해서 16px의 3배임 = 48px  */
+            line-height: 3em; /* 얘기준은 글자크기의3배, 48 * 3 = 144px */
+        }
+
+        /* 
+            vertical-align 수직정렬
+                대상: 텍스트, 인라인요소, 테이블(td, th) 
+                    display 속성이 inline, inline-block, table-cell 요소에 적용됨 
+                    display:inline  -> img, video, b, i
+                    display:inline-block  -> button, input
+                    display:table-cell  -> td, th 
+
+                값: 숫자(px, %), 키워드(밑에 있는거)  
+
+                text-align속성은 블록레벨요소에 지정 
+                vertical-align속성은 인라인요소에지정 
+
+                baseline: 부모 요소의 기준선(baseline)에 맞춤(기본값)
+                text-top: 요소의 맨 위를 부모 텍스트의 맨 위에 맞춤
+                top: 요소의 맨 위를 줄에서 가장 큰 요소의 맨 위에 맞춤
+                middle: 부모 요소 중앙에 맞춤
+                bottom: 요소의 맨 아래를 줄에서 가장 낮은 요소에 맞춤
+                text-bottom: 요소의 맨 아래를 부모 텍스트의 맨 아래에 맞춤
+                super: 부모의 윗첨자 기준선에 맞춤
+                sub: 부모의 아래첨자 기준선에 맞춤
+        */
+        .vat img {
+            vertical-align: top;
+        }
+        .vam img {
+            vertical-align: middle;
+        }
+        .vab img {
+            vertical-align: bottom;
+        }        
+        
+
+        /* px 단위는 텍스트 baseline 기준, 음수 가능 */
+        /* % 단위는 부모 요소의 줄 간격 기준, 음수 가능 */
+        /* em 단위는 부모 요소의 글꼴 크기, 음수 가능 */
+        .vapx img {
+            vertical-align: 48px; /* 1em이랑 같은크기 */
+        }
+        .vaem img {
+            vertical-align: 1em;
+        }
+        .vaper img {
+            vertical-align: 100%; /* 글자크기가아니라 줄간격기준임 */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>수직 정렬</h1>
+    <p class="vat">vertical-align:top; <img src="../star.png" alt="스타2"></p>
+    <p class="vam">vertical-align:middle; <img src="../star.png" alt="스타2"></p>
+    <p class="vab">vertical-align:bottom; <img src="../star.png" alt="스타2"></p>
+
+    <p class="vapx">vertical-<sub>align</sub>: px; <img src="../star.png" alt="스타2"></p>
+    <p class="vaem">vertical-<sub>align</sub>: em; <img src="../star.png" alt="스타2"></p>
+    <p class="vaper">vertical-<sub>align</sub>: %; <img src="../star.png" alt="스타2"></p>
+</body>
+</html>

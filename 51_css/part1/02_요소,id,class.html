@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            우선순위: 
+            !important > inline > id > class > 요소 
+
+            id와 class의 이름 지정 방법 
+            1. 첫 글자는 영문자, _, - (숫자x) 
+            2. 두 번째 문자 부터는 영문자, _, -, 숫자 
+            3. 대소문자 구별된다. 
+        */ 
+
+        /* 
+            css속성 
+            1. color: 글자색 
+            2. background-color : 배경색 
+            3. border-color : 테두리색 
+            4. border-style : solid;   
+            5. opacity : 0.0-1.0 (불투명도)
+            6. background-image : url()  
+            7. background-repeat : 
+                repeat : 가로 방향, 세로 방향으로 반복합니다.
+                repeat-x : 가로 방향으로 반복합니다.
+                repeat-y : 세로 방향으로 반복합니다.
+                no-repeat : 반복하지 않습니다.
+                initial : 기본값으로 설정합니다.
+                inherit : 부모 요소의 속성값을 상속받습니다.
+            8. background-posiion 
+                x-position y-position : 가로 위치와 세로 위치를 정합니다.
+                initial : 기본값으로 설정합니다.
+                inherit : 부모 요소의 속성값을 상속받습니다.
+                가로 위치 값 : left, center, right, 백분율, 길이
+                세로 위치 값 : top, center, bottom, 백분율, 길이
+            9. background-attachment: 
+                fixed : 이미지 고정
+                scroll : 스크롤
+            10. 속기속성
+                background: #ffffff url("img_tree.png") no-repeat right top; 
+                순서: color-image-repeat-attachment-position , 하나 누락돼도 문제x
+            11.margin-auto면 가로중앙배치
+
+  
+            선택자 
+            1. 기본: 요소,id, class, 전체, 그룹
+            2. 복합 : 부모+자식+형제 
+            3. 의사 클래스 :link, :visited, :hover, :active
+            4. 의사 요소: ::befor, ::after
+            5. 속성 
+
+            하나의 문서에서 
+            아이디값: 중복사용x 
+            클래스값: 중복사용o 
+        */ 
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>요소/아이디/클래스 선택자</h1>
+    <p>나는 id와 class가 없습니다.</p>
+    <p id="p1">나는 id=p1 입니다.</p>
+    <p class="p1" id="p2">나는 class=p1, id=p2 입니다.</p>
+    <p class="p1 p2">나는 class=p1, p2 입니다.</p>
+    <p id="p3">나는 id=p3 입니다.</p>
+</body>
+</html>

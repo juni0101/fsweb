@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            position: relative;
+            width:178px;
+            height:100px;
+            background: url(../../assets/hatea/bg-main0-0.png);
+            margin:20px;
+            left:0px; top:0px;
+            text-indent: -999em;  /*글자가 저기아주 창밖으로 나간거라 안보임*/
+            opacity: 0; 
+        }
+
+        /* 
+            animation-name: 애니메이션 이름;
+            animation-duration: 애니메이션 시간(단위: s(초));
+            animation-iteration-count: 애니메이션 반복 여부;
+                값: 숫자, infinite 
+            animation-direction: 애니메이션 방향;
+                값: alternate(양쪽,둘다라는의미), reverse 
+            animation-timing-function: 애니메이션 시간 함수;
+                값: ease, ease-in, ease-out, ease-in-out, lenear, cubic-bezier(0,0,1,1) 
+            animation-delay: 애니메이션 지연 시간(단위: s(초));
+
+
+            속기형
+            animation: name duration [delay] [timing-function]
+            [iteration-count] [direction]
+
+            키프레임, 프레임 -> 애니메이션의 작업단위
+            @keyframes 이름 {
+                from  {시작 css}
+                to {끝 css}
+            }
+
+            @keyframes 이름 {                       위에랑 이것중에 보통 이걸씀 
+                0%  {시작 css}
+                50% {중간 css}
+                50.33333%   {중간 css}              소수점5개까지 가능 
+                100% {끝 css}
+            }
+
+            애니메이션 이름규칙
+            1. 영문의 대소문자 구별
+            2. 첫글자는 영문자, - , _ 로 씀
+            3. 
+        */
+
+
+        /* .anim에 애니메이션의 이름은 move, 시간은 1초, 무한 반복(infinite), 좌우 왕복(alternate), 등속도(linear), 지연 시간은 2초로 지정하시오. */
+        .anim {
+            animation: move 1s forwards;
+            /* animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            
+            forwards를 사용할때는 반복횟수는 쓰지않음 */
+        }
+
+
+        @keyframes move { 
+            0% {left:0; opacity: 0;} 
+            100% {left :200px; opacity: 1;} 
+        } 
+
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <div class="anim">풍선</div>
+</body>
+</html>

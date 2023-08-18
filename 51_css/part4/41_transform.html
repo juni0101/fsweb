@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /*
+            text-transform  대소문자 변환;
+
+            < transform 변환 >
+                    요소의 이동,회전,확대축소,비틀기 효과주는 함수
+
+                transform: translate(x, y);                 이동    
+                transform: scale(w, h);                     확대축소   
+                transform: rotate(각도); (단위: deg)        회전
+                transform: skew(각도, 각도) (단위: deg);    기울임
+
+                    (translate)
+                    translateX(x)       좌우
+                    translateY(y)       상하
+                    translateZ(z)       깊이
+                    translate3d(x,y,z)       
+                    perspective(값): 원근감         -> 변형요소에 직접지정
+                    translate(x,y)                하나만쓰면 x만쓴거임
+
+                    (스케일)은 단위없음
+                    scaleX(x)        가로
+                    scaleY(y)        세로
+                    scaleZ(z)        깊이    
+                    scale3d(x,y,z)       
+                    scale(x,y)         translate는 하나만쓰면 x만쓴건데, 얘 하나만쓰면x크기에 비례하여 y값이 적용됨 
+
+                    (rotate)
+                        단위: 0-360 deg (각도)
+                    rotateX()
+                    rotateY()
+                    rotateZ()
+                    rotate3d()
+                    rotate()  
+                    
+                    (skew)
+                        단위 deg
+                    skew(x-angle,y-angle)
+                    skewX(x-angle)
+                    skewY(y-angle)
+
+            2D변환: x축, y축
+            3D변환: x축, y축, z축
+            perspective : 1000px;       -> 원근감
+            perspective-origin: x y;      -> 변형의 기준 
+            transform-origin: x y;      -> 요소의 기준점
+                                            기준점은 요소의 정중앙임(50%, 50%) 
+
+        */
+
+        .outer {
+            border: 1px solid black;
+            /* perspective는 관점 속성으로 부모 요소에 지정한다. */
+            perspective: 1000px;
+            /* 관점의 위치로 perspective 속성과 함께 사용해야 한다. */
+            perspective-origin: 50% 50%;
+            margin: 20px;            
+        }
+
+        .trf { 
+            display: inline-block;/* ib하면 width,height해놔도 적용안됨 */
+            width:100px;
+            height:100px;
+            background: red;
+            transition: .5s;
+        }
+
+        /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
+        .outer:hover .trftr {
+            transform: translate(100px, 0);
+            transform: translate(100px); /* 위랑 아래 똑같음  */
+        }
+
+        /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
+        .outer:hover .trfsc {
+            transform: scale(1.2, 1.2);
+            transform: scale(1.2);      /* 위랑 아래 똑같음  */
+        }
+
+         .trfro {
+            /* 변환의 기준 */
+            transform-origin: 0 0;
+        }
+        /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
+        .outer:hover .trfro {
+            transform: rotate(60deg);
+            transform: rotateZ(60deg);   /* 위랑 아래 똑같음  */
+        }
+
+        /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
+        .outer:hover .trfrox {
+            transform: rotateX(60deg);
+        }
+
+        /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
+        .outer:hover .trfroy {
+            transform: rotateY(90deg);
+        }
+
+        /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
+        .outer:hover .trfsk {
+            transform: skew(0, 10deg);
+        }
+
+    </style>
+</head>
+
+<body>
+        <h1>변환</h1>
+        <h2>이동</h2>
+        <div class="outer">
+            <span class="trf trftr">translate</span>transform
+        </div>
+        <h2>크기 조절</h2>
+        <div class="outer">
+            <span class="trf trfsc">scale</span>transform
+        </div>
+        <h2>회전</h2>
+        <div class="outer">
+            <span class="trf trfro">rotate</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfrox">rotate</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfroy">rotate</span>transform
+        </div>
+        <h2>기울기</h2>
+        <div class="outer">
+            <span class="trf trfsk">skew</span>transform
+        </div>
+</body>
+
+</html>

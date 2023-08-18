@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p {
+            border: 1px solid rebeccapurple;
+        }
+        .tal {
+            text-align: left;
+        }
+        .tar {
+            text-align: right;
+        }
+        .tac {
+            text-align: center;
+        }
+        .taj {
+            text-align: justify; /* 양쪽맞춤 */
+            word-break: break-all; /* 영문도 한글ㅊ럼 글자별로 줄바꿈 */
+        }
+        img {
+            width: 300px;
+        }
+        .taimg {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>텍스트 수평 정렬</h1>
+    <p class="tal">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다. </p>
+    <p class="tar">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
+    <p class="tac">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
+    <p class="taj">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatum magni fuga. Mollitia alias aut vero. Nesciunt dolore impedit reprehenderit dolor quas blanditiis aliquid praesentium, voluptate sed rerum facilis porro!
+    </p>
+    <p class="taimg"> 
+        <img src="../../temp/main2.webp" alt="">
+    </p>
+    <!--
+        css justify같은 영문자는 단어별로 자동줄바꿈됨
+        한글은 글자별로 자동줄바꿈됨 
+    -->
+</body>
+</html>

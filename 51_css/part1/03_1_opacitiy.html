@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불투명도</title>
+    <style>
+        /* 
+            소수점앞0 생략가능 
+            opacity: 배경,테두리까지도 투명적용
+            alpha: 글자색만 
+        */
+
+        .opa1 {
+            opacity: .5;
+        }
+        .opa2 {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        p {
+            background-color: rebeccapurple;
+            border: 10px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>불투명도(opacity)</h1>
+    <p class="opa1">opacity는 불투명도로 0-1사이값임</p>
+    <p class="opa2">rgba(r,g,b,a)에서 alpha는 투명도가리킴 </p>
+    <p>이 두개값은 차이가있음</p>
+</body>
+</html>

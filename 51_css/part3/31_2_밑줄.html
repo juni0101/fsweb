@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:nth-of-type(1) { 
+            text-decoration: overline 1px; 
+            text-underline-offset: -20px; /* 이건 글자에만적용되는것 */
+        } 
+        p:nth-of-type(2){  
+            display: inline-block;  
+            border-bottom: 1px solid black;  
+            padding-bottom: 10px; 
+        }  
+    </style> 
+</head> 
+<body> 
+    <p>text-decoration</p>  
+    <p>border-bottom</p>  
+    <p><ins>콘텐츠삽입용임 이건 </ins></p> 
+    <p><del>콘텐츠 삭제용임 </del></p> 
+</body>
+</html>

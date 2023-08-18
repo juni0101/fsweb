@@ -1,12 +1,16 @@
-body {
+body ,html{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 8px 12px;
+
+    background-color: rgba(255, 255, 255, 0.76); 
 }
 a {
     text-decoration: none;
@@ -44,24 +48,33 @@ a {
     padding: 8px;
 } 
 
-.main {
-    width: 1635;
-    height: 800px;
-    
-}
-
-.main .main_1{
+.main_1 {
     background-image: url(../temp/main_1.PNG);
-    width: 1903px;
-    height: 585px;
-    position: 200px 300px;
-    margin: auto;
-    display: block;
+    display: inline-block;
+    background-position: 132px -1px; 
+    width: 100%;
+    height: 581px;
 }
-.main .main_2{
-    width: 1903px;
-    height: 585px;
+.main_2 {
+    display: inline-block;
+    background-image: url(../temp/main2.webp);
+    width: 1000px;
+    height: 561px;
+    background-position: -275px -4px;
 }
-.main .main_2_img {
-    
+.main_2_text {
+    position: relative;
+    top: 31px;
+    right: -1114px;
+}
+.main_2 h2 {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.main_3 {
+    display: flex;
+}
+.main_3 img {
+    width: 475px;
+    height: 356px;
 }

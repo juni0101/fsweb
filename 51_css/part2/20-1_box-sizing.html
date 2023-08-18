@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+
+
+        /*  box-sizing: border-box는 width,height의 border, padding이 
+            안쪽으로 지정됨, 
+            그래서 div3는 border,padding이 있음에도 아무것도 적용안된 div0과 크기똑같음
+            이거쓰면 계산필요없이 크기맞게 맞춰줌
+
+            부모 자식 형제
+            선택자 선택자
+            선택자> 선택자
+            선택자+ 선택자
+            선택자~ 선택자
+         */
+        .div0{
+            width: 500px;
+            height: 150px;
+            background-color: yellow;
+        }
+
+        .div0 ~ div {  /* div0아래로 div 형제e들 다  */
+            background: yellow;
+            width: 500px;
+            height: 150px;
+            padding: 20px;
+            border: 10px solid rgb(178, 253, 58);
+        }
+
+        /*  width:560px
+            = width + padding*2 + border*2
+            = 500 + 20*2 + 10*2 
+            height:210px;
+            = height + padding*2 + border*2
+            = 150 + 20*2 + 10*2 
+        */
+        /* (1) .div1의 box-sizing은 content-box로 지정하시오. */
+        .div1{
+            box-sizing: content-box; /* 이게 기본값이라 하나마나 */
+            margin: 5px;
+        }
+
+
+        /* width:500px; height:150px; */
+        /* width와 height에 border와 padding 크기가 포함된다. */
+        /* (2) .div2의 box-sizing은 border-box로 지정하시오. */
+        .div2{
+            box-sizing: border-box; /* 작아짐,  */
+        }
+
+
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>박스 모델</h1>
+    <div class="div0">박스0</div>
+    <div class="div1">박스1: content-box</div>
+    <hr>
+    <div class="div2">박스2: border-box</div>
+</body>
+
+</html>

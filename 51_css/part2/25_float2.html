@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            1. clear는 float 처리한요소의 아래(형제)요소에 대해서 
+                float이 적용되지않도록 제거
+                - 블록레벨요소를 가로배치
+                - flaot: left; -> 왼-오 배치
+                - float: right; -> 오-왼 배치
+                - clear: left; 
+                - clear: right; 
+                - clear: both; 
+            2. float은 공간부족하면 아래로 내려감 
+        */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul {
+            width: 1600px;
+            height: 480px;
+            margin: 0;
+            padding: 0;
+            background-color: yellow;
+            /* overflow: hidden; */
+            
+        }
+
+        li {
+            width: 360px;;
+            height: 240px;;
+            float: left;
+            text-align: center;
+            list-style: none;
+            margin: 8px;
+        }
+
+
+        /* (1) .div1의 float를 left로 지정하시오. */
+        .div1 { 
+            background:lightblue;
+            /* width의 기본값이 콘텐츠크기로 바뀐다. */ 
+        }   
+
+        /* (2) .div2의 float를 right로 지정하시오. */
+        .div2 {
+            background: lightcoral;
+        }
+
+        /* (3) .div3의 clear 속성을 both로 지정하시오. */
+        .div3 {
+            background: lightgoldenrodyellow;
+            /* 상위 요소의 float 효과를 제거 */
+        }
+        .div4 {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>플로트</h1>
+    <ul class="clearfix" >
+        <li class="div1">박스1</li>
+        <li class="div2">박스2</li>
+        <li class="div3">박스3</li>
+        <li class="div4">박스4</li>
+        <li class="div4">박스5</li>
+        <li class="div3">박스6</li>
+        <li class="div2">박스7</li>
+        <li class="div1">박스8</li>
+    </ul>
+</body>
+</html>

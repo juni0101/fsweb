@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp 
+            1.  HEX: 16진수 -> 0~9, A~F 
+            #ff0000 또는 #f00  
+            #000 또는 #fff 
+            2. #RRGGBB 또는 #RGB  
+            3. rgb(0~255, 0~255, 0~255) : r레드 g그린 b블루 
+                rgb(255, 0, 0) rgb(0,255,0) rgb(0,0,255) 
+            4. rgba(0~255, 0~255, 0~255, 0~1) 마지막 0-1은 투명도 
+                rgba(0,0,0,1) ~ rgb(255,255,255,1) 
+            5.  hsl(0~359, 0~100%, 0~100%)  hue색상, saturation채도, lightness밝기
+                hsl(0,0%,0%)~ hsl(359, 100%, 100%) 
+                hsla(0~359, 0~100%, 0~100%, 0~1) 
+                hsl(0,0%,0%,0.1)~ hsl(359, 100%, 100%)  
+            */
+            .cName{color: red;} 
+            #cHex{color: #ff0000;} 
+            p {color: green;} 
+            .cRgba, .cHsl, .cHsla {color: blue;} 
+            .cHsl{background-color: hsl(0, 50%, 50%)}
+            .cRgba{background-color: hsl(100, 50%, 50%, 0.5);}
+    </style> 
+</head> 
+<body> 
+    <h1>CSS 색상 값</h1> 
+    <p class="cName">red</p> 
+    <p id="cHex">#ff0000</p> 
+    <p class="cRgb">rgb(255, 0, 0)</p> 
+    <p class="cRgba">rgba(255, 0, 0, 0.5)</p> 
+    <p class="cHsl">hsl(0, 100%, 50%)</p> 
+    <p class="cHsla">hsla(0, 100%, 50%, 0.5)</p> 
+</body>
+</html>

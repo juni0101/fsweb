@@ -1,0 +1,190 @@
+@charset "utf-8"; /* 이건 utf-8방식으로 변형하겠다는뜻 (이해안됨) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap'); 
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html {
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+.main a {
+    font-size: 1.3rem;
+    color: #333;
+}
+.sub a {
+    font-size: 1.8rem;
+}
+
+li {
+    list-style: none;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#gnb {
+    float: right;
+    margin-top: 10px;
+}
+#gnb .main li {
+    display: inline-block;
+    width: 150px;
+    /* margin: 0 30px; */
+}
+.logo {
+    float: left;
+}
+
+
+
+
+header {
+    height: 100px;
+    padding: 30px;
+}
+/* navigation */
+#gnb .sub{
+    display: none;
+}
+
+/* slide */
+#slide {
+    height: 300px;
+}
+#slide li {
+    position: absolute;
+}
+#slide img {
+    box-shadow: 0 0px  5px gray;
+}
+
+/* modal */
+#modal {
+    display: none;
+}
+
+/* contents */
+#contents {
+    height: 200px;
+    padding: 5px 0;
+    /* text-align: end; */
+}
+#contents > div {
+    float: left;
+    /* 1200 - 424 / 2 */
+    width:380px;
+}
+
+ /* 탭 */
+/* 버튼 */
+#contents #tabs {
+    width: 424px;
+}
+input {
+    display: none;
+}
+#tabs input:checked + div {
+    display: block;
+}
+#tabs  {
+    /* float:left; */
+    display: inline-block;
+}
+
+/* 내용 공통 */
+#tabs div {
+    display: none;
+    position: absolute;
+    width: 424px;
+    height: 160px;} 
+label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #008657;
+    color: white;
+}
+
+/* 공지사항 */
+#tabs1 {
+    border: 1px solid #ccc;
+}
+#tabs1 li {
+    line-height: 2;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+#tabs1 span {
+    display: inline-block;
+    width: 334px;
+    padding-left: 10px;
+}
+
+/* 갤러리 */
+#tabs #tabs2 {
+    /* box-sizing: border-box; */
+    /* width: calc(400px - 32px); */
+    padding: 20px 16px;
+    border: 1px solid #ccc;
+}
+#tabs2 a {
+    display: inline-block;
+    margin: 0 4px;
+}
+#tabs2 img {
+    border: 1px solid #ccc;
+
+}
+
+/* banner */
+.banner {
+    margin-left: 8px;
+}
+
+/* shortcut */
+#contents .shortcut {
+    float: right;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: rgba(223, 223, 200, 0.89);
+    padding: 30px;
+} 
+footer .blogo {
+    opacity: .3;
+}
+.copy {
+    padding-left: 8px;
+    padding-top: 10px;
+    opacity: .6;
+}
+.copy p:last-of-type{
+    font-size: 1rem;
+}
+.sns ul{
+    display: flex;
+    padding: 10px 20px 0 0;
+}
+.sns ul li {
+    padding-left: 20px;
+}
+#youtube {
+    padding-top: 3px;
+}

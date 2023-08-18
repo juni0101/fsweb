@@ -1,0 +1,198 @@
+@charset "utf-8"; /* 이건 utf-8방식으로 변형하겠다는뜻*/
+@import url(reset.css);
+@import url(typo.css);
+
+@font-face {
+    font-family: 'IAMAPLAYER';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+h2{text-align: center;}
+h2 + p {text-align: center;}
+.counter {background-color: #616161;}
+.parallax {text-align:center;}
+.parallax span {
+    font-size: 3.6rem;
+    letter-spacing: 10px;
+    line-height: 400px;
+    color: white;
+}
+.skill h3 {
+    text-align: center;
+}
+
+/* 페럴렉스 스크롤링 */
+.parallax {
+    background: no-repeat center/cover fixed; 
+    height: 400px;
+}
+
+
+
+#sec1 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -86px;
+    margin-top: -16px;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+footer {
+    background-color: gray;
+}
+
+
+/* header */
+header {
+    z-index: 1;
+    width: 100%;
+    height: 44px;
+    padding: 10px 0;
+    position: fixed;
+    box-shadow: 0 2px 5px 0 rgba(128, 128, 128, 0.555);
+    background-color: #fff;
+}
+#gnb li {
+    float: left;
+}
+#gnb a {
+    padding: 8px 16px;
+}
+#gnb i {
+    padding-right: 3px;
+}
+#gnb #glass {
+    float: right;
+    padding: 2px 16px;
+}
+
+
+/* sec1:home */
+#sec1 {
+    height: 100vh;
+    background-image: url(../im_img/bg1.png);
+    background-position: -4px -450px;
+
+}
+#sec1 h1 {
+    padding: 12px 24px;
+    letter-spacing: 5px;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+    font-family: 'IAMAPLAYER';
+}
+
+/* sec2 :about*/
+#sec2 {
+    color: #777777;
+}
+#sec2 h2, #em {
+    text-align: center;
+}
+#sec2 h2 {
+    margin: 10px 0;
+    padding-top: 64px;
+    font-size: 24px;
+}
+#sec2 #em {
+    margin: 15px 0;
+}
+
+/* 이미지 */
+.basic p{
+    margin: 15px 0;
+    padding: 12px 24px;
+    box-sizing: content-box;
+}
+.my_pic {
+    width: 425px;
+    float: left;
+    padding: 12px 24px;
+    margin-right: 80px;
+}
+.my_pic i {
+    padding-right: 15px;
+}
+
+#name {
+    text-align: center;
+}
+.basic {
+    float: left;
+}
+.container .skill h3{
+    font-size: 18px;
+    margin: 18px 0;
+    padding: 16px 0;
+}  
+
+/* 스킬: 프로그래스바 */
+/*카운터 */
+.counter {
+    padding: 32px 0;
+}
+.counter li{
+    float: left;
+    width: 25%;
+    margin: 16px 0;
+}
+.counter span {
+    display: block;
+    font-size: 2.4rem;
+}
+
+
+
+/* sec3 :portfolio */
+#sec3 .parallax {
+    background-image: url(../im_img/bg3.png);
+}
+.pf li {
+    float: left;
+    width: 225px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.pf li:nth-of-type(4n){
+    margin: 0;
+}
+
+
+
+/* sec4: contect */
+#sec4 .container {
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+}
+#sec4 .parallax {
+    background-image: url(../im_img/bg2.png);
+}
+.map img {
+    width: 284px;
+    border-radius: 6px;
+}
+.map {
+    float: left;
+}
+.right {
+    float: right;
+    padding-left: 10px;
+}
+input {
+    padding: 8px; 
+}
+input:nth-of-type(1){float:left; width:49%;}
+input:nth-of-type(2){float:right; width:49%;}
+input:nth-of-type(3){float: left ;display: block;  width: 100%; margin-top: 8px;}
+
+/* footer */ 
+footer {
+    width: 100%;
+}

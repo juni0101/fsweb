@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        /* reset(초기화) */
+        * {
+            box-sizing: border-box;
+        }
+        body,html {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 탭 */
+        /* 버튼 */
+        input {
+            display: none;
+        }
+        #tabs input:checked + div {
+            display: block;
+        }
+        #tabs  {
+            /* float:left; */
+            display: inline-block;
+            background-color: lightgreen;
+            padding: 8px 16px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 내용 공통 */
+        #tabs div {
+            display: none;
+            position: absolute;
+            top: 40px;
+            width: 400px;
+            height: 160px;
+        }
+
+        /* 공지사항 */
+        #tab1 {
+            background-color: lightblue;
+        }
+
+        #tabs1 li {
+            border-bottom: 1px solid red;
+            padding-bottom: 8px;
+            margin: 8px 0;
+        }
+
+        #tabs1 span {
+            display: inline-block;
+            width: 310px;
+        }
+
+        /* 갤러리 */
+        #tabs #tabs2 {
+            /* box-sizing: border-box; */
+            /* width: calc(400px - 32px); */
+            background-color: lightcoral;
+            padding: 24px 16px;
+        }
+        #tabs2 a {
+            margin: 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 탭 -->
+    <div id="tabs">
+        <!-- 공지사항 -->
+        <label for="btn1">공지사항</label>
+        <input type="radio" id="btn1" name="btn" checked>
+        <div id="tabs1">
+            <ul>
+                <li><a href=""><span>떡볶이양념 최초 HACCP 인증</span>2023.01.12</a></li>
+                <li><a href=""><span>떡볶이 프랜차이즈 업계 위생안전시설</span>2023.02.12</a></li>
+                <li><a href=""><span>체계적인 물류관리시스템</span>2023.02.12</a></li>
+                <li><a href=""><span>세계로 나아가는 신전떡볶이</span>2023.03.12</a></li>
+            </ul>
+        </div>
+        <!-- 갤러리 -->
+        <label for="btn2">갤러리</label>
+        <input type="radio" id="btn2" name="btn">
+
+        <div id="tabs2">
+            <a href="#"><img src="../../70_project/images/sinjun/menu1.png" alt=""></a>
+            <a href="#"><img src="../../70_project/images/sinjun/menu2.png" alt=""></a>
+            <a href="#"><img src="../../70_project/images/sinjun/menu3.png" alt=""></a>
+        </div>
+    </div> <!-- tabs -->
+</body>
+
+</html>
+
+

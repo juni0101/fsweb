@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스정중앙 배치</title>
+    <style>
+
+        /* 
+            1. text를 창가운데에 두긴했는데 그림가운데에 배치하고싶다면?
+            position relative 사용
+
+            2. 가로중앙배치
+                블록레벨요소 : margin auto;
+                인라인요소 : text-align : center;
+                    이미지는 인라인요소따라서 텍스트처럼 가운데배치 가능
+
+            3. 창 줄일때 이미지 작아지게하는건 반응형임 
+        */
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        #sec1 {
+            position: relative; 
+        }
+    
+        header {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            padding: 0px 60px;
+            box-shadow: 0 2px 10px rgba(128, 128, 128, 0.623);
+            letter-spacing: 3px;
+        }
+        .nav ul {
+            display: flex;
+            list-style: none;   
+        }
+        .nav li {
+            padding: 8px 24px;
+            font-size: 20px;
+        }
+        .img {
+            width: 1500px;
+            height: 800px;
+            text-align: center;
+        }
+         .text {  
+            position: absolute; 
+            top: 50%;   /* width height를 알아야 이걸쓸수있음  */ 
+            left: 50%;   
+            transform: translate(-50%, -50%); 
+            color: white;
+            font-size: 40px;
+        }
+        .text b {
+            background-color: rgba(0, 0, 0, 0.692);
+            padding: 8px 16px;
+            margin-right: 20px;
+            letter-spacing: 3px;
+        }
+        .text span {
+            letter-spacing: 7px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>sinjun tteokbokki</h2>
+        <div class="nav">   
+            <ul>
+                <li>project</li>
+                <li>project</li>
+                <li>project</li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <div class="img"><img src="../../70_project/images/br_img/Architecture.jpg" alt=""></div>
+        <div class="text">
+            <b>sinjun</b>
+            <span>tteokbokki</span>
+        </div>
+    </div>
+</body>
+</html>

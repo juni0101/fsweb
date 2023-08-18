@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            인라인요소는 width와 height를 지정할수없음 
+            span은 display안쓰면 width적용할수없음 왜? = 인라인요소기때문
+
+        */
+        ul {
+            width: 400px;
+            margin: 0;
+            padding-left: 0;
+        }
+        li {
+            border-bottom: 1px solid black;
+            margin: 12px 0;
+            padding: 0 0  8px 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            display: inline-block; /* a는 인라인인데 block으로 바꾼것 */
+        }
+        span {
+            display: inline-block;
+            width: 310px;
+        }
+        #hi {
+            margin: 20px;
+            width: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href=""><span>맞춤 플랜을 제안하는 크리에이티브..</span> 2023.01.01</a></li>
+        <li><a href=""><span>JUST 쇼핑몰과 함께 하실 가슴 따뜻한..</span>2023.01.01</a></li>
+        <li><a href=""><span>코리아웨딩페어 결혼박람회가 열립니다.</span>2023.01.01</a></li>
+        <li><a href=""><span>마진없이 아낌없이 드리는 마지막 찬스!</span>2023.01.01</a></li>
+        
+
+    </ul>
+    <span id="hi">안녕</span>
+</body>
+</html>

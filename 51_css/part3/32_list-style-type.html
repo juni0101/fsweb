@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            목록의 마커 
+            list-style-type    마커의 유형, 거의 이것만쓴다고 보면됨
+                <ul>값: disc,circle,square    (까만동그라미, ) 
+                <ol>값: decimal     숫자
+            list-style-image    이미지 마커;
+            list-style-position     위치;
+
+            속기형 
+            list-stle: type image position; 
+
+            list-style-image: url ('경로/이미지파일')
+            list-style-position: 위치 
+                값: outside(기본값), inside를하면 li안쪽으로 넣을수있음 
+            
+
+            비트맵,백터차이 : 비트맵은 이미지넣어서 깨지고 백터는안깨짐 
+            비트맵 :png,jpg,gif     확대할때 깨짐o 
+            백터 : svg              확대할때 깨짐x  
+            스케일: 크기를 줄이고늘린다는뜻 
+        */
+        
+        
+        /* <ul>에 사용 */ 
+        /* disc */ 
+            .lst1  li{
+                list-style: disc;
+                list-style-image: url(../star.png); /* 사이즈조정기능x  */
+                border: 1px solid red;
+                list-style-position: inside;
+                /* list-style : disc    url()   inside;
+                        style과 이미지가같이있다면 이미지가 우선순위높음  */
+            }
+
+        /* circle */ 
+            .lst2 {
+                list-style: circle;
+            }
+        /* square */ 
+            .lst3 {
+                list-style: square;
+            }
+        /* <ul>,<ol>에 모두 사용 - 항목 마커 제거 */ 
+            .lst10{
+                list-style: none; 
+            }
+        /* <ol>에 사용 */ 
+        /* decimal */ 
+        .lst4 {
+            list-style: decimal;
+        }
+        /* decimal-leading-zero */ 
+        .lst5 {
+            list-style: decimal-leading-zero;
+        }
+        /* upper-alpha */
+        .lst6 {
+            list-style: upper-alpha;
+        }
+        /* lower-alpha */
+        .lst7 {
+            list-style: lower-alpha;
+        }
+        /* upper-roman */
+        .lst8 {
+            list-style: upper-roman;
+        }
+        /* lower-roman */
+        .lst9 {
+            list-style: lower-roman;
+        }
+        .lst11 {
+            list-style: lower-greek;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 목록 관련 속성</h1>
+    <h2>순서 없는 목록</h2>
+    <ul class="lst1">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+    <ul class="lst2">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+    <ul class="lst3">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+    <ul class="lst10">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ul>
+
+    <h2>순서 있는 목록</h2>
+    <ol class="lst4">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+    <ol class="lst5">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+    <ol class="lst6">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+    <ol class="lst7">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+    <ol class="lst8">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+    <ol class="lst9">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+    <ol class="lst11">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+</body>
+
+</html>

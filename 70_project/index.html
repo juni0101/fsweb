@@ -1,101 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>강주은</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/3cb34be75b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 헤더 -->
     <header>
-        <nav class="gnb">내비게이션</nav>
+        <nav id="gnb">
+            <ul class="clearfix">
+                <li><a href="#sec1">Home</a></li>
+                <li><a href="#sec2"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a href="#sec3"><i class="fa-solid fa-table-cells"></i>Portfolio</a></li>
+                <li><a href="#sec4"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+                <li id="glass"><i class="fa-solid fa-magnifying-glass"></i></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="sec1" class="sec">
+    <section id="sec1" class="sec parallax" > 
         <h1>Kang Ju Eun</h1>
-    </section>
+    </section> <!-- sec1 -->
 
     <section id="sec2" class="sec">
         <h2>About Me</h2>
-        <p><em>I like coding</em></p>
-        <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="my_pic">
-            <p><b>홍길동</b></p>
-            <img src="../im/PhotoofMe.jpg" alt="내사진">
-        </div>
-        <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- 스킬 -->
-        <h3>Im really good at:</h3>
-        <p>Web Planning</p>
-        <div><span>90%</span></div>
-        <p>Frontend Programming</p>
-        <div><span>90%</span></div>
-        <p>Backend Programming</p>
-        <div><span>90%</span></div>
+        <p id="em"><em>I like coding</em></p>
+        <div class="container">
+            <div class= "basic" class="clearfix">
+                <p>We have 성격위주프로필 a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="my_pic">
+                        <p id="name"><i class="fa-solid fa-user"></i><b>강주은</b></p>
+                        <img src="./im_img/my.jpg" alt="내사진">
+                    </div>
+                <p id="p3">기업위주 스킬 to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div><!-- basic -->
+
+            <!-- 스킬 -->
+            <div class="skill">
+                <h3>Im really good at:</h3> 
+                <p>Web Planning</p>
+                <div><span>90%</span></div>
+                <p>Frontend Programming</p>
+                <div><span>90%</span></div>
+                <p>Backend Programming</p>
+                <div><span>90%</span></div>
+            </div><!-- .skill -->
+        </div><!-- .container -->
+
         <!-- 카운터 -->
         <div class="counter">
-            <ul>
+            <ul class="clearfix">
                 <li><span>16+</span>Total Pages</li>
-                <li><span>5+</span>Web Projects</li>
-                <li><span>3+</span>App Projects</li>
-                <li><span>16+</span>National Technical Qualification</li>
+                <li><span>4+</span>Web Projects</li>
+                <li><span>2+</span>App Projects</li>
+                <li><span>2+</span>National Technical Qualification</li>
             </ul>
         </div>
-    </section>
+    </section> <!-- sec2 -->
 
     <section id="sec3" class="sec"> 
         <div>
-            <span>portfolia</span>
+            <div class="parallax"><span>portfolio</span></div>
         </div>  
         <h2>My Work</h2>
         <p>
             <em>Here are some of my latest lorem work ipsum tipsum.<br>
-                Click on the images to make them bigger</em>
+            Click on the images to make them bigger
+            <em>
         </p>
-        <div class="pf">
-            <ul>
-                <li><img src="../im/Bearcloseup.jpg" alt="1"></li>
-                <li><img src="../im/Coffeebeans.jpg" alt="1"></li>
-                <li><img src="../im/Emptyghosttrain.jpg" alt="1"></li>
-                <li><img src="../im/map.jpg" alt="1"></li>
-                <li><img src="../im/Mybelovedtypewriter.jpg" alt="1"></li>
-                <li><img src="../im/Mybelovedtypewriter.jpg" alt="1"></li>
-                <li><img src="../im/PhotoofMe.jpg" alt="1"></li>
-                <li><img src="../im/Quietocean.jpg" alt="1"></li>
-            </ul>
-        </div>
+        <div class="container" class="clearfix">
+            <div class="pf">
+                <ul class="clearfix">
+                    <li><img src="./im_img/pf1.png" alt="1"></li>
+                    <li><img src="./im_img/pf2.png" alt="1"></li>
+                    <li><img src="./im_img/pf3.png" alt="1"></li>
+                    <li><img src="./im_img/pf4.png" alt="1"></li>
+                    <li><img src="./im_img/pf5.png" alt="1"></li>
+                    <li><img src="./im_img/pf6.png" alt="1"></li>
+                    <li><img src="./im_img/pf7.png" alt="1"></li>
+                    <li><img src="./im_img/pf8.png" alt="1"></li>
+                </ul>
+            </div>
+        </div> <!-- .container -->
         <button>Load More</button>
-    </section>
+    </section> <!-- sec3 -->
 
 
 
     <section id="sec4" class="sec">
-    <div><span>Contact</span></div>
-    <div class="work">
+        <div>
+            <div class="parallax"><span>Contact</span></div>
+        </div>
+    <div class="container">
         <h3>Where I work</h3>
         <em>I'd love your feedback!</em>
-        <div class="map">
-            <img src="../im/map.jpg" alt="">
-            <div class="addr">
-                <li><i></i>Chicago, US</li><br>
-                <li><i></i> Phone: +00 151515</li><br>
-                <li><i></i> Email: mail@mail.com</li><br>
-            </div>
-            <p>Swing by for a cup of , or leave me a note:</p> 
-            <form action="main.jpg"> 
-                <input type="text" placeholder="Name"> 
-                <input type="email" placeholder="Email"> 
-                <input type="text" placeholder="Message"> 
-            </form> 
-            <button>Send Message</button> 
+        <div class="work">
+            <div class="map">
+                <img src="./im_img/map.jpg" alt="">
+            </div><!-- class = map -->
+                <div class="right">
+                    <div class="addr">
+                        <li><i></i>경기도 시흥시</li><br>
+                        <li><i></i> Phone: 010-2506-3146</li><br>
+                        <li><i></i> Email: jupia3346@naver.com</li><br>
+                        <p>Swing by for a cup of , or leave me a note:</p>
+                    </div>
+                    <form action="main.jpg">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Message">
+                        <button>Send Message</button>
+                    </form>
+                </div>
         </div> <!-- class = map -->
-    </div>
-    </section>
+    </div>  <!-- container -->
+    </section> <!-- sec4 -->
 
     <footer>
         <div class="tbtn">To the Top</div> 
-        <div class="sns"></div> 
+        <div class="sns">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div> 
         <p class="copy">copyright 2023 KJE. All rights reserved.</p> 
     </footer> 
 </body> 

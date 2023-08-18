@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            1. float 요소에 플롯을 적용했을때
+                - 부모의 높이가 0;
+                - 하위요소가 float 요소의아래로 들어감, 해결방안이 밑에 1-4
+                처리한요소는 공중에뜸 
+                자식을 float처리하면 부모의 height=0 
+                (해결방안)
+                1) ::after, ::before + clear::both
+                2)overflow:hedden
+                3)clear: both
+                4) height
+
+            after, before을 사용하기위해서는 반드시 사용할것
+                content: '';
+
+            float, clear는 블록레벨 요소에만 적용됨 
+
+            1,2둘다 같은방법임, 2가 간편하지만 1번을쓰는이유는? 
+                =2가 상황에따라 반응을 안보일수있기때문에 
+        */
+
+
+        /* (1) 본문의 두 번째 p 요소와 세 번째 p 요소에 ::after 선택자를 사용하여 clear:both; 처리하시오. */ 
+        .img2::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+      
+
+
+        /* (2) 본문의 세 번째  p 요소에 overflow를 hidden 처리하시오. */
+        .img3 {
+            display: block;
+        }
+        p {
+            border: 1px solid red;
+        }
+
+
+        img {width:200px;}
+        .img1 {float:none;}
+        .img2 {float:left; margin-right: 10px;}
+        .img3 {float:right; margin-left: 10px;} 
+    </style> 
+</head>
+<body>
+    <h1>이미지와 단락</h1>
+    <hr>
+    <p><img class="img1" src="../../assets/images/1.jpg" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+    <p><img class="img2" src="../../assets/images/1.jpg" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+    
+    <p><img class="img3" src="../../assets/images/1.jpg" alt="집">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+</body>
+</html>

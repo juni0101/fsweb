@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .parent {
+            position: relative;
+            height:500px;
+            background-color: yellow;
+        }
+
+        /* 
+            1. 빨간색이 노란색정중앙에는 배치되지않고 화면정중앙에배치됨 
+            이유가뭘까?
+
+            자식이 absolute이면 부모높이가 자식크기를 갖지못함 
+
+            2. 요소를 absolute로 설정하면 
+            width ,height가 콘텐츠크기로됨
+            그래서 width,height를 설정해주지않으면  0 , 0이되기때문에 화면에서 안보임 
+
+            3. absolute의 left, top의 기준은?
+            position:relative만 기준이 되는게아닌, absolute,fixed도 기준이 될수있음 
+        */
+
+        /* .parent의 자식 div를 부모를 기준으로 정중앙 배치하시오. */
+        .parent div {
+            width:200px;
+            /* height:50px; */
+            background-color: red;
+            /* 마진을 width의 절반의 음수 값으로 지정한다. */ 
+                margin-left: -100px;
+            /* 마진을 height의 절반의 음수 값으로 지정한다. */ 
+                margin-top: 100px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+            /* 텍스트 중앙배치  */
+            text-align: center ;
+            line-height: 50px;
+            margin: 0 auto;
+        }
+
+    </style> 
+</head>
+<body>
+    <h1>부모 요소에 자식 요소의 정중앙 배치</h1>
+    <div class="parent">
+        <div>정중앙 배치</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            1. html 특수문자
+                : &lt;<   &gt;>   &nbsp;한칸공백   &copy 저작권 
+                한글자음 + 한자키
+                이모티콘: 윈도우 + 점 
+            2. ::after ::before은 내비게이션올렸을때 생기는 바에 이용 
+            3. ::before ~ 시작 태그 바로 뒤에 내용 삽입
+            4. ::after ~ 종료 태그 바로 앞에 내용 삽입
+            5. content 속성과 함께 사용됨 
+        */
+
+
+        /* p 시작 태그 뒤에 ♥를 가상으로 삽입해 주세요. */
+        p::before{
+            content: '★';
+        }
+
+        /* p 종료 태그 앞에 🎄를 가상으로 삽입해 주세요. */
+        p::after{
+            content: '🎄༼ つ ◕_◕ ༽つ';
+        }
+    </style>
+</head>
+
+<body>
+    <h1>의사(가상)요소 선택자</h1>
+    <h2>::after(콘텐츠 이후), ::before(콘텐츠 이전)</h2>
+    <p>내용</p>
+</body>
+
+</html>

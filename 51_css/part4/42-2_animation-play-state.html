@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            animation-fill-mode 
+                값: none 
+                    forwards          100%유지, 반복횟수는1로지정해야함, 
+                                      마지막상태를 유지 -> 해태제과 구름,텍스트 
+                    backwards         0% 위치에서 시작  
+                    both        
+            animation-play-state  
+                값: running(움직임), paused(일시정지) 
+        */
+        div {
+            position: relative;
+            width:100px;
+            height:100px;
+            background: yellow;
+            margin:20px;
+            left:0px; top:0px;
+        }
+
+        .wrap {
+            width:300px;
+            border:1px solid red;
+            background: transparent;
+            margin-bottom: 100px;
+        }
+
+        /* 애니메이션 실행 여부 */
+        .wrap:hover .anim {
+            animation-play-state: running;
+        }
+        .anim {
+            animation: rotate 1s infinite linear paused;
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0);}
+            100% {transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <h2>animation-play-state</h2>
+    <div class="wrap">
+        <div class="anim">infinite</div>
+    </div>
+</body>
+</html>

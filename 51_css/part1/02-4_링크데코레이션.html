@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            1. 의사(Pseudo, 가상, 유사) 클래스
+
+            2. a태그의 색깔
+                a:link - 방문전: 파란색
+                a:visited - 방문후: 보라색
+                선택자:hover - 올린경우: 파란색
+                선택자:active - 눌린경우: 빨간색
+            네개중 hover만 거의사용
+
+            a:hover
+            a:active
+ 
+            4개 선택자를 함께사용할경우 
+            :link -> :visited -> :hover -> :active 순으로 기록해야한다.
+        */
+
+        /* a:link{
+            color: red; 
+        }
+        a:visited {
+            color: orange; 
+        }
+        a:hover{
+            color: yellow; 
+        }
+        a:active {
+            color: green; 
+        } */
+        a {
+            color: rgb(184, 140, 140);
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    </style> 
+</head> 
+<body> 
+    <h1>의사 클래스 선택자</h1> 
+    <a href="#">링크1</a> 
+    <a href="#">링크2</a> 
+</body>
+</html>

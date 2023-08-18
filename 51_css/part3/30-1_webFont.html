@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lunasima&family=Noto+Sans:wght@200&display=swap" rel="stylesheet">
+    <style>
+        /* 
+            <폰트쓰는법>
+            1. 다폰트
+            2. 시도별무료폰트   서울시,제주도,포천시
+
+
+            <엣폰트페이스라고 읽음>
+            @font-face {
+                font-family: 글꼴이름은 내가 정하는거임 ex)junis
+                src: url('경로/글꼴파일');
+            }
+            font-face는 글꼴을사용할선택자보다 위에 기록해야함
+            아래 주소로 표현시 html문서를 서버에 올려서 확인
+            src: url('http://id.dothome.co.kr/font/SeoulNamsanL.ttf');
+            src: url('/font/SeoulNamsanL.ttf');            
+            
+
+            CDN(Content Delivery Network, 콘텐츠 전송 네트워크)은 지리적으로 분산된 여러 개의 서버를 통해 웹 콘텐츠를 사용자와 가까운 곳에서 전송함으로써 전송 속도를 높입니다.
+            1. 구글글꼴 -다운없이 링크만걸고 사용가능  https://fonts.google.com/
+            2. 눈누 https://noonnu.cc/font_page/1228 
+         */
+
+
+
+        /* .ff1에 구글 Noto Sans KR 폰트를 CDN 방식으로 지정해 보세요.
+            (이건 사이트에서 링크긁어와서 하는방법) */
+            @font-face {
+            font-family: 'iceSotong-Rg';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceSotong-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'Cafe24Supermagic-Bold-v1.0';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            }
+            .ff1 {
+                font-family: 'Cafe24Supermagic-Bold-v1.0';
+            }
+            .ff2 {
+                font-family: 'iceSotong-Rg';
+            } 
+        /* .ff2에 서울 SeoulNamsanL 폰트를 @font-face 규칙을 사용하여 지정해 보세요. 
+            (이건 저장된 글꼴을 불러와서 쓰는방법)*/
+            @font-face {
+                font-family: 'junis';
+                src: url(../../50_html/Super\ Boys.ttf);
+            }
+            .ff3 {
+                font-family: 'junis';
+            }
+            /* 구글링크로 하는법 */
+            .ff4 {
+                font-family: 'Lunasima', sans-serif;
+                font-family: 'Noto Sans', sans-serif;
+            }
+    </style>
+</head>
+
+<body>
+    <h1>웹 폰트</h1>
+    <p>구글 웹 폰트(Google Web Font) 지정 안함.</p>
+    <p class="ff1">구글 웹 폰트(Google Web Font) 지정 했음.</p>
+    <p>서울 서체(Seoul Font) 지정 안함.</p>
+    <p class="ff2">서울 서체(Seoul Font) 지정 했음.</p> 
+    <p>서울 서체(Seoul Font) 지정 안함.</p>
+    <p class="ff3">서울 서체(Seoul Font) 지정 했음.</p> 
+    <p>서울 서체(Seoul Font) 지정 안함.</p>
+    <p class="ff4">서울 서체(Seoul Font) 지정 했음.</p> 
+</body>
+
+</html>

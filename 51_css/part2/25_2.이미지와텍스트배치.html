@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 960px;
+            margin: auto;   
+            /* 콘텐츠 가운데로, 가로크기를 제외한 나머지공간을 균등분할함 */
+        }
+
+        p ::after{
+        /* overflow: hidden; */ 
+        content: ''; 
+        display: block; 
+        clear: both;  
+        }
+        img { 
+            float: left;  
+            margin-right: 64px;
+        } 
+        #p1 {
+            margin-bottom: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur pariatur dolores cupiditate illo porro. Magnam, laborum assumenda? Inventore quis ipsum nihil hic vitae! Porro, harum magnam aut esse deserunt officia, nesciunt soluta repellat recusandae necessitatibus dignissimos eaque sit odio expedita provident eveniet iste nihil laudantium eius at impedit! Beatae, pariatur illum temporibus libero, corporis et inventore atque, officiis eum voluptas iure. Magni eveniet corporis amet sit enim! Impedit architecto inventore perspiciatis culpa autem sed dolore delectus ad a! Eum illum obcaecati laudantium iste quis beatae quibusdam</p>
+        <p><img src="../../assets/images/1.jpg" width="300" height="200"></p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur pariatur dolores cupiditate illo porro. Magnam, laborum assumenda? Inventore quis ipsum nihil hic vitae! Porro, harum magnam aut esse deserunt officia, nesciunt soluta repellat recusandae necessitatibus dignissimos eaque sit odio expedita provident eveniet iste nihil laudantium eius at impedit! Beatae, pariatur illum temporibus ?</p>
+    </div>
+</body>
+</html>
