@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url(typo.css);
+@import url(common.css);
+
+
+/* main-index */
+
+
+/* about-브랜드 소개 */
+.about_sec1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: url(../assets/images/about/pb_main1.jpg) no-repeat center/contain fixed;
+    background-position: 0 105px;
+}
+
+.about_sec1 p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 40px;
+}
+
+.about_sec2 {
+    width: 100%;
+    height: 1400px;
+    padding-top: 100px;
+}
+
+.about_sec2 ul {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.about_sec2 li {
+    height: 400px;
+    padding-top: 100px;
+}
+
+.about_sec2 li h3 {
+    height: 100px;
+    line-height: 100px;
+}
+
+.about_sec2 li p {
+    width: 800px;
+    height: 300px;
+}
+
+/* .about_sec2 li:nth-of-type(1) {
+    background: url(../assets/images/about/pb_brand1.jpg) no-repeat center;
+    background-position: right center;
+} */
+
+.about_sec3 {
+    height: 1100px;
+}
