@@ -1,0 +1,294 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'GmarketSansMedium';
+}
+
+body,
+h1,
+h2 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(128, 128, 128, 0.616);
+    z-index: 1;
+}
+
+header ul {
+    display: flex;
+    padding-top: 8px;
+}
+
+header li {
+    padding: 0 32px;
+}
+
+header a {
+    color: black;
+    letter-spacing: 2px;
+}
+
+header li:hover {
+    background-color: rgba(128, 128, 128, 0.253);
+    border-radius: 4px;
+}
+
+header .icon {
+    font-size: 22px;
+    padding-top: 8px;
+}
+
+header .icon a {
+    padding: 0px 8px;
+
+}
+
+header .icon a:hover {
+    background-color: rgba(255, 166, 0, 0.411);
+    border-radius: 4px;
+}
+
+/* section 공통 */
+.sec {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+#sec1,
+#sec2,
+#sec3 {
+    height: 855px;
+}
+
+/* section 1 */
+#sec1 {
+    position: relative;
+    top: 55px;
+}
+
+#sec1 .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -200px;
+    padding: 8px 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.829);
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+/* section2 */
+#sec2 {
+    background: url(../images/back.jpg);
+}
+#sec2 h2 {
+    padding: 90px 60px;
+    color: white;
+    letter-spacing: 7px;
+}
+#sec2 li {
+    position: relative;
+    margin-right: 12px;
+    letter-spacing: 2px;
+}
+#sec2 li:nth-of-type(1) {
+    margin-left: 12px;
+}
+#sec2 li:nth-of-type(5) {
+    margin-left: 12px;
+}
+#sec2 span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px 16px;
+    background-color: rgba(116, 30, 30, 0.808);
+    color: white;
+}
+#sec2 span:hover {
+    background-color: rgb(167, 102, 112);
+}
+
+
+/* section2,3 공통 */
+#sec2 li,
+#sec3 li {
+    width: 360px;
+    height: 240px;
+    float: left;
+    margin-bottom: 40px;
+}
+#sec2 li:nth-of-type(4n) {
+    margin-left: 0;
+}
+
+#sec3 li:nth-of-type(4n) {
+    margin-left: 0;
+}
+
+/* section3 */
+#sec3 {
+    background: url(../images/back.jpg);
+}
+#sec3 h2 {
+    padding: 64px 32px;
+    color: white;
+    letter-spacing: 7px;
+}
+
+#sec3 h3 {
+    padding: 8px 16px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(207, 206, 206);
+    letter-spacing: 2px;
+
+
+}
+#sec3 p {
+    margin: 15px 30px;
+    color: rgb(207, 206, 206);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+#sec3 li {
+    margin-right: 12px;
+}
+#sec3 li:nth-of-type(1) {
+    margin-left: 12px;
+}
+
+#sec3 button:hover {
+    background-color: rgb(185, 185, 170);
+    border-radius: 6px;
+}
+
+#sec3 button {
+    width: 360px;
+    height: 38px;
+    border: none;
+    background-color: rgba(175, 175, 157, 0.5);
+    border-radius: 6px;
+}
+
+#sec3 #p3,
+#sec3 #p4 {
+    padding-bottom: 50px;
+}
+
+
+/* section4 */
+#sec4 {
+    height: 1406px;
+    background: url(../images/back.jpg);
+}
+
+#sec4 h2 {
+    padding: 64px 32px;
+    color: white;
+}
+
+#sec4 p {
+    margin: 5px 51px;
+    color: rgb(207, 206, 206);
+    font-size: 13px;
+
+}
+
+#sec4 input {
+    width: 1350px;
+    height: 42px;
+    padding: 8px;
+    margin: 8px 0 8px 51px;
+    border: 1px solid rgba(128, 128, 128, 0.411);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+
+#sec4 button {
+    width: 154px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    margin: 20px 0 20px 51px;
+}
+
+#sec4 img {
+    padding-top: 40px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 213px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+footer #fp1 {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 14px;
+}
+
+footer ul {
+    padding: 30px 0 0 30px;
+    display: flex;
+}
+
+footer a {
+    color: white;
+    font-size: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+footer #copy {
+    padding: 30px 0 0 15px;
+    font-size: 12px;
+}
+
+footer #copy p {
+    padding-bottom: 8px;
+    color: rgba(172, 172, 172, 0.719)
+}
