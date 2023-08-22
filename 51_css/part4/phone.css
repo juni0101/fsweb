@@ -1,0 +1,5 @@
+@media (orientation: portrait ) and (max-width:600px){
+    body {
+            background: rgb(230, 83, 83);
+        }
+}

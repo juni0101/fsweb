@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RWD</title>
+    <title>가로세로 방향에따른 media</title>
     <style>
         /* 
             @import url(파일); -> 외부파일 가져오기
@@ -21,25 +21,31 @@
             and: 그리고
             , : 또는
             expressions: 조건으로 min-width(최소 가로크기), max-width(최대 가로크기),
-                         orientation(방향), ...
+                         orientation(방향), aspect-ratio (비율) 
 
-            orientation: portait(세로) | 
+            orientation: portrait(세로) | landscape(가로)
         */
 
         /* 중단점(break point) : 미디어쿼리의 영역을 나누는 기준  */
 
-        /* 데스크탑 우선제작 */ 
-        @media screen and (max-width: 768px)  {
+        /* 폰만적용 */
+        /* 600이하 세로형 */ 
+        @media (orientation: portrait ) and (max-width:600px){
             body {
-                background: rgb(230, 83, 83);
-    }
-}
+                    background: rgb(230, 83, 83);
+                }
+        }
+        /* orientation: landscape */ 
+        @media (orientation: landscape) and (max-width: 900px){
+            body {
+                background: purple;
+            }
+        }
 
         /* phone */
         /*  min-width:600px    최소600 -> 해상도가 600이상인장치
             max-width: 600px    600이하인장치   */
-
-
+        
     </style>
 </head>
 

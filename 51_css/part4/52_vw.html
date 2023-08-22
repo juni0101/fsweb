@@ -19,7 +19,7 @@
         /* 1vmin는 1vw와 1vh 중 작은 값 */
         p:nth-of-type(5) {font-size: 5vmin;}
         /* 1vmax는 1vw와 1vh 중 큰 값 */
-        p:nth-of-type(6) {font-size: 5vmax;}
+        p:nth-of-type(6) {font-size: 5vmax;} 
     </style>
 </head>
 <body>
@@ -27,10 +27,10 @@
     <div>
         <p>나는 px이다.</p>
         <p>나는 %이다.</p>
-        <p>나는 vw이다.</p>
-        <p>나는 vh이다.</p>
-        <p>나는 vmin이다.</p>
-        <p>나는 vmax이다.</p>
+        <p>나는 vw이다. - 뷰포트의 가로크기에 영향받음</p>
+        <p>나는 vh이다. - 뷰포트의 세로크기에 영향받음</p>
+        <p>나는 vmin이다. - 뷰포트의 가로/세로 중 작은쪽에 영향을받음 </p>
+        <p>나는 vmax이다. - 큰쪽에 영향받음 </p>
     </div>
 </body>
 </html>

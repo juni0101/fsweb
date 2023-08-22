@@ -1,0 +1,26 @@
+@charset "utf=8";
+@import url(tablet.css) ; 
+@import url(desktop.css);  
+/* inport 사용해서 연결할수도있음 */
+
+/* 데스크탑 사이즈 */
+@media screen and (min-width:992px)  {
+    body {
+        background: rgb(83, 196, 230);
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px)  {
+    body {
+        background: rgb(200, 248, 68);
+    }
+}
+
+
+/* 폰사이즈 */
+@media (orientation: portrait ) and (max-width:600px){
+    body {
+            background: rgb(230, 83, 83);
+        }
+}

@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- 뷰포트 설정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 이거는 데스크탑이아닌 모바일에 영향주는것임  -->
     <title>뷰포트</title>
+    <!-- 
+        반응형웹과 적응형웹
+            반응형웹: 감지된 화면크기따라 자동으로 페이지가 재배열되는 유동적인 접근방식
+            px단위보다 %를 주로사용
+        적응형웹: 브라우저가 주어진 플랫폼에 맞춰 특별히 생성된 레이아웃을 
+             불러오는 웹 디자인 유형입니다. 
+     -->
 </head>
 <body>
     <h1>뷰포트</h1>
     <p>뷰포트 테스트 입니다.</p>
-    <img src="" alt="뷰포트 테스트">
+    <!-- 이런표현을 상대경로방식이라고함  -->
+    <img src="../../assets/images/coca.png" alt="뷰포트 테스트">
+    <!-- 맨앞 /은 root(vs코드에서 작업영역폴더(fsweb), 닷홈서버는 html) -->
+    <img src="/assets/images/coca.png" alt="뷰포트 테스트">
+    <!-- .는 현재폴더를 의미함/ ..은 상위폴더를의미함 -->
+
+    <!-- 일반적으로 같은도메인에서는 상대경로방식을 사용
+        도메인이 다른경우 절대경로방식을 사용  -->
 </body>
 </html>

@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RWD</title>
+    <link rel="stylesheet" href="phone.css" > 
+    <link rel="stylesheet" href="tablet.css" media="(min-width:768px)">
+    <link rel="stylesheet" href="desktop.css" media="(min-width:992px)">
+    <!-- 대규모 프로젝트에서는 이렇게 나눠야함 
+        원래는 크기순으로 배열해야하지만 안에 media를 추가해서 css에는 칼라만 넣어도됨 
+         -->
+    <title> 비율에 따른 media</title>
     <style>
         /* 
             @import url(파일); -> 외부파일 가져오기
@@ -21,25 +27,33 @@
             and: 그리고
             , : 또는
             expressions: 조건으로 min-width(최소 가로크기), max-width(최대 가로크기),
-                         orientation(방향), ...
+                         orientation(방향), aspect-ratio (비율) 
 
-            orientation: portait(세로) | 
+            orientation: portrait(세로) | landscape(가로)
         */
 
         /* 중단점(break point) : 미디어쿼리의 영역을 나누는 기준  */
 
-        /* 데스크탑 우선제작 */ 
-        @media screen and (max-width: 768px)  {
-            body {
-                background: rgb(230, 83, 83);
-    }
-}
 
         /* phone */
         /*  min-width:600px    최소600 -> 해상도가 600이상인장치
             max-width: 600px    600이하인장치   */
+            @media screen and (max-width: 768px)  {
+                body {
+                    background: rgb(230, 83, 83);
+                }
+            }
 
+        /* tablet */
+        @media screen and (min-width: 768px)  {
+            body {
+                background: rgb(200, 248, 68);
+            }
+        }
 
+      00 -> 해상도가 600이상인장치
+            max-width: 600px    600이하인장치   */
+        
     </style>
 </head>
 
