@@ -5,34 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+CSS</title>
+    <title>flex</title>
     <style>
         * {
             box-sizing: border-box;
         }
 
         /* 
-            플렉스 박스(유연한 박스)
-            주축과 교차축
-                flex-direction:row; 이면 주축 row, 교차축 column
-                flew-direction:column; 이면 주축 column, 교차축 row
+            레이아웃 설계방식 
+            1. float
+            2. flex
+            3. grid
+
 
             부모: 플렉스 컨테이너
-                1. display:flex;
-                2. flex-direction: 방향;
-                3. flex-wrap: 줄바꿈;
-                4. flex-flow: direction wrap
-                5. justify-content: 주축 정렬
-                6. align-items: 교차축 정렬
-                7. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+            display:flex;
+                1. flex-direction: 방향;
+                2. flex-wrap: 줄바꿈;
+                3. flex-flow: direction wrap
+                4. justify-content: 주축 정렬
+                5. align-items: 교차축(세로) 정렬
+                6. align-content: 교차축(세로) 블록 방향 정렬 (2개의 라인)
 
             자식: 플렉스 아이템
-                8. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
-                9. flex-grow: 커진다.
-                10. flex-shrink: 작아진다.
-                11. flex-basis: 처음 크기
-                12. flex: grow shrink basis
-                13. order: 순서, 숫자가 작을수록 앞에 배치
+                7. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
+                8. flex-grow: 커진다.
+                9. flex-shrink: 작아진다.
+                10. flex-basis: 처음 크기
+                11. 8,9,10의 속기형 -> flex: grow shrink basis
+                12. order: 순서, 숫자가 작을수록 앞에 배치
+
+
+                flex-direction : 방향
+                    값: row(가로)
+                        column(세로)
+                        row-reverse(가로-역)
+                        column-reverse (세로-역) 
+                flex-wrap :줄바꿈
+                    값: nowarp
+                        wrap 
+                        wrap-recerse 역으로줄바꿈
+                flex-flow
+                    값: row nowrap 
+                        row wrap
+                        row wrap-reverse 
+                justify-content
+                    값: flex-start
+                        start
+                        flex-end
+                        end
+                        center
+                    flex-start와 flex-end는 flex-direction: *-reverse일때 역으로 적용되나 start와 end는 역으로 적용되지않음 
+                align-items
+                    값: nomal 
+                        stetch
+                        flex-start
+                        flex-end
+                        center
+                        baseline 
+                align-content
+
         */
 
 
@@ -40,12 +72,13 @@
         .container {
             outline: 1px solid red;
             display: flex;
+            margin: 10px;
         }
 
         .container div {
-            width: 100px;
-            height: 100px;
-            background-color: gray;
+            width: 100px; 
+            height: 100px; 
+            background-color: gray; 
         }
 
     </style>

@@ -1,16 +1,20 @@
 @charset "utf=8";
 
-#contents {
+#list_wrap {
     width: 1600px;
+    margin: 0 auto;
+}
+#list_wrap2 {
+    width: 1500px;
     margin: 0 auto;
 }
 /* sec1 */
 #sec1 {
     position: relative;
+    height: 370px;
 }
 #sec1 img {
     margin-top: 105px;
-    margin-bottom: 62px;
 }
 #sec1 #main_txt {
     position: absolute;
@@ -26,24 +30,142 @@
     margin-top: 30px;
 }
 
+/* filter */
+#filter ul {
+    display: flex;
+    height: 62px;
+    padding: 0 77px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.199);
+}
+#filter li {
+    font-size: 12px;
+    position: relative;
+    top: 43%;
+    margin-right: 40px;
+    letter-spacing: 1px;
+    height: 20px;
+}
+#filter li:hover {
+    border-bottom: 3px solid pink;
+    font-weight: 700;
+}
+
+
+
 /* sec2 */
+#sec2 #sub {
+    text-align: center;
+    font-size: 12px;
+}
+#sec2 #sub p {
+    margin-top: 71px;
+}
+#sec2 {
+    height: 920px;
+    background: #F5F5F5;
+}
 #sec2 #sub_img {
-    width: 700px;
-    height: 800px;
+    width: 650px;
+    height: 750px;
+    margin: 8px 50px 0 50px;
+}
+#sec2 #sub_img_hover {
+    width: 650px;
+    height: 750px;
+    margin: 8px 50px 0 50px;
+}
+#sec2 {
+    display: flex;
 }
 #sec2 ul {
     display: flex;
+    flex-wrap: wrap;
 }
 #sec2 ul img {
-    width: 346px;
-    height: 346px;
+    width: 321px;
+    height: 321px;
 }
+#sec2 li {
+    padding: 0 27px;
+    text-align: center;
+    font-size: 12px;
+}
+#sec2 p {
+    margin: 60px 0 30px 0;
+}
+/* hover */
+
+
+
+
 
 /* sec3 */
+#sec3 {
+    height: 1100px;
+    background: #F5F5F5;
+}
 #sec3 ul {
     display: flex;
+    flex-wrap: wrap;
 }
 #sec3 ul img {
-    width: 346px;
-    height: 346px;
+    width: 321px;
+    height: 321px;
+    margin-top: 60px;
+}
+#sec3 li {
+    padding: 0 27px;
+    text-align: center;
+    font-size: 12px;
+}
+#sec3 p {
+    margin: 60px 0 30px 0;
+}
+
+
+
+/* sec4 */
+#sec4 {
+    height: 200px;
+}
+#sec4 img {
+    width: 187px;
+    height: 187px;
+}
+#sec4 img:hover {
+    opacity: .5;
+    transition: .5s;
+}
+#sec4 ul {
+    display: flex;
+    padding: 100px;
+    justify-content: center;
+}
+#sec4 li {
+    padding: 0 30px;
+}
+#sec4 #button, button { 
+    text-align: center; 
+}
+#sec4 h4 { 
+    font-size: 21px; 
+} 
+#sec4 p { 
+    font-size: 14px; 
+    padding-bottom: 20px; 
+} 
+#sec4 input{ 
+    width: 395px; 
+    height: 40px; 
+    border: 1px solid rgba(128, 128, 128, 0.276); 
+    padding: 6px; 
+    margin-bottom: 30px; 
+}
+#sec4 button {
+    width: 134px;
+    height: 35px;
+    background: #fecad48a;
+}
+#sec4 button:hover {
+    background: #916f768a;
 }

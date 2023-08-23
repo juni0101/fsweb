@@ -200,6 +200,7 @@ input {
 /* footer */
 footer {
     height: 100px;
+    margin-bottom: 0;
     background-color: #000000d8;
     color: white;
     text-align: center;

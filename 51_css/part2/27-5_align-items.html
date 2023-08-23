@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+CSS</title>
+    <title>align-items</title>
     <style>
         .container {
             display: flex;
@@ -18,7 +18,7 @@
 
         /* 교차축 세로 */
         .wrap1 .container {
-            height:200px;
+            height:300px;
         }
         .wrap1 .container div {
             width:100px;
@@ -29,16 +29,24 @@
 
         
         /* (1) .ais에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
-
+        .ais {
+            align-items: start;
+        }
 
         /* (2) .aifs에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
-
+        .aifs {
+            align-items: end;
+        }
 
         /* (3) .aife에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
-
+        .aife {
+            align-items: center;
+        }
 
         /* (4) .aic에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
-
+        .aic {
+            align-items: baseline;
+        }
 
 
 
