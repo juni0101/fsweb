@@ -14,7 +14,9 @@
     height: 370px;
 }
 #sec1 img {
-    margin-top: 105px;
+    width: 1600px;
+    height: 337px;
+    margin-top: 36px;
 }
 #sec1 #main_txt {
     position: absolute;
