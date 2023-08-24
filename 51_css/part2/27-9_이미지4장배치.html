@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <style>
+
+        /* reset */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+        /* common */
+        section {
+            padding: 0 30px;
+        }
+        li {
+            margin-bottom: 16px;
+            list-style: none;
+        }
+        img { 
+            width: 100%; 
+            vertical-align: top;
+        }
+        /* tablet */
+        @media (min-width: 576px){ 
+            ul { 
+            display: flex; 
+            flex-wrap: wrap;
+            width: 1500px; 
+            margin: 0 auto; 
+            justify-content: space-between; 
+            }
+            li {
+                flex: calc(50% - 38px);
+            }
+            li:nth-of-type(2n-1){
+                margin-right: 16px;
+            }
+        }
+        /* desktop */
+        @media (min-width: 992px){
+            ul { 
+                padding: 0 calc(50% - 750px);
+            }
+            li {
+                flex: calc(25% - 38px);
+                margin-right: 16px;
+            }
+            li:nth-of-type(4n){
+                margin-right: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h2>이탈리아</h2>
+            <ul>
+                <li><img src="../../70_project/im_img/pf1.png" alt=""></li>
+                <li><img src="../../70_project/im_img/pf1.png" alt=""></li>
+                <li><img src="../../70_project/im_img/pf1.png" alt=""></li>
+                <li><img src="../../70_project/im_img/pf1.png" alt=""></li>
+            </ul>
+    </section>
+</body>
+</html>
