@@ -36,34 +36,39 @@
                 12. order: 순서, 숫자가 작을수록 앞에 배치
 
 
-                flex-direction : 방향
-                    값: row(가로)
-                        column(세로)
-                        row-reverse(가로-역)
-                        column-reverse (세로-역) 
-                flex-wrap :줄바꿈
-                    값: nowarp
-                        wrap 
-                        wrap-recerse 역으로줄바꿈
-                flex-flow
-                    값: row nowrap 
-                        row wrap
-                        row wrap-reverse 
-                justify-content
-                    값: flex-start
-                        start
-                        flex-end
-                        end
-                        center
+                display: flex
+                flex-direction : 배치방향
+                        row (기본값)
+                        row-reverse
+                        column
+                        column-reverse
+                flex-wrap :줄넘김
+                        nowrap (기본값)
+                        wrap
+                        wrap-reverse
+                flex-flow (flex-direction,flex-wrap 속기형)
+                        ex) flex-flow: row wrap;
+
+                justify-content 메인축
+                    flex-start (기본값)
+                    flex-end
+                    center
+                    space-between
+                    space-around :둘레(around)”에 균일한 간격
+                    space-evenly :사이와 양 끝에 균일한 간격
+
                     flex-start와 flex-end는 flex-direction: *-reverse일때 역으로 적용되나 start와 end는 역으로 적용되지않음 
-                align-items
-                    값: nomal 
-                        stetch
-                        flex-start
-                        flex-end
-                        center
-                        baseline 
+
+                align-items 수직축 
+                    stretch (기본값) :수직축 방향으로 끝까지 쭈욱
+                    flex-start
+                    flex-end
+                    center
+                    baseline
+
                 align-content
+                    start, end, center
+                    stetch, baseline, space-evenly
 
         */
 

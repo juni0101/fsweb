@@ -17,16 +17,15 @@
         }
 
         /* 교차축 세로 */
-        .wrap1 .container {
-            height:300px;
-        }
-        .wrap1 .container div {
-            width:100px;
-        }
-        /* 플렉스 컨테이너 크기 만큼 늘어남. */
-        /* 플렉스 아이템의 height를 지정하면 늘어나지 않고, flex-start로 지정된다. */
+        .wrap1 .container { 
+            height:300px; 
+        } 
+        .wrap1 .container div { 
+            width:100px; 
+        } 
 
-
+        /* 플렉스 아이템의 height를 지정x -> stretch */ 
+        /* 플렉스 아이템의 height를 지정o -> flex-start */ 
         
         /* (1) .ais에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
         .ais {
@@ -47,8 +46,13 @@
         .aic {
             align-items: baseline;
         }
-
-
+        .wrap1 .aib {
+            writing-mode: horizontal-tb;
+        }
+        .warp2 .aib {
+            border: 3px solid blue;
+            writing-mode: vertical-rl;
+        }
 
         .aib div:nth-child(1) {font-size:3rem;}
         .aib div:nth-child(2) {font-size:1rem;}
