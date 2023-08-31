@@ -1,0 +1,273 @@
+@charset "utf-8"; 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/* 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth; /* IE는 적용안됨(인터넷익스플로어) */
+  font-size: 10px;
+}
+body, h1, ul, p {
+    margin: 0;
+}
+/* ******************************************** 
+typography.css: 크기,색,종류,굵기,줄간격 
+******************************************** */
+body {
+  font-family: 'Noto Sans KR', sans-serifs;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #111;
+  background: #fff; 
+}
+.text {
+    font-size: 3.6rem;
+}
+.text, #gnb {
+    letter-spacing: 4px;
+}
+#sec3 a {
+    color: #111;
+}
+.wtxt {    
+    color: #fff;   
+}
+::placeholder {
+    color: #777;
+}
+footer {
+    color: #777;;
+}
+/* 전체공통 */
+
+/********************************************* */
+ 
+
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+button {
+  border: none;
+}
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;  /* 이미지가아니니까 이렇게줘도됨 */
+}
+
+
+/* 와이어프레임 */
+header {
+    background-color: white;
+}
+
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    box-shadow: 0 2px 5px rgba(128, 128, 128, 0.726);
+    z-index: 1;
+    padding: 8px;
+}
+header ul {
+    display: flex;
+}
+header li {
+    list-style: none;
+    padding: 8px 16px;
+}
+header li:hover {
+    background-color: rgba(128, 128, 128, 0.39);
+    border-radius: 4px;
+}
+a {
+    color: black;
+}
+
+/* section 공통 */
+.sec {
+    position: relative;
+    width: 1500px;
+    margin: 0 auto;
+}
+#sec1{
+    height: 855px;
+}
+#sec2{
+    height: 685px;
+}
+ #sec3 {
+    height: 804px;
+}
+#sec4 {
+    height: 1409px;
+}
+
+
+/* section1 */
+#sec1 {
+    top: 55px;
+}
+#sec1 .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 8px 16px;
+    font-size: 40px;
+}
+.text b {
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* section2 */
+#sec2 h2 {
+    margin-bottom: 40px;
+}
+#sec2 li {   
+    position: relative; 
+} 
+#sec2 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.74);
+    font-size: 20px;
+}
+
+/* 2,3,4 공통 */
+section h2{
+    padding: 80px 0 20px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+/* section2,3 공통 */
+#sec2 ul, #sec3 ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+#sec2, #sec3, #sec4{
+    background-color: #ffffff67;
+}
+#sec2 li:nth-of-type(4n){
+    margin: 0;
+}
+#sec3 li:nth-of-type(4n) {
+    margin-left: 0;
+}
+#sec2 li {
+    margin-right: 20px;
+}
+#sec3 li {
+    margin-right: 15px;
+}
+#sec2 li,  #sec3 li{   
+    width: 360px;
+    height: 240px;
+} 
+#sec2 li:nth-of-type(4)~ li{
+    margin-top: 20px;
+}
+
+/* section3,4 공통 */
+section:first-of-type ~ section > p {
+    margin-bottom: 40px;
+}
+
+/* section3 */
+#sec3 h3 {
+    margin: 16px 0;
+    font-size: 24px;
+}
+#sec3 .job {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.808); 
+}
+#sec3 a {
+    display: block;
+    height: 40px;
+    background-color: rgb(238, 238, 235);
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+}
+#sec3 a:hover {
+    background-color: rgba(128, 128, 128, 0.664);
+}
+#sec3 li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 530px; 
+}
+
+/* section4 */
+#sec4 input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 12px 16px; 
+    margin-bottom: 16px;
+    border: 1px solid rgba(128, 128, 128, 0.507);
+    border-radius: 5px;
+}
+#sec4 button {
+    padding: 12px 32px; 
+    margin: 32px 0 48px 0;
+    background-color: #000;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+#sec4 button:hover {
+    background-color: rgba(54, 54, 54, 0.712);
+}
+.map {
+    height: 840px;
+}
+
+
+/* footer */
+footer {
+    /* line-height: 84px;  한줄텍스트일때 박스 수직중앙정렬  */
+    padding: 30px 0;
+    background-color: #333;
+    text-align: center;
+}
+footer ul {
+    display: flex;
+    justify-content: end;
+    padding: 8px 12px;
+
+}
+footer li {
+    list-style: none;
+    padding: 5px;
+}
+footer i {
+    color: white;
+    font-size: 20px;
+}
+
