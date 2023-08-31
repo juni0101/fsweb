@@ -72,8 +72,6 @@ header {
     background-color: white;
 }
 
-
-
 /* header */
 header {
     display: flex;
@@ -99,6 +97,9 @@ header li:hover {
 }
 a {
     color: black;
+}
+header img {
+    padding-top: 18px;
 }
 
 /* section 공통 */
