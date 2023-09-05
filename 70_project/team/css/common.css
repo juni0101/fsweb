@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url(typo.css);
 
 /* 전체 공통 */
 * {
@@ -9,18 +10,23 @@
 
 /* scroll_bar */
 body::-webkit-scrollbar {
-  width: 12px; /* 스크롤바의 너비 */
+  width: 12px;
+  /* 스크롤바의 너비 */
 }
 
 body::-webkit-scrollbar-thumb {
-  height: 30%; /* 스크롤바의 길이 */
-  background: #fecad4; /* 스크롤바의 색상 */
+  height: 30%;
+  /* 스크롤바의 길이 */
+  background: #fecad4;
+  /* 스크롤바의 색상 */
 
   border-radius: 10px;
 }
+
 body::-webkit-scrollbar-track {
   background-color: #f0f0f0;
 }
+
 /* // scroll_bar */
 ul {
   list-style: none;
@@ -60,6 +66,7 @@ header {
   padding: 0 80px;
   background-color: white;
 }
+
 .header_inner:hover {
   height: 240px;
   color: black;
@@ -67,20 +74,86 @@ header {
   width: 100%;
 }
 
-.header_inner:hover .sub_list{
+.header_inner:hover .sub_list {
   display: block;
 }
+
 .gnb li {
   display: inline-block;
   width: 100px;
   height: 70px;
 }
+
+/* show login & join */
+.gnb_icon li:nth-of-type(2){
+  position: relative;
+}
+.gnb_icon li:nth-of-type(2):hover .mypage_login{
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  text-align: center;
+  transform: translateX(-50%);
+  background: white;
+}
+.mypage_login{
+/* 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  text-align: center;
+  transform: translateX(-50%);
+  background: white; */
+  display: none;
+}
+.mypage_login p{
+  margin: 4px auto;
+}
+.mypage_login p:nth-of-type(2){
+  font-size: 11px;
+  opacity: .5;
+}
+.mypage_login button{
+  display: block;
+  width: 80%;
+  height: 40px;
+  margin: 4px auto;
+}
+.mypage_login button:nth-of-type(1){
+  border: none;
+  background-color: #fecad4;  
+}
+.mypage_login button:nth-of-type(2){
+  border: 1px solid #777;
+  background-color: white;
+}
+
+.gnb_icon li:nth-of-type(2):hover {
+  border-bottom: 2px solid #fecad4;
+}
+/* //show & login */
+
+
+
 .gnb li a {
   color: black;
 }
+
 .sub_list {
   display: none;
 }
+
 .sub_list li a {
   color: black;
 }
@@ -90,8 +163,7 @@ header {
   width: 120px;
   height: 50px;
   margin: 5px 150px 0 20px;
-  background: url(../assets/images/common/logo_pandora.svg) no-repeat center
-    center;
+  background: url(../assets/images/common/logo_pandora.svg) no-repeat center center;
 }
 
 .logo a {
@@ -111,21 +183,28 @@ nav {
   position: relative;
 }
 
-.gnb > li {
+.gnb>li {
   margin-right: 20px;
   padding: 0 16px;
   line-height: 70px;
 }
+
 .gnb li a:hover {
   border-bottom: 1px solid #fecad4;
   padding-bottom: 4px;
+  
 }
+
 .sub_list li a:hover {
   opacity: 0.7;
   border-bottom: none;
-  width: 30px;
+  width: 35px;
+  height: 5px;
 }
-
+.Jewelry{
+  width: 240px;
+  overflow: clip;
+}
 .lnb {
   display: none;
 }
@@ -146,13 +225,11 @@ nav {
   border-radius: 2px;
 }
 
-
 .search_btn {
   display: inline-block;
   width: 40px;
   height: 38px;
-  background: url(../assets/images/common/ico_search.svg) no-repeat center
-    center/20px;
+  background: url(../assets/images/common/ico_search.svg) no-repeat center center/20px;
   text-indent: -999rem;
 }
 
@@ -180,6 +257,7 @@ nav {
   margin-left: 12px;
   display: flex;
 }
+
 .gnb_icon li {
   width: 40px;
   height: 38px;
@@ -194,20 +272,17 @@ nav {
 }
 
 .gnb_icon li:nth-of-type(1) {
-  background: url(../assets/images/common/ico_store.svg) no-repeat center
-    center/16px;
+  background: url(../assets/images/common/ico_store.svg) no-repeat center center/16px;
 }
 
 .gnb_icon li:nth-of-type(2) {
-  background: url(../assets/images/common/ico_mypage.svg) no-repeat center
-    center/20px;
+  background: url(../assets/images/common/ico_mypage.svg) no-repeat center center/20px;
 }
 
 .gnb_icon li:nth-of-type(3) {
-  background: url(../assets/images/common/ico_cart.svg) no-repeat center
-    center/18px;
+  background: url(../assets/images/common/ico_cart.svg) no-repeat center center/18px;
 }
-
+/* footer */
 footer {
   width: 100%;
   height: 434px;
@@ -226,10 +301,11 @@ footer {
   padding-top: 60px;
 }
 
-.fnb > li {
+.fnb>li {
   width: 360px;
 }
-.fnb > li > ul {
+
+.fnb>li>ul {
   margin-top: 20px;
 }
 
@@ -237,6 +313,7 @@ footer {
   height: 24px;
   line-height: 24px;
 }
+
 .f_info1 {
   display: flex;
   width: 1440px;
@@ -252,6 +329,7 @@ footer {
   display: flex;
   margin-left: auto;
 }
+
 .sns li {
   width: 50px;
   height: 50px;
@@ -265,40 +343,35 @@ footer {
 }
 
 .sns li:nth-of-type(1) {
-  background: url(../assets/images/common/sns_kakaotalk.png) no-repeat center
-    center/18px;
+  background: url(../assets/images/common/sns_kakaotalk.png) no-repeat center center/18px;
 }
 
 .sns li:nth-of-type(2) {
-  background: url(../assets/images/common/sns_facebook.png) no-repeat center
-    center/10px;
+  background: url(../assets/images/common/sns_facebook.png) no-repeat center center/10px;
 }
 
 .sns li:nth-of-type(3) {
-  background: url(../assets/images/common/sns_youtube.svg) no-repeat center
-    center/18px;
+  background: url(../assets/images/common/sns_youtube.svg) no-repeat center center/18px;
 }
 
 .sns li:nth-of-type(4) {
-  background: url(../assets/images/common/sns_instagram.svg) no-repeat center
-    center/18px;
+  background: url(../assets/images/common/sns_instagram.svg) no-repeat center center/18px;
 }
 
 .sns li:nth-of-type(5) {
-  background: url(../assets/images/common/sns_pinterest.svg) no-repeat center
-    center/18px;
+  background: url(../assets/images/common/sns_pinterest.svg) no-repeat center center/18px;
 }
 
 .f_info2 {
-  width: 1440px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
+
 .inipay {
   width: 50px;
   height: 50px;
-  text-indent: -9999rem;
-  background: url(../assets/images/common/ico_inipay.png) no-repeat center
-    center/50px;
+  vertical-align: top;
+  margin-left: auto;
+  background: url(../assets/images/common/ico_inipay.png) no-repeat center center/50px;
 }

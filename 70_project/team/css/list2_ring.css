@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+/* 와이어프레임 */
+/* #sec1 {background-color: rebeccapurple;} */
+/* #sec2 {background-color: lightcyan;} */
+/* #sec3 {background-color: lightcoral;} */
+
+.container_list2 {
+    width: 1600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* -----------섹션1----------- */
+/* 패럴렉스 스크롤링(Parallax Scorolling) */
+.pearallax {
+    background: no-repeat top fixed;
+}
+
+#sec1 {
+    color: #fff;
+    position: relative;
+    height: 270px;
+    background-image: url(../assets/images/list2/list2_ring/main.png);
+}
+
+#sec1 h1 {
+    position: absolute;
+    text-align: center;
+    padding: 140px 100px;
+    font-size: 34px;
+}
+
+#sec1 p {
+    position: absolute;
+    text-align: left;
+    padding: 190px 100px;
+}
+
+/* -----------섹션2----------- */
+#slideShow {
+    position: relative;
+    width: 1600px;
+    height: 500px;
+    margin: 50px auto;
+    overflow: hidden;
+    /*리스트 형식으로 이미지를 일렬로
+    정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
+    hidden으로 숨겨줘야됨*/
+}
+
+.slides {
+    position: relative;
+    width: 1600px;
+    height: 80%;
+    /* 슬라이드할 사진과 마진 총 넓이 */
+    transition: left 0.5s ease-out;
+    /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+    margin: 10px auto;
+}
+
+/* 첫 번째 슬라이드 가운데에 정렬하기위해
+    첫번째 슬라이드만 margin-left조정 */
+.slides li:first-child {
+    margin-left: 10px;
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.controller span {
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    top: 40%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#slideShow ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sec23 li {
+    width: 325px;
+    height: 325px;
+}
+
+.slides span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    background-color: #111;
+    text-align: center;
+    padding: 8px 16px;
+}
+
+#slideShow li {
+    border: 1px solid;
+    position: relative;
+}
+
+.controller span:hover {
+    background-color: rgba(128, 128, 128, 0.11);
+}
+
+.prev {
+    left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때
+이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev:hover {
+    transform: translateX(-10px);
+}
+
+.next {
+    right: 100px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때
+이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next:hover {
+    transform: translateX(10px);
+}
+
+/* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
+.controller span:hover {
+    background-color: rgba(128, 128, 128, 0.11);
+}
+
+.prev {
+    left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때
+    이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev:hover {
+    transform: translateX(-10px);
+}
+
+.next {
+    right: 10px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때
+    이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next:hover {
+    transform: translateX(10px);
+}
+
+.controller img {
+    width: 50px;
+}
+
+.sec_img1~p {
+    margin: 4px auto;
+    text-align: center;
+}
+
+/* -------------섹션2끝---------- */
+
+/* -------------섹션3---------- */
+
+#sec3 {
+    text-align: center;
+    height: 2060px;
+}
+
+.list2_2:hover {
+    transform: scale(1.1);
+}
+
+#sec3 ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sec_img1 {
+    width: 325px;
+    height: 325px;
+}
+
+.list2_2 {
+    background: #F0F0F0;
+    margin: 1px;
+    width: 396px;
+    height: 512px;
+}
+
+.sec_img1~p {
+    margin: 8px;
+}
+
+/* -----------섹션4----------- */
+#sec4 {
+    width: 1600px;
+    height: 100px;
+    margin: 50px auto;
+}
+
+.bt {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.bt>li {
+    background: #F0F0F0;
+    border: 1px solid #000;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}

@@ -5,20 +5,36 @@ table, th, td {
     border-collapse: collapse;
     text-align: center;
 }
+table {
+    border-collapse: collapse; /* table에서만 사용함 */
+    text-align: center;
+}
+th {
+    background: pink;
+}
+/* tr:nth-of-type(2n) {
+    background: rgb(211, 211, 190);
+} */
 td {
     width:100px;
-    height:100px;
+    height:30px;
+    /* 표의 셀 가로정렬 */
+    /* text-align: center; */
+    /* 표의 셀 세로정렬 */
+    /* vertical-align: top; */
 }
 
 caption {
     margin-bottom: 10px;
 }
-
-#table1 th, #table1 td {
-    height:30px;
-}
 col:nth-of-type(1) {
-    background: yellow;
+    background: lightblue ;
+}
+col:nth-of-type(1) ~ col {
+    background: lightgreen;
+}
+#table th, #table td {
+    height:30px;
 }
 thead tr:nth-of-type(1) {
     background: lightgreen;

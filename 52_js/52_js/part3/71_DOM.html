@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+CSS+JS</title>
+    <title>요소를 dom에 접근해서 선택하는법 5가지</title>
     <style>
         li {
             font-size: 20px;
-            color: #555;
+            color: #272727;
             margin: 20px;
         }
     </style>
@@ -17,11 +17,19 @@
 
 <body>
     <ul>
-        <li>목록1</li>
+        <li id="blue">목록1</li>
         <li>목록2</li>
         <li class="red">목록3</li>
         <li>목록4</li>
     </ul>
+    
+    <h1>DOM 접근</h1>
+    <h2>getElement</h2>
+    <p>getElementById</p>
+    <p id="lightblue">getElementByClassName</p>
+    <h2>query~</h2>
+    <p class="pink">querySelector</p>
+    <p>querySelectorAll</p>
 
     <script>
         /* 
@@ -36,14 +44,45 @@
 
             DOM에 접근하기
             - document.getElementById('아이디명')
-            - document.getElementsByClassName('클래스명')
-            - document.getElementsByTagName('태그명')
+            - document.getElementsByClassName('클래스명').item(숫자)
+            - document.getElementsByTagName('태그명')[순서]
             - document.querySeletor('선택자')
             - document.querySeletorAll('선택자들')
 
             객체.style.속성 = 값;
-        */
 
+            //., # 그외 css 선택자 기호를씀
+            - document.querySelector('선택자')
+            - document.querySelector('선택자들')
+
+            객체.메서드();
+            document.write('텍스트');
+            문서.가져오다요소의아이디(아이디명)
+            자바스크립트의 문자열 따옴표는 '',""로 묶음
+
+             속성
+            <태그속성 = '값'> 내용 </태그>
+            요소.innerText: 값;        얘는 태그인식못함
+            요소.innerHTML: 값;       얘는 태그인식함, 그래서주로 이거씀
+        */
+       document.write('')
+       console.log();
+    //    document.querySelectorById('blue'); /* 이건 css에서 선택자만 선택한격임 */
+
+       document.getElementById('blue').style.color = 'blue';
+       document.getElementsByClassName('red').item(0).style.border = '1px solid blue'; 
+       document.getElementsByTagName('li')[3].style.color = 'orange';
+
+       document.querySelector('#lightblue').style.backgroundColor = 'green';
+       document.querySelector('#lightblue').style.fontSize = '20px'
+
+       document.querySelector('.pink').innerText = 'yellow'
+       document.querySelector('.pink').innerHTML = '<h3>yellow</h3>'
+
+       //이렇게 변수선언을하면 이렇게 간편하게 쓸수있음 
+      let red = document.querySelector('.pink') 
+      pink.style.color = 'pink'
+      console.log('pink')
     </script>
 </body>
 

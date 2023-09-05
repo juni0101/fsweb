@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드</title>
+    <!-- css -->
+    <style>
+        /* reset.css */
+        ul {padding:0; list-style: none;}
+        img {width: 100%; vertical-align: top;} 
+
+        /* slide */
+        .slide {width: 300px; overflow: hidden;}
+        ul {
+            position: relative;
+            display: flex; width: 1200px;
+            animation: slide 9s infinite;
+        }
+        li {width: 300px; flex: 0 0 auto;}
+    @keyframes slide {
+            0% {left:0;}
+            5% {left:-300px;}
+            33.33% {left:-300px;}
+            38% {left:-600px;}
+            66.66% {left:-600px;}
+            71% {left:-900px;}
+            99.99% {left:-900px;}
+            100% {left:0px;}
+        }
+
+  </style>
+</head>
+<body>
+  <!-- 
+    js안들어간 캐로셀은 케로셀이라기보다는 슬라이드임
+    버튼없는 케로셀
+   -->
+   <div class="slide">
+      <ul>
+        <li><img src="./images/main_visual02.jpg" alt=""></li>
+        <li><img src="./images/main_visual04.jpg" alt=""></li>
+        <li><img src="./images/main_visual05.jpg" alt=""></li> 
+        <li><img src="./images/main_visual02.jpg" alt=""></li> 
+        <!-- 오른쪽으로이동할때 바로 이동하는것처럼 보이기위해 1번을 다시갔다놓음  -->
+      </ul>
+   </div>
+</body>
+</html>

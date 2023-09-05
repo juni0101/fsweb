@@ -4,25 +4,161 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML</title>
+    <title>테이블</title>
     <link rel="stylesheet" href="css/13_테이블.css">
 </head>
 <body>
     <h1>표</h1>
-    <!-- 교재 19페이지에 있는 기본 표를 만들어 보세요. -->
+    <!-- 
+        필수
+        <table> 표
+        <tr> 행
+        <th> 셀의 제목
+        <td> 셀의 내용
+            <th rowspan="숫자" colspan="숫자"> 
+            rowspan 행병합 colspan열병합
+
+        선택
+        <caption> 표의제목
+        <colgroup> 열 그룹
+        <col> :column(열)     
+        <thead>  제목 그룹
+        <tbody>  내용 그룹
+        <tfoot>   그룹 
+
+
+        <table> 
+            <caption>
+            <col>
+            <thead>
+                <tr>
+                    <th> : 제목
+                </tr> 
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> : 내용
+                </tr> 
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td> : 내용
+                </tr> 
+            </tfoot>
+        </table> 
+
+        tr안에 하나만 있어도됨 
+     -->
 
     <h2>기본</h2>
     <table>
+        <tr>
+            <td>1</td>
+            <td>2</td> 
+
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td> 
+        </tr>
     </table>
 
-    <h2>열 병합</h2>
-    <!-- 열을 병합할 때는 colspan 속성을 사용한다. -->
+        
+
     <table>
+        <caption> 표의제목 열방향 </caption>
+        <col> <!-- 만들어진이유: 열대로 css적용하기위해서 -->
+            <col>
+            <col>
+        <tr>
+            <th scope="col">번호</th> 
+            <th scope="col">과목</th> 
+            <th scope="col">이름</th> 
+            <th scope="col">점수</th> 
+
+        </tr>
+        <tr>
+            <td scope="row">1</td>
+            <td scope="row">html</td> 
+            <td scope="row">홍길동</td> 
+            <td scope="row">90</td> 
+        </tr>
+        <tr>
+            <td scope="row">2</td>
+            <td scope="row">html</td> 
+            <td scope="row">홍길동</td> 
+            <td scope="row">80</td> 
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="3">종합</td>
+                <td>85</td>
+            </tr>
+        </tfoot>
     </table>
+
+    <table>
+            <caption> 표의제목 행방향 </caption>
+            <tr>
+                <th scope="row">번호</th> <!-- scope="row" 행범위를 뜻함  -->
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th scope="col">과목</th> <!-- scope="col" 열범위를 뜻함  -->
+                <td>html</td>
+                <td>css</td>
+                <td>javascript</td>
+            </tr>
+             <tr>
+                <th>이름</th>
+                <td>css</td>
+                <td>javascript</td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
 
     <h2>행 병합</h2>
+    <!-- 열을 병합할 때는 colspan 속성을 사용한다. -->
+    <table>
+        <tr>
+            <!-- 1,2행 2개를병합했다는뜻  -->
+            <td rowspan="2">1</td>
+            <td>2</td> 
+
+        </tr>
+        <tr>
+            <td>4</td> 
+
+        </tr>
+    </table>
+
+    
+
+    <h2>열 병합</h2>
     <!-- 행을 병합할 때는 rowspan 속성을 사용한다. -->
     <table>
+        <tr>
+            <!--  -->
+            <td>1</td>
+            <td>2</td> 
+
+        </tr>
+        <tr>
+
+            <td colspan="2">3</td>
+        </tr>
     </table>
 </body>
 </html>

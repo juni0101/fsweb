@@ -9,19 +9,55 @@
 </head>
 
 <body>
-    <h1>데이터 유형</h1>
+    <h1>데이터 타입</h1>
     <script>
         /* 
-            데이터 유형
+            <데이터 유형>
             1. string: '문자열' 또는 "문자열"
             2. number: 숫자
-            3. boolean(부울): true 또는 false
-            4. undefined
-            5. object(객체): Array(배열), Date(날짜), Math(수학), String(문자열), null, ... 
+            3. boolean(부울): true(1) 또는 false(0), 트루는 1,펄스는 0으로 계산됨
+            4. undefined 
+            5. object(객체)
+                Array(배열)
+                Date(날짜)
+                Math(수학)
+                String(문자열)
+                null, ... 
 
             undefined는 변수에 값이 등록되기 전의 기본값이고,
             null은 변수에 저장된 데이터를 비우고자할 때 사용된다.
+
+        
         */
+        //<데이터>
+            let a = '십';
+            let b = "텐";
+            let c = '10';
+            let d = 10;
+            let e = true;
+            let f = false;
+            let g = undefined;
+            let h = null;
+
+            document.write(a);
+            document.write(b);
+            document.write(c);
+            document.write(d);
+            document.write(e);
+            document.write(f);
+            document.write(g);
+            document.write(h);
+            
+
+            //문자열 표현방식 3가지
+            //1. 백틱
+            document.write(
+                `<hr> ${a}`
+            );
+            //2. 콤마
+            document.write('나는',a,'입니다');
+            //3. 더하기
+            document.write('나는'+a+'입니다');
 
         // string
 
@@ -31,8 +67,16 @@
         // Boolean() 함수는 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환한다.
 
         // undefined
+        //  선언후 값을 할당하지않으면 
+        let und;
+        document.write(`${und}`);
 
         // null
+        // 키워드(예약어)는 변수이름으로 사용할수없음
+        // null은 빈값을 의미함 
+        let nu = 10;
+        nu = null;
+        document.write(`nu = ${nu}`);
 
         // 출력
 

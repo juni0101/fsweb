@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캐로셀 - bxSlider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+<!-- https://bxslider.com/     케로셀형식가져오기-->  
+<!-- https://cdnjs.com/        제이쿼리 가져오기-->
+<style>
+  body {
+    margin: 0;
+  }
+  #section {
+    height: 100vh; /* 이건 높이를 딱맞게해주는것 */
+  } 
+  .bx-wrapper {
+    width: 1044px;
+    margin: 0 auto;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 70%;
+    overflow: hidden;
+    border: 1px solid rgb(137, 36, 238);
+  }
+  .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: center;
+    width: 100%;
+    bottom: 32px;
+  }
+  .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 16px;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager 
+  a {
+    background: #e40303;
+    text-indent: -9999px;   /* 페이져라고 원래글씨가적혀있는데 숨긴거임  */
+    display: block;
+    width: 20px;
+    height: 8px;
+    margin: 0 5px;
+    outline: 0;
+    border-radius: 5px; 
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager 
+  a:focus {
+    background: #1c3eff;
+    width: 50px;
+  }
+  .txt {
+    text-align: center;
+  }
+ 
+  
+
+
+  /* 
+    미디어(img,video)의크기
+    object-fit: cover,contain, 
+    object-position: x위치,y위치 (background-position과 같은의미)
+
+    배경이미지: 
+    background-size: cover,contain; 
+    background-position:  x위치,y위치
+
+  */
+</style>
+</head>
+<body>
+  <div id="section">
+    <!-- 버튼들이 슬라이드안에 포함되게 -->
+    <div class="bxslider">
+      <!-- 웹접근성으로 반드시 기록 -->
+      <div>
+        <img src="./images/762676C01.png" alt="이미지1">
+        <div class="txt">
+          <p>투톤 셀러셀 트리플 댕글 참</p>
+          <p>\138,000</p>
+          <a href="">제품보기</a>
+        </div>
+      </div>
+      <div><img src="./images/791691C02.png" alt="이미지2"></div>
+      <div><img src="./images/792680C01.png" alt="이미지3"></div>
+      <div><img src="./images/792681C01.png" alt="이미지3"></div>
+      <div><img src="./images/792687C01.png" alt="이미지3"></div>
+      <div><img src="./images/792694C01.png" alt="이미지3"></div>
+      <div><img src="./images/792695C01.png" alt="이미지3"></div>
+      <div><img src="./images/792698C01.png" alt="이미지3"></div>
+      <div><img src="./images/792695C01.png" alt="이미지3"></div>
+    </div>
+  </div>
+  <!-- 
+      제이쿼리? 자바스크립트 라이브러리언어임
+      document.getElementsById('myId');
+      document.getElementsByClassName('myClass');
+
+        1. 스크립트에 제이쿼리를 붙인다. 라이브러리를 사용(js,css사용)
+        2. html 코드가져옴
+        3. js 코드붙임 (주의사항: 라이브러리(*.js) 밑에붙여야함)
+   -->
+
+  <!-- 제이쿼리 라이브러리(CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- bx슬라이더 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script>
+    //{}: 객체(object)
+    // 객체.메서드()
+    // js데이터: 숫자,문자열,부울,객체{},...
+    /*
+      js객체정의할때는 이렇게씀
+      {
+        속성:값,            세미콜론이아니라 콤마임 
+        속성:값, 
+        ...
+      }
+    */
+    // 요소.메서드(매개변수)
+    // $(jq 선택자).bxSlider({});
+    $('.bxslider').bxSlider({
+    // auto: true,    /* 이게 자동으로 움직이는건데 false하면 자동으로안움직임 */
+    // autoControls: true,  /* 정지실행버튼 */
+    // stopAutoOnClick: true,
+    pager: true,        /* 동그라미 유무 */
+    slideWidth: 348,
+    minSlides: 3,
+    maxSlides: 3,
+    moveSlides: 3,
+});
+</script>
+</body>
+</html>

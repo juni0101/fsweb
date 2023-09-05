@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 (5-10번파일까지)</title>
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <!-- 
+        1. 산술 : +, -, *, /, %(나머지, 5%3 = 2), **
+        2. 대입 : =,+=, -=, *=, /=, %=, **=
+        3. 비교 
+            >, <, >=, <=, ==, ===, !=, !== 
+            5 == 5  트루
+            5 == '5'  트루
+            5 === '5'  펄스
+        4. 논리 : &&(and), ||(or), !(not)
+        5. 조건 : ? : 
+
+        1. 단항: ++, --
+        2. 이항: 대부분        
+        3. 삼항: 피연산자1 ? 피연산자2 : 피연산자3 
+     -->
+    <script>
+
+        let a = 5;
+        let b = 3;
+        document.write (
+            `<h2>산술연산자<h2>
+            a+b = ${a + b} <br>
+             a-b = ${a - b} <br>
+             a*b = ${a * b} <br>
+             a/b = ${a / b} <br>
+             a%b = ${a % b} <br>
+             a**b = ${a ** b} <br>
+            `
+        )
+        document.write(a + b); 
+        document.write(a - b);
+        document.write(a * b);
+        document.write(a / b);
+
+        //  1. 산술연산자
+        //  문자열 연결 연산자: +
+        //  숫자 + 숫자 = 숫자
+        //  숫자 + 문자 = 문자열 
+        //  문자 + 숫자 = 문자열
+        //  문자 + 문자 = 문자
+        //  ex) 5 + 2 + 3 + '5' = '105'
+ 
+        let c = '2';
+        document.write(`
+        <hr>
+        a + c + b = ${a + c + b}<br>
+        a + b + c =  ${a + b + c}<br>  
+        `);
+        
+        //  a = b
+        //  a += b  -> a = a+b
+        //  a -= b  -> a = a-b
+        //  a *= b  ->  a = a*b
+        //  a /= b  ->  a = a/b
+        //  a %= b  ->  a = a%b
+        //  a **= b  ->  a = a**b
+
+
+        // a=5, b=3, c=2
+        document.write(`
+            <h2>대입(할당)연산자</h2>
+            a=5, b=3, c=2           <br>
+            a += b  -> a = a+b      a는${ a += b }<br>   여기서 a = 8이됨
+            a -= b  -> a = a-b      a는${ a -= b }<br>    8-3 = 5
+            a *= b  ->  a = a*b     a는${ a *= b }<br>
+            a /= b  ->  a = a/b     a는${ a /= b }<br>
+            a %= b  ->  a = a%b     a는${ a %= b }<br>
+            a **= b  ->  a = a**b       a는${ a **= b}<br>
+    `)
+
+    /*
+        증감연산자란? 
+        1++ 1씩증가
+        1-- 1씩감소 
+    */
+
+    document.write(`
+        <h2>+++,--</h2>
+        a++은 몇인가? ${a++}<br>
+        b--은 몇인가? ${b--}    <br>
+        그래서 얘는  ${a = b++} <br>
+        ${a = ++b}
+    `);
+    
+
+    document.write(`
+        <hr>
+        <h2>비교연산자</h2>
+        ${a},${b}
+        ${a > b}<br>
+        ${a < b}<br>
+        ${a >= b}<br>
+        ${a <= b}<br>
+        ${a == b}<br>
+        ${a === b}<br>
+        ${a != b}<br>
+        ${a !== b}<br> 
+`) 
+            
+    /*
+        논리연산자: !(not), &&(and), ||(or)
+        &&는 f가 하나만있어도 f
+            조건1 && 조건2 
+            T && T  -> T
+            T && F  -> F
+            F && T  -> F
+            F && F  -> F 
+        || 는 t가 하나만있어도 t
+            T && T  -> T
+            T && F  -> T
+            F && T  -> T
+            F && F  -> F 
+        ! 는 아니라는뜻  
+
+    */
+
+    document.write(` 
+        <hr>
+        <h2>논리연산자</h2>  <br>
+        논리연산의 결과도 true아니면 false다  <br>
+        a = ${a}   <br>
+        a는 10에서 20사이   <br>
+        a는 10이상이고 20이하        <br>
+        a >= 10 && a <= 20의 결과는?  <br>
+        ${a >= 10 && a <= 20}   <br>
+
+        a는 10에서 20사이   <br>
+        a는 10이상 또는 20이하         <br>
+        a >= 10 || a <= 20의 결과는?  <br>
+        ${a >= 10 || a <= 20}   <br>
+        a가 아닌것은?  ${!a}  
+    `) 
+
+    </script>
+</body>
+
+</html>

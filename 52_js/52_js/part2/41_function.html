@@ -5,44 +5,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+JS</title>
+    <title>함수,객체</title>
 </head>
 
 <body>
     <h1>함수</h1>
+    <p>함수를 쓰는이유: 반복되는거 간소화하기위해</p> 
+    <div>아래에 출력</div>
     <script>
+        // 돔(HTML)을 읽기 전에 script를 실행시킨다.
+
+        // DOMContentLoaded: 돔의 내용 불러온 후 
+        // 시작 이벤트
+        // window.addEventListener('이벤트', 함수);
+        window.addEventListener('DOMContentLoaded', loadFn);
+        // 창이. 추가이벤트가있는지듣고있다.
+
+        /* 형식:
+            요소.addEventListener('이벤트', 함수);
+                document.getElementById
+                document.getElementsByClassName
+                document.getElementsByTagName
+                document.querySelector
+                document.querySelectorAll
+                
+            html내용바꿀때: 
+                innerHTML       줄바꿈하려면 br 사용
+                innerText속성       엔터키사용한만큼 줄바꿈
+                html 속성바꿀때 : 요소.title = '말풍선'
+                css 속성바꿀때 : 요소.style.css속성 = '값'
+
+            window.addEventListener('DOMContentLoaded', loadFn);
+            창.추가이벤트듣고있는자('돔내용불러오기, 함수')
+            창이 돔(HTML태그구조)의 내용을 불러왔는지 듣고있다가 추가 이벤트가 완료되면 함수를 실행!
+
+            이벤트: click, load, DOMContentLoaded, load
+
+            
+        */
+
+        var txt; 
+
+
+        // 선언적 함수 
+        function loadFn() { 
+            
+        // All, 's' -> (0), [0] 
+        // fn()이 호출되면 중괄호 안의 코드가 실행된다. 
+
         /* 
-            변수(variables)
-                - 1개의 데이터를 저장
-                - var 키워드를 이용하여 선언
-                - 문자형, 숫자형, 논리형 데이터 보관
+            1. 매개변수
+            2. returm - 호출한함수를 넘겨주는역할, 순수하게 return만쓰면 함수를 종료하는역할 
+            3. 스코프 - 변수,함수 
 
-            함수(function)
-                - 코드를 저장하고 데이터를 반환
-                - function 키워드를 이용하여 선언
+            문(statement)
+                1. 표현식(expression): 결과 값이있는문장
+                2. 함수문, 제어문(if, for) - 결과값이 없는문장 
 
+            선언적 함수 
+                이름이 있는 함수
+                호이스팅기능 있음 
+            function 함수 () { 
+                코드; 
+                코드; 
+            } 
+            
+            function 함수 () {
+                함수();
+                return: 값;
+            }
 
-            함수 정의
-                function 함수명() {
-                    코드;
-                }
+            익명 함수 -> 이름이 없는 함수
+            var 변수 = function(매개변수, ...) {코드; 코드; ...}
+            
+            ********화살표 함수***************************************
+            var 변수 = (매개변수, ...) => {코드; 코드;}
 
-            익명 함수(함수명이 없는 함수) 정의
-                var 참조변수 = function() {
-                    코드;
-                }
+            1) 매개변수 1개이면 () 생략
+            var 변수 = 매개변수 => {코드; 코드;}
+            2) 코드가 한 문장이면 {} 생략
+            var 변수 = (매개변수, ...) => 코드;
+            3) 매개변수가 없으면
+            var 변수 = () => 코드;
+            ***********************************************************
+
 
             함수 호출
-                함수명();
-                또는
-                참조변수();
-
-
-            호이스팅(hoisting)?
-                - 자바스크립트 해석기가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것
-
-            일반 함수의 경우 함수 정의 전에 함수 호출문이 있어도 호이스팅(hoisting) 방식이 적용되어 실행되지만 익명 함수는 적용되지 않는다.
+            함수 (매개값, ...);
         */
+
+        txt = document.querySelector('p');
+        txt.style.color = 'red';
+        txt.addEventListener('click',fn3);
+
+        }
+
+        // 익명 함수
+        // 익명 함수가 우선적으로 호출된다.
+        
+        // 매개변수가 1개일경우 괄호생략
+        var fn1 = num =>  {
+            txt.innerHTML = num,`<br>`;
+            txt.innerHTML += `5<br>`;
+            txt.innerHTML += `6<br>`;
+        }
+
+        var fn2 = num =>  {
+            txt.innerHTML += `6<br>`;
+        }
+        // 명령문 1개일경우 {} 생략
+        var fn3 = num3 =>  document.write(num3, '<br>');
+        
+
+        // 매개변수없으면 () 생략불가
+        var fn4 = () =>  txt.innerHTML += `5<br>`;
+
+         // 매개변수없으면 () 생략불가
+         let fn6 = (a,b,c) =>  {
+            document.write()
+        }
+        let refVar = fn6(10,20,30);
+        document.write(refVar);
+        
+        // 선언적 함수
+        // function fn(num) {
+        //     txt.innerHTML = num,`<br>`;
+        //     txt.innerHTML += `2<br>`;
+        //     txt.innerHTML += `3<br>`;
+        // }
+
 
 
     </script>

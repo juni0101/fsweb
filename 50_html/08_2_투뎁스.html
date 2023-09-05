@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul, li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .menu_wrap .dep1 > li {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      background: lightblue;
+      font-size: 16px;
+      vertical-align: top;
+    }
+    .dep1 {
+      font-size: 0;
+    }
+    .dep1 > li :hover > .dep2 {
+      display: block;
+    }
+    .dep1 > li > a {
+      display: block;
+    }
+    .dep2 {
+      display: none;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="menu_wrap">
+    <ul class="dep1">
+      <li>
+        <a href="#">menu1</a>
+        <ul class="dep2">
+          <li><a href="#">sub1</a></li>
+          <li><a href="#">sub2</a></li>
+          <li><a href="#">sub3</a></li>
+        </ul>
+      </li>
+      <li >
+        <a href="#">menu1</a>
+        <ul class="dep2">
+          <li><a href="#">sub1</a></li>
+          <li><a href="#">sub2</a></li>
+          <li><a href="#">sub3</a></li>
+        </ul>
+      </li>
+      <li >
+        <a href="#">menu1</a>
+        <ul class="dep2">
+          <li><a href="#">sub1</a></li>
+          <li><a href="#">sub2</a></li>
+          <li><a href="#">sub3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
