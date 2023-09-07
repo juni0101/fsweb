@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>나이계산하기</h1>
+  <input type="" placeholder="태어난 년도는?">
+  <button>입력</button>
+  <p></p>
+
+  <script>
+    /*
+      <퀴즈>
+      1. input을 이용한 입력 
+      2. age()함수 사용 
+      3. 결과텍스트가 input 아래 줄바꿈
+      4. 출력은 ``사용
+    */
+
+    const $button = document.querySelector('button');
+    const $input = document.querySelector('input');
+    const $text = document.querySelector('p');
+
+    const date = new Date();
+    console.log(date.getFullYear());
+    const currentYear = date.getFullYear();
+    let birthYear;   /* 얘는 바뀌는값이기때문에 const보다 let사용 */ 
+
+    const btn = () => { 
+      birthYear = $input.value;
+      console.log(birthYear);
+      $text.textContent = `당신의 나이는 ${currentYear - birthYear + 1}살입니다`;
+      $input.value = '';
+    }
+
+    $button.addEventListener('click', btn);
+
+  </script>
+</body>
+</html>

@@ -10,8 +10,9 @@ html {
   scroll-behavior: smooth; /* IE는 적용안됨(인터넷익스플로어) */
   font-size: 10px;
 }
-body, h1, ul, p {
+body, h1, ul, p, a {
     margin: 0;
+    padding: 0;
 }
 
 /* 변수정의 */
@@ -40,6 +41,9 @@ body {
 #sec3 a {
     color: #111;
 }
+a {
+    color: #111;
+}
 .wtxt {    
     color: var(--white);   
 }
@@ -59,7 +63,7 @@ img {
     width: 100%;
 }
 a {
-    text-decoration: none;
+    text-decoration: none; 
 }
 button {
   border: none;
@@ -87,7 +91,7 @@ header {
 /* 로고 */
 header img{
     width: 90%;
-}
+    vertical-align: middle;}
 /* 내비게이션 */
 #gnb{
     display: none;
@@ -101,16 +105,21 @@ header img{
 }
 #sec1 .text {
     position: absolute;
-    top: 26%;
+    top: 22%;
     left: 50%;
     transform: translate(-50%, -50%); 
     padding: 8px 16px;
     font-size: 40px;
 }
 .text b {
-    background-color: rgba(75, 63, 63, 0.274);
-    padding: 10px;
+    background-color: rgba(219, 196, 196, 0.438);
+    padding: 8px;
     border-radius: 4px;
+    font-size: 24px;
+    
+}
+.text span {
+    display: none;
 }
 
 /* 섹션2,3 공통 */
@@ -197,7 +206,7 @@ section h2{
     background-color: rgba(54, 54, 54, 0.712);
 }
 .map {
-    height: 185px;
+    height: 200px;
 }
 /* footer */
 footer {
@@ -207,16 +216,73 @@ footer {
     text-align: center;
     font-size: 12px;
 }
-footer ul {
-    display: flex;
-    justify-content: end;
+footer ul { 
+    display: flex; 
+    justify-content: end; 
+    margin-right: 32px;
 }
-footer i {
-    color: var(--white);
-    padding-left: 12px;
+footer i { 
+    color: var(--white); 
+    padding: 32px 16px 0 10px; 
+    font-size: 18px;
+} 
+
+
+@media (min-width: 600px){ /* 600이상인 태블릿 */
+  header {
+    height: 68px;
+  }
+  header #gnb {
+    display: block; 
+  } 
+  header #gnb ul {
+    display: flex; 
+  } 
+  header #gnb ul li { 
+    padding-left: 24px; 
+  }
+  #sec1 .text { 
+    display: flex; 
+    top: 28%;
+  } 
+  #sec1 span { 
+    display: block; 
+    font-size: 32px; 
+    margin-left: 16px; 
+    padding-top: 8px; 
+  } 
+  #sec1 b {
+    font-size: 32px;
+  }  
+  #sec2 ul { 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: end;
+  }
+  #sec2 li { 
+    width: 340px; 
+    margin-right: 14px; 
+    vertical-align: top;
+  }
+  #sec3 ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+  }
+  #sec3 li {
+    width: 340px;
+    margin-right: 14px;
+  }
+  .map {
+    height: 397px;
+  }
+  footer i {
+    font-size: 18px;
+  }
 }
 
-@media (min-width:992px){  /* 992이상임 */
+
+@media (min-width:992px){  /* 992이상인 데스크탑 
 /* header */
 header ul {
     display: flex;
@@ -232,9 +298,7 @@ header li:hover {
 a {
     color: var(--black);
 }
-header img {
-    padding-top: 18px;
-}
+
 
 /* section 공통 */
 .sec {
@@ -243,19 +307,22 @@ header img {
     margin: 0 auto;
 }
 #sec1{
-    height: 855px;
+    height: 865px;
 }
 #sec2{
-    height: 685px;
+    height: 700px;
 }
  #sec3 {
-    height: 804px;
+    height: 866px;
 }
 #sec4 {
-    height: 1409px;
+    height: 1428px;
 }
 
 /* section1 */
+#sec1 .text{
+    top: 50%;
+}
 
 /* section2 */
 #sec2 h2 {
@@ -358,7 +425,11 @@ footer li {
 }
 footer i {
     color: var(--white--);
-    font-size: 20px;
+    font-size: 22px;
+    color: var(--white);
+}
+footer p {
+    font-size: 14px;
 }
 
 }/* @media 992이상 */

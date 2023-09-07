@@ -14,7 +14,6 @@
     height: 296px;
 }
 #sec1 {
-    background: url(../assets/images/list_neckEarring/수정용.jpg);
     width: 1600px;
     height: 270px;
     margin-top: 36px;
@@ -33,6 +32,7 @@
     opacity: 0;
     transform: translateX(30px);
     animation: main_txt 1s .5s forwards;
+    font-weight: 700;
 }
 
 @keyframes main_txt {
@@ -208,7 +208,7 @@
 #sec2 #sub_img {
     width: 650px;
     height: 750px;
-    margin: 8px 50px 0 50px;
+    margin: 8px 50px 15px 50px;
 }
 #sec2 #sub_img_hover {
     width: 650px;
