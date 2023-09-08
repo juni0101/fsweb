@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            font-size: 50px;
+            color: #fff;
+        }
+        .box1 {
+            background: red;
+        }
+        .box2 {
+            background: blue;
+        }
+        .box3 {
+            background: rgb(93, 167, 97);
+        }
+        .box4 {
+            background: rgb(130, 34, 209);
+        }
+        .box5 {
+            background: rgb(130, 34, 209);
+        }
+        p {
+            font-size: 30px;
+            position: fixed;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>여기에출력</p>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4 스크롤</div> 
+    <div class="box5">박스5 키보드</div> 
+    <input type="text">
+
+    <script>
+
+        // qs 함수만들기 
+        const $box1 = document.querySelector('.box1'); 
+        const $box2 = document.querySelector('.box2'); 
+        const $box3 = document.querySelector('.box3'); 
+        const $box4 = document.querySelector('.box4'); 
+        const $box5 = document.querySelector('.box5'); 
+        const $p = document.querySelector('p'); 
+        const $input = document.querySelector('input'); 
+
+        const boxClick = () => {
+            if(event.target == $box1){
+                $box1.textContent = '안뇽' 
+                $p.textContent = '박스1을 클릭했음'
+            }else if(event.target == $box2) {
+                $box2.style.backgroundColor = 'pink'
+                $p.textContent = '박스2을 클릭했음'
+            }else if(event.target == $box4){
+                $box4.style.backgroundColor = 'pink'
+                $p.textContent = '창이스크롤됐다'
+            }else if(event.target == $box5){
+                $box5.style.backgroundColor = 'pink'
+                $p.textContent = '창이스크롤됐다' 
+            }else if(event.target == $input){
+                $p.textContent = '키보드의키를 눌렀습니다'
+            }
+        } 
+        const boxThree = () => {
+            switch (event.target) {
+                case $box3 :
+                    $p.textContent = '박스3을 클릭했음';
+                    $box3.style.backgroundColor = 'lightblue'
+                    break;
+            }
+        }
+
+        $box1.addEventListener('click', boxClick); 
+        $box2.addEventListener('click', boxClick); 
+        $box3.addEventListener('mousemove', boxThree); 
+        $box4.addEventListener('scroll', boxClick); 
+        $box5.addEventListener('scroll', boxClick); 
+        $input.addEventListener('keydown', boxClick); 
+        $input.addEventListener('keyup', boxClick); 
+
+    </script>
+</body>
+
+</html>

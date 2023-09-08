@@ -27,7 +27,7 @@
 /* 회원정보 */
 .join_privacy {
     width: 1400px;
-    height: 840px;
+    height: 920px;
     margin: 0 auto;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .join_list li:nth-of-type(1) {
-    width: 200px;
+    width: 210px;
 }
 .join_list li:nth-of-type(2) input {
     height: 40px;
@@ -56,8 +56,17 @@
     vertical-align: middle;
 }
 
+.join_privacy input::placeholder {
+    font-size: 1.2rem;
+}
+
+
 .join_passwd {
-    width: 400px;
+    width: 500px;
+}
+
+.join_email select{
+    width: 120px;
 }
 
 /* .join_mobile_li = 전화 정렬을 위한 클래스 */
@@ -72,26 +81,47 @@
 
 .join_mobile_li input {
     margin: 0 5px;
+    width: 124px;
 }
 
-.join_mobile {
+.join_number {
     width: 70px;
     height: 40px;
     padding: 0 10px;
     border: 1px solid #dbdbdb;
 }
 
-.join_mobile_button {
+.join_btn {
     width: 100px;
     height: 40px;
     background: #fff;
     border: 1px solid #8e8e8e;
     cursor: pointer;
+
 }
 
 .join_address {
-    width: 655px;
+    height: 180px;
 }
+
+/* .join_address_li 주소 정렬 */
+.join_address_li {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 790px;
+    height: 180px;
+}
+
+.join_address_li button {
+    margin: 0 20px 0 5px;
+}
+
+.join_address_li input:nth-of-type(1)  ~  input{
+    width: 460px;
+}
+
+
 
 /* .join_check = li (성별, sms수신여부, 이메일 수신여부) */
 .join_check {

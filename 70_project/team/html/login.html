@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../assets/images/common/favicon.png">
     <title>PANDORA</title>
 </head>
 
@@ -19,30 +20,24 @@
             </div>
             <!-- //.top_notice -->
             <div class="header_inner" id="header_inner">
-                <div class="logo" OnClick="location.href ='#';" style="cursor: pointer;">
+                <div class="logo" OnClick="location.href ='../index.html';" style="cursor: pointer;">
                 </div>
                 <nav>
                     <!-- gnb=global navigation bar -->
                     <ul class="gnb">
                         <li>
-                            <a href="./html/about.html">판도라</a>
-                            <ul class="sub_list">
-                                <li><a href="#">submenu</a></li>
-                                <li><a href="#">submenu</a></li>
-                            </ul>
+                            <a href="./about.html">Pandora</a>
                         </li>
                         <li>
-                            <a href="#">Jewelry</a>
-                            <ul class="sub_list">
-                                <li><a href="#">submenu</a></li>
-                                <li><a href="#">submenu</a></li>
-                            </ul>
+                            <a href="./notice.html">notice</a>
                         </li>
                         <li>
-                            <a href="#">notice</a>
-                            <ul class="sub_list">
-                                <li><a href="#">submenu</a></li>
-                                <li><a href="#">submenu</a></li>
+                            <a href="./list_ring.html">Jewelry</a>
+                            <ul class="sub_list Jewelry">
+                                <li><a href="./list_ring.html">Ring</a></li>
+                                <li><a href="./list_earring.html">Earrings</a></li>
+                                <li><a href="./list_necklaces.html">Necklaces</a></li>
+                                <li><a href="./list_Bracelets.html">Bracelets</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,10 +58,10 @@
                             <a href="#">mypage</a>
                             <div class="mypage_login">
                                 <p>My PANDORA</p>
-                                <p>PANDORA 온라인 회원만의<br>특별한 혜택을 만나보세요.</p>
+                                <p>PANDORA 온라인 회원만의 <br />특별한 혜택을 만나보세요.</p>
 
-                                <button>로그인</button>
-                                <button>회원가입</button>
+                                <button onclick="location.href='./login.html'">로그인</button>
+                                <button onclick="location.href='./join.html'">회원가입</button>
                             </div>
                         </li>
                         <li>
@@ -85,20 +80,20 @@
                 <span class="slide_container">
                     <div class="slide">
                         <div class="simg">
-                            <img src="assets/images/login/login_banner.png">
+                            <img src="../assets/images/login/disney.png" alt="디즈니">
                         </div>
                         <div class="simg">
-                            <img src="assets/images/login/디즈니.png">
+                            <img src="../assets/images/login/marvel.png" alt="마블">
                         </div>
                         <div class="simg">
-                            <img src="assets/images/login/마블.png">
+                            <img src="../assets/images/login/starwars.png" alt="스타워즈">
                         </div>
                     </div>
                 </span>
             </div>
             <div class="l_content">
                 <div class="l_member">
-                    <form href="#">
+                    <form href="#" method="post">
                         <fieldset>
                             <legend>회원로그인</legend>
                             <div class="l_id">
@@ -118,7 +113,7 @@
                         <ul class="l_help">
                             <li><a href="#">아이디/비밀번호 찾기</a></li>
                             <li><a href="#">휴면해제</a></li>
-                            <li><a href="#">회원가입</a></li>
+                            <li><a href="./join.html">회원가입</a></li>
                         </ul>
                     </form>
                     <div class="l_sns">
@@ -127,9 +122,9 @@
                             로그인하기
                         </div>
                         <ul class="sns_login">
-                            <li><a href="#"><img src="assets/images/login/kakao_b.svg" alt="kakao"></a></li>
-                            <li><a href="#"><img src="assets/images/login/naver_b.svg" alt="naver"></a></li>
-                            <li><a href="#"><img src="assets/images/login/google_b.svg" alt="google"></a></li>
+                            <li><a href="#"><img src="../assets/images/login/kakao_b.svg" alt="kakao"></a></li>
+                            <li><a href="#"><img src="../assets/images/login/naver_b.svg" alt="naver"></a></li>
+                            <li><a href="#"><img src="../assets/images/login/google_b.svg" alt="google"></a></li>
                         </ul>
                     </div><!-- //l_sns -->
                 </div><!-- //l_member -->
@@ -158,10 +153,10 @@
         <footer>
             <div class="footer_inner">
                 <!-- fnb=footer navigation bar -->
-                <ul class="fnb claerfix">
+                <ul class="fnb">
                     <li>Customer Service
                         <ul>
-                            <li><a href="#">공지사항</a></li>
+                            <li><a href="./notice.html">공지사항</a></li>
                             <li><a href="#">자주하는 질문</a></li>
                             <li><a href="#">매장찾기</a></li>
                             <li><a href="#">상품 관리법</a></li>
@@ -172,16 +167,16 @@
                     </li>
                     <li>Account
                         <ul>
-                            <li><a href="#">로그인</a></li>
-                            <li><a href="#">회원가입</a></li>
+                            <li><a href="./login.html">로그인</a></li>
+                            <li><a href="./join.html">회원가입</a></li>
                             <li><a href="#">위시리스트</a></li>
                             <li><a href="#">배송조회</a></li>
                         </ul>
                     </li>
                     <li>About Pandora
                         <ul>
-                            <li><a href="#">브랜드 알아보기</a></li>
-                            <li><a href="#">연혁</a></li>
+                            <li><a href="./about.html">브랜드 알아보기</a></li>
+                            <li><a href="./about.html">연혁</a></li>
                         </ul>
                     </li>
                     <li>Legal
@@ -193,7 +188,7 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="f_info1 claerfix">
+                <div class="f_info1">
                     <ul class="f_about">
                         <li>
                             <p>㈜스타럭스 대표이사 : 안종훈 ㅣ 사업자등록번호 : 120-86-24028 ㅣ 통신판매업등록번호 : 서울 강남 – 4364호</p>
@@ -220,14 +215,15 @@
                         </li>
                     </ul>
                 </div> <!-- //.f_info1 -->
-                <div class="f_info2 claerfix">
+                <div class="f_info2">
                     <p class="copyright">COPYRIGHT 2023 PANDORA. ALL RIGHTS RESERVED.</p>
                     <p class="inipay">inipay</p>
                 </div> <!-- //.f_info2 -->
             </div> <!-- //.footer_inner -->
         </footer> <!-- footer -->
     </div> <!-- //#wrap -->
-    <script src="./js/login_slide.js"></script>
+    <script src="../js/login_slide.js"></script>
+    <script src="../js/login&join.js"></script>
 </body>
 
 </html>

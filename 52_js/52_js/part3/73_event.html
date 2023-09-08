@@ -49,8 +49,11 @@
             Event(이벤트): 웹 문서 영역 안에서 웹 브라우저 또는 사용자가 행하는 동작
 
             이벤트 종류
-            1. 마우스 이벤트: click, mouseenter, mouseleave, mousemove
-            2. 키보드 이벤트: keydown, keypress, keyup
+            1. 마우스 이벤트: click(mousedown,mouseup)
+                              mouseenter(mouseover)
+                              mouseleave(mouseout)
+                              mousemove
+            2. 키보드 이벤트: keydown, keypress, keyup 
             3. 윈도우 이벤트: scroll, resize
 
             이벤트 처리기(이벤트 핸들러): 이벤트가 발생할 때 그 이벤트에 반응하여 실행하는 함수
@@ -90,7 +93,7 @@
             $p.textContent = '박스2을 클릭했습니다.' 
             $box2.style.backgroundColor = 'pink'
         })  
-        $box3.addEventListener('click', () => { 
+        $box3.addEventListener('mousemove', () => { 
             $p.textContent = '박스3을 클릭했습니다.' 
             $box3.style.backgroundColor = 'lightblue'
         }) 

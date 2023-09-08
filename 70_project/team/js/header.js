@@ -1,3 +1,18 @@
+// 스크롤 이동 시 헤더 숨기기
+// $(window).bind('wheel', function(event){
+//   if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+//       // scroll up
+//       // console.log("스크롤 위로");
+//       document.querySelector('header').style.transform = "translateY(0px)";
+
+//   }
+//   else {
+//       // scroll down
+//       // console.log("스크롤 아래로");
+//       document.querySelector('header').style.transform = "translateY(-100px)";
+//   }
+// });
+
 // header의 변경할 요소 지정
 const header = document.querySelector("#header_inner");
 
@@ -31,4 +46,16 @@ init();
 header.addEventListener('mouseover', ()=>{
   header.classList.add("scroll_down");
   header.classList.remove("header_inner");
+})
+
+
+// login & join / show & hide
+const myPage = document.querySelector(".gnb_icon li:nth-of-type(2)");
+const myPage_login = document.querySelector(".mypage_login");
+
+myPage.addEventListener("mouseover", () =>{
+  myPage_login.style.display = "block";
+  myPage_login.addEventListener("mouseout", () =>{
+    myPage_login.style.display = "none";
+  })
 })
