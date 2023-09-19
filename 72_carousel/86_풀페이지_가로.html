@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀페이지_가로</title>
+    <style>
+      /* 
+        
+      */
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* fullPage layout */
+        #wrap {
+          display: flex;
+          height: 100vh;
+          overflow-y: hidden;
+        }
+        .sec {
+          flex-shrink: 0;
+          width: 100vw;  
+          height: 100vh;
+        }
+        #sec1 {
+          background: lightblue;
+        }
+        #sec2 {
+          background: rgb(173, 230, 187);
+        }
+        #sec3 {
+          background: rgb(219, 173, 230);
+        }
+        #sec4 {
+          background: rgb(230, 229, 173);
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+    <div id="wrap">
+      <section id="sec1" class="sec">
+        <h2>섹션1</h2>
+      </section>
+      <section id="sec2" class="sec">
+        <h2>섹션2</h2>
+      </section>
+      <section id="sec3" class="sec">
+        <h2>섹션3</h2>
+      </section>
+      <section id="sec4" class="sec">
+        <h2>섹션4</h2>
+      </section>
+    </div>
+
+    <script>
+
+        const wrap = document.querySelector('#wrap');
+        const sec = document.querySelectorAll('.sec');
+        let wrapWidth = wrap.offsetWidth; 
+
+        window.onresize = () => { 
+          //기본이벤트를 제거하는 기능
+          wrapWidth = wrap.offsetWidth; 
+        } 
+        console.log(wrapWidth)
+        
+         wrap.onwheel = (e) => {
+            if(e.deltaY > 0){  //마우스휠내림
+              wrap.scrollLeft += wrapWidth;
+            }else {  //마우스휠올림
+              wrap.scrollLeft -= wrapWidth;
+            }
+            console.log(wrap.scrollLeft);
+          }
+    </script>
+    <!-- /* 스크롤바 꼭대기에있으면 0임 */ -->
+</body>
+
+</html>

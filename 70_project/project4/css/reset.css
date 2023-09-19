@@ -1,0 +1,43 @@
+ @charset "utf-8";
+
+/* 초기화 */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* IEx */
+    font-size: 10px;
+}
+
+body,h1,h2,h3,h4,ul,ol,p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+video {
+    width: 100%;
+    object-fit: cover;
+}

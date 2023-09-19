@@ -9,11 +9,19 @@
 </head>
 
 <body>
-    <p><span class="txt1">텍스트</span></p>
-    <p><span class="txt2">텍스트</span></p>
+    <h1>요소 탐색 ~ 부모,자식,형제</h1>
+    <div>
+        <ul>
+            <li>부모관계 : parentElement</li>
+            <li>자식관계 : children[노드번호]</li>
+            <li>형제관계 : nextElementSibling, previousElementSibling</li>
+        </ul>
+    </div>
 
     <script>
         /* 
+            document.getElementById('선택자')
+
             document.documentElement ~ <html>
             document.body ~ <body>
             parentElement ~ 부모 요소 노드 선택
@@ -21,12 +29,19 @@
             nextElementSibling ~ 다음 형제 요소 노드 선택
             previousElementSibling ~ 이전 형제 요소 노드 선택
 
+            제이쿼리 
             $('선택자').parent()
             $('선택자').children()
             $('선택자').next()
             $('선택자').prev()
         */
-
+            
+        const ulTag = document.querySelector('ul');
+        ulTag.style.border = '1px solid blue'
+        ulTag.parentElement.style.border = '1px solid red'
+        ulTag.children[0].innerText = '안뇽'
+        ulTag.children[1].previousElementSibling.innerText = '형'
+        ulTag.children[1].nextElementSibling.innerText = '동생'
 
     </script>
 </body>

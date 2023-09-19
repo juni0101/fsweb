@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>배경이미지 바꾸기</h1>
+  <button>버튼</button>
+  <script>
+    const btn = document.querySelector('button');
+    const arr = [
+      "url(/assets/images/1.jpg)", 
+      "url(/assets/images/2.jpg)", 
+      "url(/assets/images/3.jpg)", 
+      "url(/assets/images/4.jpg)", 
+    ];
+
+    let i =0;
+    document.body.style.background = 'no-repeat cover'
+    btn.onclick = () => {
+      (i === arr.length) ? i=0 : 
+        
+        document.body.style.backgroundImage = arr[i];  
+        console.log(i)
+        i++;
+        }
+  </script>
+</body>
+</html>

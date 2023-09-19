@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <button>버튼</button>
     <p></p>
 
     <script>
@@ -30,7 +31,21 @@
             document.documentElement.scrollTop ~ 창에서 스크롤한 양 반환
         */
 
+        const txt = document.querySelector('p');
+        const btn = document.querySelector('button');
+        const de = document.documentElement;
+
+        btn.onclick = () => {
+            de.scrollTop = 300; 
+        }
+
+        window.onscroll = () => { 
+            txt.innerText = de.scrollTop; 
+
+        }
+        
     </script>
+    <!-- /* 스크롤바 꼭대기에있으면 0임 */ -->
 </body>
 
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀페이지_세로</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* fullPage layout */
+        .sec {
+          height: 100vh;
+        }
+        #sec1 {
+          background: lightblue;
+        }
+        #sec2 {
+          background: rgb(173, 230, 187);
+        }
+        #sec3 {
+          background: rgb(219, 173, 230);
+        }
+        #sec4 {
+          background: rgb(230, 229, 173);
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+    <div id="wrap">
+      <section id="sec1" class="sec">
+        <h2>섹션1</h2>
+      </section>
+      <section id="sec2" class="sec">
+        <h2>섹션2</h2>
+      </section>
+      <section id="sec3" class="sec">
+        <h2>섹션3</h2>
+      </section>
+      <section id="sec4" class="sec">
+        <h2>섹션4</h2>
+      </section>
+    </div>
+
+    <script>
+
+        const docEle = document.documentElement;
+        const sec = document.querySelectorAll('.sec');
+        const wh = window.innerHeight;  /* 창의 높이 */
+        
+        for(let i=0; i<sec.length; i++){
+          sec[i].onwheel = (e) => {
+           //기본이벤트방지
+           // e.preventDefault();
+             if(e.deltaY > 0){  //마우스휠내림 
+              let next = e.currentTarget.nextElementSibling.offsetTop;
+              console.log(this)
+               docEle.scrollTop = next; 
+               
+              }else {  //마우스휠올림 
+                let prev = e.currentTarget.previousElementSibling.offsetTop;
+                docEle.scrollTop = prev; 
+              } 
+             console.log(wh); 
+           } 
+
+        }
+    </script> 
+    <!-- 
+       스크롤바 꼭대기에있으면 0임 
+           this쓰면 화살표함수x, 익명함수써야함, this는 이벤트가발생한 객체임 
+           e.currentTarget쓰면 화살표함수사용 가능 
+      --> 
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currentTarget</title>
+    <style>
+        .ancestor {width: 500px; height: 500px; background: #ccc;}
+        .parent {width: 400px; height: 400px; background: #ddd;}
+        .child {width: 300px; height: 300px; background: #eee;}
+        div {font-size: 2rem;}
+    </style>
+</head>
+
+<body>
+    <h1>currentTarget</h1>
+    <ul class="list1">
+      <li>this</li>
+      <li>currentTarget</li>
+      <li>target</li>
+    </ul>
+    <ul class="list2">
+      <li>this</li>
+      <li>currentTarget</li>
+      <li>target</li>
+    </ul>
+
+    <script>
+        const list1 = document.querySelectorAll('.list1 li'); 
+        const list2 = document.querySelectorAll('.list2 li'); 
+
+        //i는 ㅇ소임 
+        for(let i=0; i < list1.length; i++){ 
+          list1[i].addEventListener('click', fn);
+          list2[i].addEventListener('click', fn);
+          function fn (){
+            event.currentTarget.style.color = 'red';
+          }
+
+        } 
+      
+    </script>
+</body>
+</html>
+</body>
+</html>

@@ -6,30 +6,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+JS</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
 </head>
-
 <body>
     <h1>배열 객체</h1>
+    <h2>arr1</h2>
+    <ul></ul>
+    <h2>arr2</h2>
+    <ul></ul>
+    <h2>arr3</h2>
+    <ul></ul>
     <script>
         /* 
             배열? 여러 개의 데이터를 하나의 저장소에 저장
 
-            var 참조변수 = new Array();
-                참조변수[0] = 값1;
-                참조변수[1] = 값2;
-                참조변수[2] = 값3;
-                ...
-                참조변수[n-1] = 값n;
+            배열 선언방법
+                1. const 배열 = new Array(값1, 값2, 값3, ... 값n);
+                2. const 배열 = [값1, 값2, 값3, ... 값n];
 
-            var 참조변수 = new Array(값1, 값2, 값3, ... 값n);
-            var 참조변수 = [값1, 값2, 값3, ... 값n];
+            배열의 값: 
+                숫자, 문자열, 불, 객체, undefined, 변수
 
-            배열 객체에 저장된 데이터 가져오기
-                참조변수[인덱스번호];
-                인덱스 번호는 0부터 시작
+            배열값 가져오는법
+                arr1[0]
+
+            const 객체 = {속성:값, 속성;값..}
+            const 객체 = new obgect();
+            const 배열 = new Array();
+            const 날짜 = new Date();
+            const 문자열 = new String();
+
        */
 
+        let num = 1;
+
+        const list = document.querySelectorAll('ul');        
+        const arr1 = [10, 20, 30];
+        arr1[0] = 100;   /* const여도 안에 값은 바꿀수있음  */
+        console.log(arr1[0])
         
+        //li를 자동생성하는
+        for(let i = 0; i<arr1.length; i++){
+            list[0].innerHTML += `<li>${arr1[i]}</li>`
+        }
+
+        /*
+            for(let 변수 of 배열){
+                코드
+            }
+            
+            i가 배열의값임  
+        */
+        for(let i of arr1){
+            console.log(i)
+            list[0].innerHTML += `<li>${i}</li>`
+        }
+        
+        /*
+         객체.forEach(value, index, arr) 메서드
+         배열.forEach(fucntion(값,인덱스,배열){코드;});
+        */
+        arr1.forEach(function(val, ind, arr){
+            console.log(val);
+            console.log(ind);
+            console.log(arr);
+        })
+        arr1.forEach(function(val, ind, arr){
+            list[0].innerHTML += `<li>${ind}</li>`;
+        })
+
+
+
+        //배열선언
+        const arr2 = new Array();
+        const arr3 = [];
+        arr2[0] =10;
+        arr2[1] =20;
+        arr2[2] =30;
+        /* 
+        push(new data):         배열 맨뒤에 삽입
+        pop():                   배열 맨마지막 삭제
+        shift():                    배열 맨앞 삭제
+        unshift(new data):          배열 맨앞에 삽입 */
+
+        arr2.push(40,50);
+        arr2.unshift(60);
+        arr2.pop();     /* 마지막꺼 하나삭제이므로 값쓸필요없음  */
+        arr2.shift();  
+        list[1].innerHTML = arr2; 
+
+
+
+         /*
+            <배열 메서드>
+            join(연결문자): 연결문자 기준으로 1개의 문자열 데이터로 반환
+            concat(): 2개의 배열 객체를 하나로 결합하여 반환
+
+            sort(): 오름차순 정렬하여 반환
+            reverse(): 데이터 순서를 거꾸로 바꾼 후 반환
+
+            slice(index1, index2): 인덱스1에서 인덱스2 이전까지 반환
+            splice(index, count, value1, value2, ...): index번호부터 count개수만큼 삭제 후 value 추가
+
+            forEach() 배열순환하는용도
+       */
+        arr3[0] = '문';
+        arr3[1] = '자';
+        arr3[2] = '열';
+        list[2].innerHTML = arr3; 
+
+
+        arr3.concat('안')
+        list[2].innerHTML = `
+            ${arr3.join('-')}<br>
+            ${arr3}<br>
+
+            ${arr2.concat(arr3)}<br>
+            ${arr2}<br>
+
+            ${arr2.sort()}<br>
+            ${arr2.reverse()}<br> 
+            ` 
     </script>
 </body>
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>일정시간 간격으로 값 증감시키기</h1>
+    <button>setTimeout동작(0-4까지 되다가 멈추기)</button>
+    <button>clearTimeout동작 (무한진행)</button>
+    <p>여기에출력</p>
+    <script>
+        /* 
+            브라우저 객체 모델(BOM, Browser Object Model) 
+            window - document, screen, location, history, navigator 
+
+            window: 브라우저 객체의 최상위 객체 
+
+            alert('메시지'): 알림 창 출력 
+            prompt('텍스트'[, '기본텍스트']): 프롬프트 창 입력 
+            confirm('메시지'): 확인/취소 창 
+            open('URL', '새 창 이름', '새 창 옵션'): URL 페이지를 새 창으로 열기 
+            close(): 창 닫기 
+
+            setInterval (): 일정한 시간 간격으로 코드를 반복 실행
+            clearInterval()         setInterval 정지  
+
+            setTimeout (function(){코드}, 일정시간간격): 시간주고 정지 
+            clearTimeout()          정지된시간을 푸는역할 
+        */
+       const ele = document.querySelector('p');
+       const btn = document.querySelectorAll('button');
+
+       
+       //1초마다 함수반복
+       let i = 0
+       const timer = setInterval(() => {
+            ele.innerHTML += '<br>'+ i; 
+            i++;
+            timer2
+       }, 1000)
+
+       //
+       let timer2 = setTimeout(() => {
+            clearInterval(timer)   /* 5초에서 동작멈춤 */
+       }, 5000);
+
+       btn[0].onclick = () => {
+        setTimeout(timer2);  /* 5초전에 버튼클릭하면 무한으로숫자나옴 */
+       }
+       btn[1].onclick = () => {
+        clearTimeout(timer2);  /* 5초전에 버튼클릭하면 무한으로숫자나옴 */
+       }
+
+    </script>
+</body>
+
+</html>

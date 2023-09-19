@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>티파니앤코_강주은</title>
+
+  <style>
+    @font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../font/README.txt),
+         url(../font/OFL.txt);
+    } 
+
+    /* reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
+    }
+    body {
+      font-family: 'Noto Sans KR', sans-serifs; 
+    }
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+    }
+
+    /* header */
+    .header_wrapper {
+      position: absolute;
+      width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      transition: .5s;
+      position: relative;
+      z-index: 9999;
+    }
+    header:hover {
+      background: rgb(239, 238, 223);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      top: 80px;
+      background: rgba(0, 0, 0, 0.557);
+      z-index: 1;
+      transition: .5s;
+    }
+    header:hover::after { 
+      height: 265px; 
+    }
+
+    /* logo */
+    .logo {
+      padding-left: 50px;
+    }
+
+    /* depth1 */
+    nav {
+      position: relative;
+      height: 80px;
+      overflow: hidden;
+      text-align: center;
+      transition: .5s;
+      z-index: 9999;
+    }
+    header:hover nav {
+      height: 345px;
+    }
+    nav .dep1 {
+      display: flex;
+    }
+    .dep1 > li > a {
+      padding: 0 40px;
+    }
+
+    /* depth2 */
+    .dep2 li {
+      line-height: 2.5;
+      font-size: 13px;
+    }
+    .dep2 li a {
+      color: rgba(255, 255, 255, 0.792);
+    }
+
+    /* .util */
+    .util {
+      display: flex;
+      font-size: 13px;
+    }
+    .member {
+      display: flex;
+      padding-right: 16px;
+    }
+    .member li {
+      padding-left: 16px;
+    }
+
+    /* 캐로셀 */
+    .carousel-container {
+    /* width: 600px;
+    height: 400px;
+    margin: auto; */
+    overflow: hidden;
+    position: relative;
+    /* border: 8px solid blue; */
+   }
+  .carousel-slide {
+    display: flex;
+    position: relative;
+    /* width: 600px;
+    height: 400px; */
+  }
+  .carousel-slide img {
+    width: 1500px;
+    height: 700px;
+  }
+  #prevBtn {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 48px;
+    background: none;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  #nextBtn {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(50%, -50%);
+    z-index: 10;
+    font-size: 48px;
+    background: none;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  /* 인디케이터 */
+  .indi {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .indi li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #777;
+    text-indent: -9899999px;
+    margin: 5px;
+  }
+  .indi li:first-of-type {
+    background: #fff;
+  }
+
+  /* footer */
+  footer {
+    height: 200px;
+    background: #000000da;
+  }
+  footer p { 
+    color: white; 
+    text-align: center;
+    padding: 36px 12px;
+  }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+      <div class="header_wrapper">
+        <header>
+          <h1 class="logo"><a href="#"><img src="./images/logo.png" alt="logo"></a></h1>
+          <div class="inner">
+            <nav>
+              <ul class="dep1">
+                <li>
+                  <a href="#">주얼리</a>
+                  <ul class="dep2">
+                    <li><a href="#">네크리스</a></li>
+                    <li><a href="#">브레이슬릿</a></li>
+                    <li><a href="#">이어링</a></li>
+                    <li><a href="#">링</a></li>
+                    <li><a href="#">세트</a></li>
+                    <li><a href="#">브로치</a></li>
+                    <li><a href="#">익스텐더</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">워치</a>
+                  <ul class="dep2">
+                    <li><a href="#">남성용 워치</a></li>
+                    <li><a href="#">여성용 워치</a></li>
+                    <li><a href="#">다이아몬드 워치</a></li>
+                    <li><a href="#">워치 스트랩</a></li>
+                    <li><a href="#">파인워치</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">액세서리</a>
+                  <ul class="dep2">
+                    <li><a href="#">크리스털 펜</a></li>
+                    <li><a href="#">스마트폰 케이스</a></li>
+                    <li><a href="#">디지털 엑세서리</a></li>
+                    <li><a href="#">키홀더</a></li>
+                    <li><a href="#">선글라스</a></li>
+                    <li><a href="#">헤어 액세서리</a></li>
+                    <li><a href="#">핸드백</a></li>
+                    <li><a href="#">바디 주얼리</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">기프트</a>
+                  <ul class="dep2">
+                    <li><a href="#">생일 기프트</a></li>
+                    <li><a href="#">베스트셀러 기프트</a></li>
+                    <li><a href="#">졸업 기프트</a></li>
+                    <li><a href="#">로맨틱 기프트</a></li>
+                    <li><a href="#">귀중한 선물</a></li>
+                    <li><a href="#">웨딩 기프트</a></li>
+                    <li><a href="#">기프트 카드 </a></li>
+                  </ul>
+                </li>
+              </ul><!-- .main -->
+            </nav>
+          </div> <!-- .inner -->
+          <div class="util">
+            <div class="sns">
+              <a href="#">SNS</a>
+            </div>
+            <ul class="member">
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+            </ul>
+          </div>  <!-- .util -->
+        </header>
+      </div>
+      <section aria-label="carousel"> 
+          <div class="carousel">
+            <div class="carousel-container">
+              <div class="carousel-slide">
+                <img src="./images/pic4.png" id="lastClone" alt="pic4">
+                <img src="./images/pic1.png" alt="pic1">
+                <img src="./images/pic2.png" alt="pic2">
+                <img src="./images/pic3.png" alt="pic3">
+                <img src="./images/pic4.png" alt="pic4">
+                <img src="./images/pic1.png" id="firstClone" alt="pic1">
+              </div>
+              <button id="prevBtn">&lt;</button>
+              <button id="nextBtn">&gt;</button>
+              <ul class="indi">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>
+          </div>
+      </section>
+      <footer>
+        <div>
+          <p>Copyright 강주은. All rights reserved.</p>
+        </div>
+      </footer>
+      </div><!-- container -->
+
+      <script> 
+      const carouselSlide = document.querySelector(".carousel-slide");
+        const carouselImages = document.querySelectorAll(".carousel-slide img");
+        
+        // Buttons
+        const prevBtn = document.querySelector("#prevBtn");
+        const nextBtn = document.querySelector("#nextBtn");
+        
+        const indi = document.querySelectorAll(".indi li");
+        // Counter
+        let counter = 1;
+        // 인디케이터 index
+        let index = 1;
+        
+        /*
+        Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는 요소에 대해서는 0을 나타내고, 그렇지 않다면 엘리먼트의 내부 너비를 픽셀로 나타냅니다. 내부 너비는 안쪽 여백(패딩)을 포함하지만, 테두리, 바깥 여백(마진) 그리고 수직 스크롤바의 너비는 포함하지 않습니다.
+        */
+        // html에서 0번째 요소인 Clone요소를 가리기 위해 첫번쨰 이미지의 width값 만큼     carousel-slide의 translateX값을 이동시킨다.
+        const size = carouselImages[0].clientWidth;
+        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        
+        prevBtn.addEventListener("click", () => {
+          if (counter <= 0) return;
+          carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+          counter--;
+          index = counter;
+          carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+          indicator(counter);
+        });
+        
+        nextBtn.addEventListener("click", () => {
+          if (counter >= carouselImages.length - 1) return;
+          carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+          counter++;
+          index = counter;
+          carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+          indicator(counter);
+        });
+        
+        carouselSlide.addEventListener("transitionend", () => {
+          if (carouselImages[counter].id === "lastClone") {
+            carouselSlide.style.transition = "none";
+            counter = carouselImages.length - 2;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+          }
+          if (carouselImages[counter].id === "firstClone") {
+            carouselSlide.style.transition = "none";
+            counter = carouselImages.length - counter;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+          }
+          indicator(counter);
+        });
+        
+        // 인디케이터
+        for (let i = 0; i < indi.length; i++) {
+          indi[i].addEventListener("click", () => {
+            for (let j = 0; j < indi.length; j++) {
+              indi[j].style.background = "#777";
+            }
+            counter = i + 1;
+            index = counter;
+            indi[i].style.background = "#fff";
+            carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+          });
+        }
+        
+        function indicator(index) {
+          if (index === 0 || index === 5) return;
+          for (let i = 0; i < indi.length; i++) {
+            indi[i].style.background = "#777";
+          }
+        
+          indi[index - 1].style.background = "#fff";
+        }
+        </script>
+</body>
+
+</html> 

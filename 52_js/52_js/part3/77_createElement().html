@@ -6,21 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+JS</title>
+    <style>
+        .on {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
-    <div id="info">
-    </div>
+    <h1>새로운 요소 추가하기</h1>
+    <button>클래스 추가</button>
+    <button>클래스 제거</button>
 
     <script>
-        /* 
-            요소.createElement(노드명) ~ 요소에 요소 노드 추가
-            요소.createTextNode(텍스트) ~ 요소에 텍스트 노드 추가
-            부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
+            /* 
+            노드: 요소, 텍스트, 주석 
+            document.createElement(노드명) ~ document요소에 요소 노드 추가
+            document.createAttribute(노드명) ~ document요소에 속성 추가 
+            document.createTextNode(텍스트) ~ document요소에 텍스트 노드 추가 
+
+            요소.setAttributeNode(속성) ~ 요소에 속성 연결 
+            부모.appendChild(자식) ~ 부모 노드에 끝에 자식 노드 삽입 
+            부모.insertBefore(자식, 기준자식) ~ 기준자식 앞에 자식 삽입 
+
+            요소.setAttribute('속성', 값) ~ HTML의 속성 값 변경
+            요소.getAttribute('속성') ~ HTML의 속성 값 가져오기
+
+            요소.classList.add()        클래스추가 
+            요소.classList.remove()     클래스제거
+            요소.classList.contains     클래스 확인하여 있으면true 없으면 false
+            요소.classList.toggle     add,remove를 번갈아적용
+            
         */
 
-    </script>
+        const bodyT = document.body;
+        //div태그 생성만하면 화면출력안됨,연결까지해야됨 
+        const divT = document.createElement('div'); 
+        const imgT = document.createElement('img'); 
+        const txt = document.createTextNode = '나는텍스트노드입니다' 
+        const srcAttr = document.createAttribute('src'); 
+        const altAttr = document.createAttribute('alt'); 
+        const button = document.querySelectorAll('button'); 
+        
+
+        //연결
+        bodyT.appendChild(divT); 
+        divT.textContent = '안녕'  
+        bodyT.appendchi(txt)  
+        divT.textContent += '바꿈'  
+
+        //div자식으로 txt앞에 img삽입 
+        divT.insertBefore(imgT,txt) 
+
+        imgT.setAttributeNode(srcAttr) 
+        imgT.setAttributeNode(altAttr) 
+
+        //값추가
+        imgT.setAttribute('src', '/assets/images/coca.png');
+        imgT.setAttribute('alt', '코카콜라');
+        imgT.style.height = '280px';
+        console.log(imgT.getAttribute('src'));
+
+        button.onclick = () => {
+            if(divT.classList.contains('on')){
+                divT.classList.remove('on');
+            }else {
+                divT.classList.add('on');
+            }
+        }
+        button.onclick = () => {
+                divT.classList.toggle('on');
+        }
+    </script> 
 </body>
 
 </html>

@@ -1,0 +1,453 @@
+ @charset "utf=8";
+ @import url(reset.css);
+ @import url(typo.css);
+
+/* fullPage layout */
+  .sec {
+    height: 100vh;
+  }
+  #sec1 {
+    background: lightblue;
+  }
+  #sec2 {
+    background: rgb(173, 230, 187);
+  }
+  #sec3 {
+  }
+  #sec4 {
+    background: rgb(230, 229, 173);
+  }
+
+  /* 헤더 */
+  /* typo: 크기, 색 */
+  .main a {
+      color: #333;
+      font-size: 1.8rem;
+  }
+  .sub a {
+      color: #9b9b9b;
+      font-size: 1.6rem;
+  }
+  body {
+    height: 2000px;
+  }
+
+  /* #header */
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    width: 100%;
+    padding: 0 50px;
+    z-index: 9999;
+  }
+  #header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 95px;
+    width: 100%;
+    height: 0px;
+    background: #ffffff;
+    z-index: -1;
+    transition: .5s;
+  }
+  #header:hover {
+    background: #0d1536;
+    transition: .5s;
+  }
+  #header:hover::after {
+    height: 200px;
+  }
+  .inner {
+    height: 95px;
+  }
+
+  /* logo */
+  .logo img {
+    width: 207px;
+    height: 69px;
+  }
+
+
+  /* depth 1 */
+  #gnb {
+    position: relative;
+    z-index: 1;
+    height: 95px;
+    overflow: hidden;
+    transition: .5s;
+    text-align: center;
+  }
+  #header:hover #gnb {
+    height: 295px;
+  }
+  #gnb .main {
+    display: flex;
+  }
+  .main > li > a {
+      padding: 8px 12px;
+      color: white;
+      /* margin: 4px 12px; */
+  }
+  #gnb .main > li {
+      line-height: 95px;
+  }
+  
+
+  /* depth 2 */
+  .main li:hover >.sub > li {
+      display: block;
+  }
+  .sub li {
+      text-align: center;
+      line-height: 1.8;
+      /* display: none; */
+      /* margin: 4px 8px; */
+  }
+  .sub a {
+      display: block;
+  }
+
+  /* section */
+  section {
+    height: 100vw;
+  }
+
+
+  /* 섹션1 */
+        /* reset.css */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* vertical-align: top; */
+        }
+
+        /* 캐로셀(carousel) */
+        #slideWrap {
+            /* 화면의 가로/세로 가운데 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #slideWrap .slide li {
+            /* 애니메이션 대상이 li */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* li 모두 */
+            left: 100%;
+        }
+
+        #slideWrap .slide li:first-of-type {
+            left: 0;
+        }
+
+        /* next/prev Button */
+        #slideWrap .ctls {
+            z-index: 9999;
+            /* 수직 가운데 */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+
+        #slideWrap .ctls a {
+            position: absolute;
+            color: #fff;
+            text-shadow: 0 0 1px #111;
+        }
+
+        /* prev button */
+        #pb {
+            left: 10%;
+        }
+
+        /* next button */
+        #nb {
+            right: 10%;
+        }
+
+        /* indi */
+        .indi {
+            z-index: 9999;
+            display: flex;
+            /* 수평 가운데 */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 7%;
+        }
+
+        .indi li {
+            width: 8px;
+            height: 8px;
+            margin: 0 4px;
+            /* 숫자 숨기기 */
+            text-indent: -9999em;
+            border-radius: 50%;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .indi li.on {
+            background: #f00;
+        }
+
+
+  /* 섹션2 */
+#sec2 {
+  position: relative;
+}
+#sec2 h2 {
+    font-size: 4.4rem;
+    text-align: center;
+}
+#sec2 p {
+    text-align: center;
+    padding-bottom: 48px;
+}
+  /* section */
+  #sec2 .container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1400px;
+      height: 700px;
+  } 
+
+  /* 탭 버튼 */
+  #tabs .btn {
+      z-index: 9999;
+      position: absolute;
+      right: 335px;
+  }
+  #tabs .btn a {
+    /* 버튼의 공통글자색 */
+      color: #555;
+  }
+  #tabs .btn li.on a {
+    /* li중에서 on클래스가있는것만 글자색변경 */
+      color: #007fa8;
+  }
+  #tabs .btn li {
+      display: inline-block;
+      padding: 8px 8px;
+  }
+  #tabs .btn li+li::before { 
+    /* 
+      li + li란? 첫번째li빼고 나머지
+      li:nth-of-type(1) ~ li
+     */
+      content: '|';
+      margin-right: 20px;
+  }
+
+  /*  탭 내용 */ 
+  #tabs div { 
+    /* 4개중 하나만보이고 모두숨김 */ 
+      display: none; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+      position: absolute; 
+      width: 1120px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+  } 
+  #tabs div.on {
+      display: flex;
+  }
+  #tabs figure { 
+      flex-shrink: 0; 
+      /* 큰이미지크기 */
+      width: 576px; 
+  } 
+  #tabs figcaption {
+    /* 모든캡션의 글자크기 */
+      font-size: 1.8rem;
+      font-weight: bold; 
+      margin: 8px 0;
+      letter-spacing: -1.4px;
+  }
+  #tabs figure:first-of-type::after { 
+      position: absolute; 
+      left: 0; 
+      top: 0; 
+      display: block; 
+      content: "1위"; 
+      width: 60px; 
+      height: 60px; 
+      background: #007fa8; 
+      font-size: 2rem;  
+      color: #fff; 
+      line-height: 60px; 
+      text-align: center; 
+      font-weight: bold; 
+  } 
+  #tabs figure:first-of-type~figure { 
+      width: 224px; 
+  } 
+  #tabs figure:first-of-type figcaption {
+      position: absolute;
+      /* 왼쪽맞춤때문에 left로 지정해야함 */
+      left: 633px;
+      top: 60px;
+      /* 1위캡션의 글자크기 재설정 */
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: -1.8px;
+  }
+  #tabs figure:first-of-type+figure {
+      margin-left: 30px;
+  }
+
+
+
+
+  /* 섹션3 */
+  /* 페럴렉스 이미지 */
+  #sec3 {
+    background:url(../images/bg.jpg) 50% 50%/ cover no-repeat;
+    position: relative;
+  }
+  #sec3 .des {
+    width: 400px;
+  }
+  #sec3 .tit1 {
+    transform: translateX(-400px);
+    transition: 1.3s;
+    opacity: 0;
+  }
+  #sec3 .tit2 {
+    margin: 48px 0;
+    transform: translateX(-400px);
+    transition: 1s;
+    opacity: 0;
+
+  }
+  #sec3 .tit2 p:first-of-type { 
+    line-height: 1.3; 
+    margin-bottom: 16px;
+  } 
+
+  /* 고스트버튼 */ 
+  #sec3 .proBtn { 
+    display: inline-block;
+    border: solid 2px #fff; 
+    border-radius: 5px; 
+    padding: 6px 24px; 
+    transition: 1s;
+    opacity: 0;
+  } 
+  #sec3 .container { 
+    display: flex; 
+    justify-content: space-between; 
+    width: 1500px; 
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+  /* 상품이미지 */
+  #product {
+    /* 요소의 텍스트 숨기기 */
+    text-indent: -9999em; 
+    width: 912px;
+    height: 575px;
+    background: url(../images/autumn_img.png) no-repeat 0 0/ contain fixed;  
+  }
+
+
+  /* 섹션4 */
+      /* 섹션 */
+      #sec4{
+        position: relative;
+      }
+
+      #sec4 .container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+      }
+
+      #sec4 h2 {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 20px; 
+      }
+
+      #sec4 p:first-of-type {
+          margin-bottom: 48px;
+      }
+
+      /* 비디오 */
+      #sec4 .vid {
+          position: relative;
+          width: 780px;
+          margin: 0 auto 48px;
+      }
+      /* 비디오 플레이어 버튼 */
+      #sec4 .vid .btn {
+          position: absolute;
+          left:50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background: rgba(0,0,0,0.5);
+          cursor: pointer;
+          display: none;
+          /* span의 수직중앙맞춤을위해 적당히 */
+          padding-top: 30px;
+      }
+
+      /* 일시정지버튼 모양 */
+      #sec4 .vid .btn span {
+          display: inline-block;
+          width: 10px;
+          height: 40px;
+          background: #fff;
+          margin: 0 6px;
+      }
+      #sec4 .vid .btn span.on {
+        margin-left: 15px;
+        background: transparent;
+        /* 보더로 삼각형만들기 */
+          width:0; 
+          height:0; 
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 30px solid #fff;
+          border-right: 0px solid transparent;
+      }
+      #sec4 .vid .btn span.on+span {
+          display: none;
+      }
+
+  /* 푸터 */

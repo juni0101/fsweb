@@ -6,10 +6,10 @@
 }
 /* 초기화 */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+   padding: 0;
+ box-sizing: border-box;
+    margin: 0;}
+    
 html {
   scroll-behavior: smooth; /* IE는 적용안됨(인터넷익스플로어) */
   font-size: 10px;

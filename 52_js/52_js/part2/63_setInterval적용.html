@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>배경이미지 바꾸기</h1>
+  <div></div>
+
+  <script>
+    const box = document.querySelector('div');
+    const arr = [
+      '<img src="/assets/images/1.jpg" alt="">', 
+      '<img src="/assets/images/2.jpg" alt="">', 
+      '<img src="/assets/images/3.jpg" alt="">', 
+      '<img src="/assets/images/4.jpg" alt="">', 
+    ];
+
+    let i =0;
+    box.innerHTML = arr[i];
+
+    setInterval (function() {
+      (i > arr.length-1) ? i=0 : i++;
+        box.innerHTML = arr[i]; 
+        }, 1000);
+  </script>
+</body>
+</html>
