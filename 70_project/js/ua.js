@@ -55,6 +55,7 @@
        //location.href = 'url';
             // http://id.dothome.co.kr/index.html -> 데스크탑
             // http://id.dothome.co.kr/m/index.html -> 모바일
+            // http://id.dothome.co.kr/m/index.html -> 모바일
 
        const ua =  navigator.userAgent.toLowerCase(); 
 
