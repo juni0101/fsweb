@@ -65,3 +65,5 @@
        }else{ 
         location.href = 'http://junis.dothome.co.kr/m/index.html'; 
        } 
+
+       

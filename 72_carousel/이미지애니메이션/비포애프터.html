@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <style>
+    * {margin: 0; padding: 0;}
+.bigbox {
+  width: 1000px;
+  margin: 0 auto;
+  border: 5px solid tan;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bigbox .box {
+  border: 5px solid tan;
+  width: 150px;
+  height: 200px;
+}
+
+.bigbox .box1 {
+  background: url() no-repeat 50% 50%;
+  background-size: 100%;
+  transition: all 0.3s;
+}
+
+.bigbox .box1:hover{
+  background-size: 120%;
+}
+
+.bigbox .box2 {
+  background: url(../img/aa1.jpg) no-repeat 0 0;
+  transition: all 0.3s;
+}
+
+.bigbox .box2:hover{
+  background: url(../img/aa1.jpg) no-repeat 0 -200px;/* -200px => 100%로 해도 가능 */
+}
+
+.bigbox .box3 {
+  background: url(../img/ab1.jpg) no-repeat 0 0;
+  transition: all 0.3s;
+}
+
+.bigbox .box3:hover{
+  background: url(../img/ab1.jpg) no-repeat 100% 0;
+}
+
+.bigbox .box4 {
+  background: url(../img/a3.jpg) no-repeat 0 0;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.bigbox .box4::before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 200px;
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  transition: all 0.3s;
+}
+
+.bigbox .box4:hover::before{
+  width: 150px;
+}
+
+.bigbox .box5 {
+  background: url(../img/a2.jpg) no-repeat 0 0;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.bigbox .box5:hover::before{
+  width: 150px;
+}
+
+.bigbox .box5::before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 200px;
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  transition: all 0.3s;
+}
+
+.bigbox .box5::after{
+  content: '페르시안 고양이 \A 우아하고 기품있는 \A 2살먹은 고양이';
+  white-space: pre;
+  text-align: center;
+  position: absolute;
+  width: 150px;
+  height: 50%;
+  top:30%;
+  left: 0;
+  color: #fff;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.bigbox .box5:hover::before{
+  width: 150px;
+}
+
+.bigbox .box5:hover::after{
+  opacity: 1;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="bigbox">
+    <div class="box box1">
+
+    </div>
+    <div class="box box2">
+
+    </div>
+    <div class="box box3">
+
+    </div>
+    <div class="box box4">
+
+    </div>
+    <div class="box box5">
+
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -67,9 +67,9 @@ header {
     padding-right: 3px;
 }
 #gnb #glass {
-    position: absolute;
+    position: absolute; 
     right: 0;
-    padding: 2px 16px;
+    padding: 2px 16px; 
 }
 
 
@@ -78,7 +78,6 @@ header {
     height: 100vh;
     background-image: url(../im_img/bg1.png);
     background-position: -4px -450px;
-
 }
 #sec1 h1 {
     padding: 12px 24px;
@@ -144,23 +143,23 @@ header {
 .skill p i{
     padding-right: 8px;
 }
-.skill .prograss {
+.skill .progressbar {
     width: 100%;
     background-color: #8380806b;
     color: white;
     text-align: center;
 }
-.prograss div {
+.progressbar div {
     width: 90%;
     height: 34.98px;
     background: #616161;
     padding:0;
     margin: 0;
 }
-.prograss .prograss2{
+.progressbar .prograss2{
     width: 85%;
 }
-.prograss .prograss3{
+.progressbar .prograss3{
     width: 75%;
     margin-bottom:64px ;
 }
@@ -189,6 +188,10 @@ header {
 #sec3 .parallax {
     background-image: url(../im_img/bg3.png);
 }
+.pf img {
+    width: 225px;
+    height: 168px;
+}
 .pf li {
     float: left;
     width: 225px;
@@ -210,6 +213,10 @@ header {
 }
 .pfBtn a:hover {
     background: #0000002c;
+}
+.pf img {
+    width: 225px;
+    height: 168px;
 }
 
 

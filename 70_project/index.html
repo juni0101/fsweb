@@ -1,79 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강주은</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./project4/css/style.css">
+    <title>풀페이지_세로</title>
 </head>
+
 <body>
-  <script>
+    <div id="wrap">
+      <!-- 섹션1 -->
+      <div id="sec1" class="sec">
+        <!-- 헤더 -->
+        <header id="header"> 
+          <h1 class="logo"><a href=""><img src="/72_carousel/images/header_logo.png" alt=""></a></h1>
+          <div class="inner"> 
+             <nav id="gnb"> 
+                <ul class="main"> 
+                    <li>
+                        <a href="#">분양단지</a>
+                        <ul class="sub">
+                            <li><a href="#">분양중인 단지</a></li>
+                            <li><a href="#">분양예정 단지</a></li>
+                            <li><a href="#">분양완료 단지</a></li>
+                            <li><a href="#">연간분양계획</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">브랜드 아이덴티티</a></li>
+                            <li><a href="#">특화아이템</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"> 아너스빌 멤버스</a>
+                        <ul class="sub">
+                            <li><a href="#">아너스빌 소식</a></li>
+                            <li><a href="#">청약가이드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"> 마이 아너스빌</a>
+                        <ul class="sub">
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">A/S 문의</a></li>
+                            <li><a href="#">관심단지 관리</a></li>
+                            <li><a href="#">개인정보 변경</a></li>
+                        </ul> 
+                    </li> 
+                </ul> 
+            </nav> 
+          </div><!-- inner --> 
     
-        /* 
+          <div class="util"> 
+            <div class="sns"> 
+              <a href=""></a> 
+            </div>
+            <ul class="member"> 
+              <li><a href="">로그인</a></li> 
+              <li><a href="">회원가입</a></li> 
+            </ul>
+          </div><!-- .util -->
+        </header>
+        <!-- <section>
+          <div class="vid">
+            <video autoplay muted loop>
+              <source src="/72_carousel/images/main_video1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </section> -->
+        <!-- 로고 -->
+        <!-- 내비 -->
+        <!-- 캐로셀 -->
+        <div id="slideWrap">
+          <ul class="slide">
+              <li><img src="/assets/images/1.jpg" alt="이미지1"></li>
+              <li><img src="/assets/images/2.jpg" alt="이미지2"></li>
+              <li><img src="/assets/images/3.jpg" alt="이미지3"></li>
+              <li><img src="/assets/images/4.jpg" alt="이미지4"></li>
+              <li><img src="/assets/images/5.jpg" alt="이미지5"></li>
+          </ul>
+  
+          <!-- 좌우버튼 -->
+          <div class="ctls">
+              <a href="#" id="pb">prev</a>
+              <a href="#" id="nb">next</a>
+          </div>
+  
+          <!-- 인디케이터 -->
+          <ul class="indi">
+              <li class="on">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+          </ul>
+      </div>
+      </div>
 
-           반응형
-           적응형
-                https://naver.com
-                https://m.naver.com (모바일적응형이라면 보통 m을붙임)
+      <div id="sec2" class="sec">
+        <!-- 탭 -->
+        <div class="container"> 
+          <h2>Model</h2> 
+          <p>최근 한 달 동안 고객님들이 가장 많이 구매하신 모델입니다.</p> 
+          <!-- 탭 --> 
+          <div id="tabs"> 
+              <!-- 버튼 영역 --> 
+              <ul class="btn"> 
+                <!-- on은 첫번째버튼의 css지정 -->
+                  <li class="on"><a href="#tab1">전체</a></li> 
+                  <li><a href="#tab2">2~30대</a></li> 
+                  <li><a href="#tab3">40대</a></li> 
+                  <li><a href="#tab4">50대</a></li> 
+              </ul>
+              <!-- 내용 영역 -->
+              <!-- on이 있는것만보임 --> 
+              <div id="tab1" class="on">
+                  <figure>
+                      <img src="/70_project/project4/images/car/CN12_EXT.jpg" alt="디 올 뉴 그랜저 Hybrid">
+                      <figcaption>1위. 디 올 뉴 그랜저 Hybrid</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/ev_ioniq6.jpg" alt="더 뉴 아반떼">
+                      <figcaption>2위. 더 뉴 아반떼</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/GN02_EXT.jpg" alt="투싼 Hybrid">
+                      <figcaption>3위. 투싼 Hybrid</figcaption>
+                  </figure>
+              </div>
+              <div id="tab2">
+                  <figure>
+                      <img src="/70_project/project4/images/car/ioniq5-23my-well-side.png" alt="더 뉴 아반떼">
+                      <figcaption>1위. 더 뉴 아반떼</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/ioniq6-24my-well-side.png" alt="디 올 뉴 그랜저 Hybrid">
+                      <figcaption>2위. 디 올 뉴 그랜저 Hybrid</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/LX06_EXT.jpg" alt="디 올 뉴 코나 Hybrid">
+                      <figcaption>3위. 디 올 뉴 코나 Hybrid</figcaption>
+                  </figure>
+              </div>
+              <div id="tab3">
+                  <figure>
+                      <img src="/70_project/project4/images/car/nexo-24my-well-side.png" alt="디 올 뉴 그랜저 Hybrid"> 
+                      <figcaption>1위. 디 올 뉴 그랜저 Hybrid</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/NX06_EXT.jpg" alt="팰리세이드">
+                      <figcaption>2위. 팰리세이드</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/SX02_EXT.jpg" alt="더 뉴 아반떼">
+                      <figcaption>3위. 더 뉴 아반떼</figcaption>
+                  </figure>
+              </div>
+              <div id="tab4">
+                  <figure>
+                      <img src="/70_project/project4/images/car/the-all-new-grandeur-well-side.png" alt="디 올 뉴 그랜저 Hybrid">
+                      <figcaption>1위. 디 올 뉴 그랜저 Hybrid</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/the-all-new-kona-electric-well-side.png" alt="더 뉴 아반떼">
+                      <figcaption>2위. 더 뉴 아반떼</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="/70_project/project4/images/car/the-all-new-santafe-well-side.png" alt="투싼 Hybrid">
+                      <figcaption>3위. 투싼 Hybrid</figcaption>
+                  </figure>
+              </div>
+          </div>
+      </div>
+      </div>
 
-            stringa(문자열) 객체 
-                문자열a.indexOf('문자열b') ~ a에 b가 존재하면 색인번호출력,
-                아니면 -1 
-                문자열.toLowerCase() ~ 문자열을 소문자로 변환
-                
+      <div id="sec3" class="sec">
+        <!-- 페럴렉스 스크롤링 -->
+        <div class="container">
+          <div class="des">
+            <!-- 텍스트 스크롤모션 -->
+            <div class="tit1">
+              <span>PICK</span>
+              <span>YOUR</span>
+              <span>FAVORITE</span>
+            </div>
+            <div class="tit2">
+              <p>다양한 메뉴를<br>스타벅스에서 즐겨보세요.</p>
+                  <p>스타벅스만의 특별함을 경험할 수 있는 <b>최상의 선택 음료</b><br>스타벅스 커피와 완벽한 어울림을 <b>자랑하는 푸드</b><br>다양한 시도와 디자인으로 <b>가치를 더하는 상품</b><br>소중한 사람에게 마음을 전하는 가장 좋은 방법 스타벅스 카드</p>
+              <!-- 고스트버튼 -->
+            </div> 
+            <a href="#" class="proBtn">자세히보기</a>
+            </div><!--des  -->
+            <div id="product">
+              <div class="prod1">상품1</div>
+              <div class="prod2">상품2</div>
+              <div class="prod3">상품3</div>
+            </div>
+        </div> <!-- inner -->
+    </div> <!-- sec3 -->
 
-            screen: 사용자의 모니터 정보 제공
-            location: 사용자의 현재 URL에 대한 정보와 새로 고침 메서드 제공
-            navigator: 사용자의 브라우저와 운영체제 정보 제공
-            
-            screen.width: 화면 너빗값
-            screen.height: 화면 높잇값
+      <div id="sec4" class="sec"> 
+        <div class="container">
+          <h2>'문 앞으로 배달되는 일상의 행복'이라는 비전으로</h2>
+          <p>우아한형제들은 배달이 일상을 조금 더 행복하게 하도록 오늘도 달리고 있어요</p>
+          <div class="vid">
+              <video>
+                  <source src="/assets/video/mov_bbb.mp4" type="video/mp4">
+              </video>
+              <div class="btn">
+                <!-- 삼각형이 아닐때는 직사각형 두개로 활용  -->
+                <span class="on"></span>
+                <!-- 삼각형으로 될때 숨김 -->
+                <span></span>
+              </div>
+          </div>
+          <h2>오늘이 전설이 될 수 있도록</h2>
+          <p>세계 진출, 배민로봇 개발, 인공지능을 연구하며<br>우아한형제들은 미래를 더 가깝게 만들고 있어요.</p> 
+      </div> 
+      </div> 
 
-            location.href = 'url'; -> 지정한 url로 위치 이동
-            location.reload(); -> 브라우저 새로 고침
+    <script src="./project4/js/fullpage.js"></script> 
+    <script src="./project4/js/carousel.js"></script> 
+    <script src="./project4/js/script.js"></script> 
+</body> 
 
-            웹사이트 개발
-            홈페이지 -> 브라우저의 시작페이지로 설정해놓은페이지
-            웹페이지 -> 홈페이지,메인페이지,서브페이지
-            포털사이트
-            특정사이트의 홈페이지 -> 메인페이지 ->index.html
-            
-
-            URL
-            프로토콜://호스트:포트/경로?매개변수#부분식별자
-            https://news.naver.com:8880/main/main.naver?mode=LSD&mid=shm
-
-            도메인 www.naver.com
-            아이피 223.130.195.200
-            ipv4 -> ipv6 
-            (이 세개는 다다른거임) 
-
-
-            navigator.userAgent; 
-                - 기본 플랫폼 
-                - 운영체제 정보 
-                - 사용중인 브라우저의 엔진 이름 
-                - 사용 중인 브라우저 이름 
-                - 같은 엔진을 사용 중이며 호환 가능한 다른 브라우저 
-        */
-
-       
-       // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
-       // Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/71.0.3758.78 Mobile/15E148 Safari/605.1
-       // Mozilla/5.0 (Linux; Android 9; SM-G955N Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/75.0.3770.89 Mobile Safari/537.36
-       
-       //location.href = 'url';
-            // http://id.dothome.co.kr/index.html -> 데스크탑
-            // http://id.dothome.co.kr/m/index.html -> 모바일
-            // http://id.dothome.co.kr/m/index.html -> 모바일
-
-            const ua =  navigator.userAgent.toLowerCase(); 
-
-if(ua.indexOf('window') > 0){ 
- //ua에 window문자열있으면 참(데스크탑이라는뜻) 
- location.href = 'http://junis.dothome.co.kr/main.html'; 
-}else{ 
- location.href = 'http://junis.dothome.co.kr/m/index.html'; 
-} 
-  </script>
-</body>
-</html>
+</html> 

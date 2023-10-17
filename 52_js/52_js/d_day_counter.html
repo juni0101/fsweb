@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> 
+</head>
+<body>
+
+  <h1>D-Day</h1>
+  <div id="container">
+    <div class="child">
+      <span>0</span>
+      <span>일</span>
+    </div>
+    <div class="child">
+      <span>0</span>
+      <span>시간</span>
+    </div>
+    <div class="child">
+      <span>0</span>
+      <span>분</span>
+    </div>
+    <div class="child">
+      <span>0</span>
+      <span>초</span>
+    </div>
+    <input id="year" type="text"> -
+    <input id="month" type="text"> -
+    <input id="date" type="text">
+    <button>카운트다운시작</button>
+  </div>
+  <script>
+    const $button = document.querySelector('button');
+    const $input = document.querySelector('input');
+    const $year = document.querySelector('#year');
+    const $month = document.querySelector('#month');
+    const $date = document.querySelector('#date');
+
+  const counterMakee = function(){
+    const nowDate = new Date();
+    console.log(nowDate);
+  }
+
+
+
+</script>
+</body>
+
+</html>

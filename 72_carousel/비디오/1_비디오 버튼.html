@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    video {
+      position: relative;
+    }
+    .custom_video_control {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 70px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="custom_video">
+    <div class="custom_video_container">
+      <video src="../assets/video/mov_bbb.mp4" width="100%" height="auto"></video>
+      <div class="custom_video_control">▶</div>
+    </div>
+  </div>
+  
+  <script>
+    const video = document.querySelector('video');
+    const control = document.querySelector('.custom_video_control');
+
+    video.addEventListener('click', ()=>{
+      if(video.paused){
+        video.play();
+        control.innerHTML = '| |';
+      }else{
+        video.pause();
+        control.innerHTML = '▶';
+      }
+    })
+    video.addEventListener('mouseenter', ()=>{
+      control.style.display = 'block'; 
+    });
+    video.addEventListener('mouseleave', ()=>{
+      control.style.display = 'none';
+    });
+
+  </script>
+</body>
+</html>

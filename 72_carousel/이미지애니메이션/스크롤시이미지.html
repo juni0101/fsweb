@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+      height: 5000px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  } 
+
+  img {
+      width: 466px;
+      height: 466px;
+      opacity: 0;
+      transition: 1s;
+  } 
+</style>
+
+<body>
+  <h1>스크롤시 이미지가 나타납니다!</h1>
+  <img src="./images/scrollimage/work1.jpg" alt="img1">
+  <img src="./images/scrollimage/work2.jpg" alt="img1">
+  <img src="./images/scrollimage/work3.jpg" alt="img1">
+  <img src="./images/scrollimage/work4.jpg" alt="img1">
+  <img src="./images/scrollimage/work5.jpg" alt="img1">
+  <img src="./images/scrollimage/work6.jpg" alt="img1">
+  
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+     const docEle = document.documentElement;
+        const img = document.querySelectorAll('img');
+        const arr = [100,900,1700,2490,3290,4090]
+
+        window.onscroll = function () {
+            let st = docEle.scrollTop;
+            console.log(st);
+            for (let i=0;i<img.length;i++) {
+                if (st > arr[i]) {
+                    img[i].style.opacity = '1';
+                }
+            }
+        };
+
+  </script>
+</body>
+</html>

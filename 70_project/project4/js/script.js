@@ -49,7 +49,6 @@ window.onscroll = () => {
 }
 
 // 섹션4: 비디오 플레이어
-
 const vidBtn = document.querySelector('.vid .btn'),
     vidBtnSpan = vidBtn.querySelector('span'),
     vidWrap = document.querySelector('.vid'),
@@ -67,7 +66,6 @@ vidWrap.onmouseleave = () => {
     // play 버튼을 숨긴다
     vidBtn.style.display = 'none';
 };
-
 
 // paly / pasuse 버튼을 클릭하면
 vidBtn.onclick = () => {

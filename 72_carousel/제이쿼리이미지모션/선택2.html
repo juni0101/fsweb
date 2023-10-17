@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택버튼없이 바꿀때바로 사이트이동</title>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script>
+    $(function () { 
+      $("form[name=rel_f]").on('change', function () {
+        var url = $('select',this).val();
+        window.open(url);
+        return false;
+        })
+     })
+  </script>
+</head>
+<body>
+  <form action="#" method="get" name="rel_f">
+    <fieldset>
+      <legend>관련사이트 이동</legend>
+      <select name="rel_select" id="">
+        <option value="https://www.nl.go.kr/">국립중앙도서관</option>
+        <option value="https://www.nanet.go.kr/main.do">국회도서관</option>
+        <option value="https://www.dlibrary.go.kr/">국가전자도서관</option>
+      </select>
+    </fieldset>
+  </form>
+</body>
+</html>

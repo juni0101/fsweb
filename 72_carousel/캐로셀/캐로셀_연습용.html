@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      width: 1200px;
+      height: 300px;
+    }
+    #wrap {
+      position: absolute;
+      width: 1200px;
+      height: 100vh;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);      
+      overflow: hid;
+    }
+    #wrap ul{
+      display: flex;
+    }
+    .slide li {   /* 이걸안하면작동안함  */
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .slide li:first-of-type {
+            left: 0;
+        }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <ul class="slide">
+      <li><img src="./back_images/images (2)/slide1.jpg" alt=""></li>
+      <li><img src="./back_images/images (2)/slide2.jpg" alt=""></li>
+      <li><img src="./back_images/images (2)/slide3.jpg" alt=""></li>
+    </ul>
+  </div>
+
+  <script>
+    const slide = document.querySelector('.slide');
+    const slideList = document.querySelectorAll('.slide li');
+    let idx = 0;
+  const speed = 700;
+
+  //setInterval(함수, 시간): 시간(밀리초)후 반복
+  
+  const nextSlide = () => {
+    //0-1-2-3-4
+    slideList[idx].style.left = '-100%';
+    slideList[idx].style.transition = `left ${speed/1000}s` ;
+    //1-2-3-4-5
+    if(idx === 2) idx = -1; 
+    slideList[idx + 1].style.left = '0';
+    slideList[idx + 1].style.transition = `left ${speed/1000}s`; 
+    setTimeout(() => {
+      // if(idx === -1) idx = 4;
+      slideList[idx].style.left = '100%';
+      slideList[idx].style.transition = 'none'; 
+      idx++;
+      if(idx === 3) idx = 0;
+    }, speed);
+  }
+
+  setInterval(() => nextSlide(), 1000);
+  </script>
+</body>
+</html>

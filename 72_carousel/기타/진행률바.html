@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스킬바</title>
+  <style>
+    .progress { 
+            width: 100%; 
+            background-color: #ddd; 
+            margin: 20px 0;
+        } 
+
+      .progressbar { 
+          width: 0%; 
+          height: 30px; 
+          background-color: #04AA6D; 
+          text-align: center; 
+          line-height: 30px; 
+          color: white; 
+          transition: .5s;
+      }
+  </style>
+</head>
+<body>
+  <h1>Progress Bar</h1>
+
+  <div class="progress">
+      <div class="progressbar">10%</div>
+  </div>
+  <div class="progress">
+      <div class="progressbar">10%</div>
+  </div>
+  <div class="progress">
+      <div class="progressbar">10%</div>
+  </div>
+  <br>
+  <button onclick="move()">Click Me</button>
+
+  <script>
+    const pgBar = document.querySelectorAll('.progressbar');
+    const pgBtn = document.querySelector('button');
+    let persent = [];
+
+
+    const skill =(idx)=>{
+      persent = [10, 20, 30];
+      let counter = 0;
+      setInterval(() => {
+        for(let i=0; i<pgBar.length; i++){
+          if(counter === persent[idx]){
+            clearInterval();
+          }else {
+            counter ++;
+            pgBar[idx].style.width = `${counter}%`;
+            pgBar[idx].innerHTML = counter + '%';
+          }
+        }
+      }, 20);
+    }// skill();
+    
+    pgBtn.addEventListener('click', ()=>{skill(0)});
+    pgBtn.addEventListener('click', ()=>{skill(1)});
+    pgBtn.addEventListener('click', ()=>{skill(2)});
+    
+  </script>
+</body>
+</html>
