@@ -1,174 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    *{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body{ 
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-    } 
-    h1{
-      padding: 24px 16px;
-      margin-top: 24px;
-    }
-    .d-day-container{ 
-      display: flex;  
-      padding: 8px 16px; 
-    } 
-    .d-day-child-container{ 
-      padding: 8px 16px; 
-    } 
-    button{
-      margin-top: 24px;
-    }
- 
-  </style>
-
-</head>
-<body>
-  <h1>D-Day</h1> 
-  <!-- 출력될 시간 컨테이너 만들기 -->
-  <div class="d-day-container"> 
-    <div class="d-day-child-container"> 
-      <span id="days">0</span> 
-      <span>일</span> 
-    </div> 
-    <div class="d-day-child-container"> 
-      <span id="hours">0</span> 
-      <span>시간</span> 
-    </div> 
-    <div class="d-day-child-container"> 
-      <span id="min">0</span> 
-      <span>분</span> 
-    </div> 
-    <div class="d-day-child-container"> 
-      <span id="sec">0</span> 
-      <span>초</span> 
-    </div> 
-  </div>
-  <!-- 메세지출력 만들기 -->
-  <div id="d-day-message"></div>
-  <!-- 인푹박스 -->
-  <div id="target-selector">
-    <input id="target-year-input" size="5"> -
-    <input id="target-month-input" size="5"> - 
-    <input id="target-date-input" size="5"> 
-  </div>
-  <button>카운트다운 시작</button> 
-  <button>타이머 초기화</button> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 
 
-  <script> 
-  const container = document.querySelector('.d-day-container');
-  const messageContainer = document.querySelector('#d-day-message');
-  const saveDate = localStorage.getItem('saved-date');
-//생성된 인터벌 배열
-const intervalIdArr = []; 
+  </head>
+  <body>
+    <h1>D-Day</h1>
+    <!-- 출력될 시간 컨테이너 만들기 -->
+    <div class="d-day-container">
+      <div class="d-day-child-container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="hours">0</span>
+        <span>시간</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="min">0</span>
+        <span>분</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="sec">0</span>
+        <span>초</span>
+      </div>
+    </div>
+    <!-- 메세지출력 만들기 -->
+    <div id="d-day-message"></div>
+    <!-- 인푹박스 -->
+    <div id="target-selector">
+      <input id="target-year-input" size="5" /> -
+      <input id="target-month-input" size="5" /> -
+      <input id="target-date-input" size="5" />
+    </div>
+    <button class="btn1">카운트다운 시작</button>
+    <button class="btn2">타이머 초기화</button>
 
-//사용자가 입력한거 조합하여 날짜형식을 만드는 함수
-const dateForMaker = function(){
-  const inputYear = document.querySelector("#target-year-input");
-  const inputMonth = document.querySelector("#target-month-input");
-  const inputDate = document.querySelector("#target-date-input");
-};
-
-//d-day카운터 만드는 함수
-const counterMaker = function (data) {
-  //저장된 날짜, 입력된날짜 다른경우 입력된날짜를 로컬스토리지에 저장
-  if(date != savedDate){
-    localStorage.setItem('saved-date', data);
-  }
-  //밀리초로나타냄 
-  const nowDate = new Date();
-  //데이터를 가져올때 자정으로 가져오지만, 환경에따라 시간대가다를수있어 자정으로 의도적으로 설정해줌
-  const targetDate = new Date(data).setHours(0,0,0,0);
-  //목표날짜에서 현재날짜 빼줌, 그리고 밀리초를 1000으로나눠 초 단위로 만들어줌 
-  const remaining = (targetDate-nowDate) / 1000;
-  // 만약, remaining이 0이라면, 타이머가 종료되었습니다. 출력
-  if(remaining <=0 ){
-    container.style.display = 'none';
-    messageContainer.innerHTML = '<h3>타이머가 종료되었습니다</h3>';
-    messageContainer.style.display = 'flex';
-    setClearInterval();
-    return;
-  }
-  // 만약, 잘못된 날짜가 들어왔다면, 유효한 시간대가 아닙니다. 출력 
-  else if(isNaN){
-    container.style.display = 'none';
-    messageContainer.innerHTML = '<h3>유효한시간대가 아닙니다</h3>'
-    messageContainer.style.display = 'flex';
-    setClearInterval();
-    return;
-  }
-  //남은시간 객체저장
-  const remainingObj = {
-    remainingDate : Math.floor(remaining / 3600 / 24),
-    remainingHours :  Math.floor(remaining / 3600) % 24,
-    remainingMin :  Math.floor(remaining / 60) % 60,
-    remainingSec :  Math.floor(remaining) % 60
-  }
-  //배열에 일,시간,분,초 담아두기
-  const 
-
-  //시간을 두자리수형식으로 포맷팅
-  
-  //반복문으로 아이디값 배열순서대로 불러오기
-   };
-
-
-
-
-//카운터시작 함수
-//(targetDateInput)은 사용자가 제공한날짜 
-const starter = function (targetDateInput) {
-  if (!targetDateInput) {
-    //날짜가없다면 날짜만듦 
-    targetDateInput = dateFormMaker();
-  }
-  //날짜화면에표시
-  container.style.display = 'flex';
-  //메세지는감춤
-  messageContainer.style.display = 'none';
-  //설정된모든인터벌 제거
-  setClearInterval();
-  //디데이카운터시작
-  counterMaker(targetDateInput);
-  //1초마다 함수호출
-  const intervalId = setInterval(() => {
-    counterMaker(targetDateInput);
-  }, 1000);
-  //생성된인터벌 ID를 배열에추가
-  intervalIdArr.push(intervalId);
-};
-//모든인터벌 제거하는 함수
-const setClearInterval = function () {
-  for (let i = 0; i < intervalIdArr.length; i++) {
-    clearInterval(intervalIdArr[i]);
-  }
-};
-//타이머 재설정함수  
-const resetTimer = function () { 
-  container.style.display = 'none'; 
-  messageContainer.innerHTML = '<h3>D-Day를 입력해 주세요.</h3>'; 
-  messageContainer.style.display = 'flex'; 
-	localStorage.removeItem('saved-date');  
-  setClearInterval(); 
-};
-//저장된 날짜있다면 카운터시작, 그렇지않으면 d-day입력해주세요 메세지 보여줌 
-if (savedDate) {
-  starter(savedDate);
-} else {
-  container.style.display = 'none';
-  messageContainer.innerHTML = '<h3>D-Day를 입력해 주세요.</h3>';
-}
-  </script> 
-</body> 
+    <script src="script.js"></script>
+  </body>  
 </html> 
+

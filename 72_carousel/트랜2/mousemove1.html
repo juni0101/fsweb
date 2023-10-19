@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <!-- 자바스크립트 버전!! -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.onmousemove = function(e) {
+      var theEvent = e?e:window.event;
+      var x = theEvent.clientX; // 마우스가 움직일때 생성된 개체의 X좌표
+      var y = theEvent.clientY; // 마우스가 움직일때 생성된 개체의 Y좌표
+      document.getElementById("m1").innerHTML = x;
+      document.getElementById("m2").innerHTML = y;
+
+    }
+  </script>
+  <style>
+    body {
+      height: 3000px;
+    }
+
+    #wrap {
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 id="m1">0000</h1>
+    <h1 id="m2">0000</h1>
+  </div>
+</body>
+
+</html>

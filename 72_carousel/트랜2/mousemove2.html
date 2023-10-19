@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <!-- 제이쿼리 버전!!! -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $(window).mousemove(function(e){
+        var x = e.pageX;
+        var y = e.pageY;
+        $("#m1").text(x);
+        $("#m2").text(y);
+      })
+    })
+  </script>
+  <style>
+    body {
+      height: 3000px;
+    }
+
+    #wrap {
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 id="m1">0000</h1>
+    <h1 id="m2">0000</h1>
+  </div>
+</body>
+
+</html>
