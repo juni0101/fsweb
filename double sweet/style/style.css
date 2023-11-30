@@ -1,0 +1,513 @@
+@charset "utf=8";
+
+/* reset */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  width: 1903px;
+  height: auto;
+  overflow-x: hidden;
+}
+
+/* common */
+.container{
+  width: 1903px;
+  height: 935px;
+}
+.sec{
+  width: 100%;
+  height: 950px;
+}
+.underline:after{
+  display: block;
+  content: '';
+  border-bottom: 1px solid black;
+  padding-bottom: 3px;
+  transform: scaleX(0);
+  transition: .5s;
+}
+.underline:hover::after{
+  transform: scaleX(1);
+}
+#quick{
+  position: absolute;
+  top: 28%;
+  left: 93%;
+  display: flex;
+  z-index: 999;
+  text-align: center;
+}
+#bar-menu{
+  display: none;
+}
+
+
+/* header */
+header{
+  width: 100%;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.795);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  position: fixed;
+  z-index: 20;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+}
+header .nav{
+  width: 39%;
+}
+header .sns {
+  width: 17%;
+}
+header .nav > ul,
+header .sns ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+header .nav ul a,
+header .sns ul a{
+  color: #040000cc;
+}
+#product-sub{
+  position: absolute;
+  top: 92%;
+  left: 752px;
+  width: 130px;
+  height: 240px;
+  background: white;
+  font-size: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.425);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transition: .5s;
+}
+#product:hover #product-sub{
+  opacity: 1;
+  color: #b34545cc;
+  transform: translateY(-15px);
+}
+header #bar{
+  display: none;
+}
+
+/* sec1 */
+#sec1{
+  width: 100%;
+  height: 100%;
+}
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+#sec1 ul{
+  width: 200000px;
+  display: flex;
+}
+#sec1 ul li{
+  width: 1903px;
+  height: 950px;
+}
+.sec1-img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sec1-img img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sec1-text{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: 1s
+}
+.sec1-text p:nth-of-type(1){
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 3px gray;
+}
+.sec1-text p:nth-of-type(2){
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px 3px gray;
+}
+.sec1-text button{
+  width: 180px;
+  height: 50px;
+  border: none;
+  background: rgba(255, 255, 255, 0.781);
+  margin-top: 50px;
+  transition: .5s;
+  font-size: 16px;
+}
+.swiper-slide-active .sec1-text{
+  opacity: 1;
+  transition: 1s;
+  top: 50%;
+}
+.swiper-slide-active .text-wrap {
+  opacity: 1;
+}
+.sec1-text button:hover{
+  background: rgb(94, 94, 94);
+  color: white;
+}
+
+/* sec2 */
+#sec2{
+  background: pink;
+  width: 100%;
+  height: 950px;
+  background: url(./images/augustine-wong-li0iC0rjvvg-unsplash.jpg);
+  background-position: 92% 95%;
+}
+.sec2-wrapper{
+  width: 1700px;
+  height: 100%;
+  margin: 0 auto;
+}
+#sec2 h2{
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 50px;
+}
+.sec2-text{
+  text-align: center;
+}
+.sec2-text p:nth-of-type(1){
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+.sec2-text p:nth-of-type(2){
+  font-size: 14px;
+  color: rgba(128, 128, 128, 0.644);
+}
+.sec2-wrap {
+  width: 1180px;
+  margin: 0 auto;
+  padding-top: 55px;
+}
+.sec2-wrap ul{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 360px;
+  grid-gap: 20px;
+}
+.sec2-products{
+  width: 280px;
+  height: 280px; 
+  overflow: hidden;
+}
+.sec2-products img{
+  width: 280px;
+  height: 280px;
+  transition: .5s;
+}
+.sec2-products img:hover{
+  transform: scale(1.1);
+  opacity: .8;
+}
+
+
+/* sec3 */
+#sec3{
+  width: 100%;
+  height: 950px;
+  background: rgb(103, 150, 103);
+  background: url(./images/augustine-wong-li0iC0rjvvg-unsplash.jpg);
+  background-position: 92% 95%;
+}
+.sec3-wrap{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 260px;
+  width: 1300px;
+  margin: 0 auto;
+  height: 850px;
+  padding-top: 60px;
+  grid-gap: 20px;
+  grid-template-areas: 
+  'b c c'
+  'b d g'
+  'e f g';
+}
+.sec3-wrap .sec3-contents{
+  position: relative;
+  border: 1px solid rgba(128, 128, 128, 0.192);
+}
+.sec3-wrap div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sec3-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 45px;
+  text-align: center;
+}
+.img2{
+  grid-area: b;
+  width: 420px;
+  height: 540px;
+  overflow: hidden;
+}
+.img-wrap2,
+.img-wrap3,
+.img-wrap4,
+.img-wrap5,
+.img-wrap6,
+.img-wrap7{
+  width: 100%;
+  height: 100%;
+}
+.img-wrap2 img,
+.img-wrap3 img,
+.img-wrap4 img,
+.img-wrap5 img,
+.img-wrap6 img,
+.img-wrap7 img{
+  transition: 0.5s;
+  object-fit: cover;
+}
+.img2:hover .img-wrap2 img,
+.img3:hover .img-wrap3 img,
+.img4:hover .img-wrap4 img,
+.img5:hover .img-wrap5 img,
+.img6:hover .img-wrap6 img,
+.img7:hover .img-wrap7 img{
+  transform: scale(1.08);
+  opacity: .2;
+}
+.img2:hover .sec3-text,
+.img3:hover .sec3-text,
+.img4:hover .sec3-text,
+.img5:hover .sec3-text,
+.img6:hover .sec3-text,
+.img7:hover .sec3-text{
+  color: rgba(0, 0, 0, 0.514);
+}
+.img3{
+  grid-area: c;
+  width: 860px;
+  height: 260px;
+  overflow: hidden;
+}
+.img3 .sec3-text{
+  width: 800px;
+  text-align: start;
+  top: 30%;
+}
+.img3 .sec3-text p:nth-of-type(2){
+  font-size: 20px;
+  font-weight: 600;
+}
+.img4{
+  grid-area: d;
+  width: 420px;
+  height: 260px;
+  overflow: hidden;
+}
+.img5{
+  grid-area: e;
+  width: 410px;
+  height: 258px;
+  overflow: hidden;
+}
+.img6{
+  grid-area: f;
+  width: 410px;
+  height: 258px;
+  overflow: hidden;
+}
+.img7{
+  grid-area: g;
+  width: 418px;
+  height: 538px;
+  overflow: hidden;
+}
+
+/* sec4 */
+#sec4{
+  width: 100%;
+  height: 100%;
+  background: url(../images/brooke-lark-wMzx2nBdeng-unsplash.jpg);
+  background-size: 127%;
+  background-position: 94% 58%;
+}
+#sec4 h2{
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 50px;
+}
+.sec4-wrap{
+  width: 1900px;
+  margin: 0 auto;
+  height: 700px;
+  padding-top: 80px;
+  position: relative;
+}
+.sec4-left img{
+  width: 480px;
+  height: 650px;
+  box-shadow: 3px 3px 5px gray;
+  position: absolute;
+  transform: translateX(-100px);
+  transition: 1.3s;
+}
+.sec4-right{
+  width: 600px;
+  float: right;
+}
+.sec4-right-1{
+  font-size: 70px;
+  font-weight: 700;
+  padding: 50px 0;
+  transform: translateX(400px);
+  transition: 1.1s;
+  opacity: 0;
+}
+.sec4-right-2{
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 50px;
+  transform: translateX(400px);
+  transition: 2s;
+  opacity: 0;
+}
+.sec4-right button{
+  width: 150px;
+  height: 50px;
+  border: 2px solid rgb(129, 124, 124);
+  font-weight: 600;
+  transform: translateX(400px);
+  transition: 2s;
+  opacity: 0; 
+}
+.sec4-right button:hover{
+  background: rgb(94, 94, 94);
+  color: white;
+}
+
+/* sec5 */
+#sec5{
+  width: 100%;
+  height: 1145px;
+  padding-top: 80px;
+}
+#sec5 ul{
+  display: flex;
+  width: 65%;
+  height: 32%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+#sec5 ul li{
+  width: 70%;
+  border-right: 1px solid black;
+  text-align: center;
+  padding: 60px 30px;
+}
+#sec5 ul li a p:nth-of-type(1){
+  font-size: 24px;
+  color: #244534;
+  font-weight: 600;
+  padding: 20px 0;
+}
+#sec5 ul li a p:nth-of-type(2){
+  font-size: 16px;
+  color: gray
+}
+#sec5 ul li:nth-of-type(3){
+  border-right: none;
+}
+#sec5 ul li:nth-of-type(3) img{
+  padding-top: 27px;
+}
+#sec5 ul img:hover{
+  opacity: .5;
+}
+#sec5 .notice1{
+  opacity: 0;
+  transition: .5s ease-out;
+}
+#sec5 .notice2{
+  opacity: 0;
+  transition: 3s ease-out;
+}
+#sec5 .notice3{
+  opacity: 0;
+  transition: 5s;
+}
+.sec5-bottom{
+  padding-top: 80px;
+}
+
+/* footer */
+footer{
+  width: 100%;
+  height: 396px;
+  background: #244534;
+}
+.footer-container{
+  padding: 100px;
+  display: flex;
+  display: grid;
+  grid-template-columns: 2fr repeat(3,1fr);
+  color: white;
+}
+.footer1{
+  font-size: 13px;
+  line-height: 20px;
+}
+.footer1 img{
+  width: 350px;
+  height: 35px;
+  margin-bottom: 20px;
+}
+.footer1-text span{
+  margin-right: 10px;
+}
+.footer2 h3,
+.footer3 h3,
+.footer4 h3{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.footer2,.footer3,.footer4{
+  line-height: 30px;
+}
+.footer4 a{
+  color: white;
+}
