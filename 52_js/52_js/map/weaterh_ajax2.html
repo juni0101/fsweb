@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script> 
+  <script src="https://kit.fontawesome.com/fa9c464e26.js" crossorigin="anonymous"></script>
+
+  
+
+  <script>
+    // const $cTemp = data.main.temp;
+    //   const $minTemp = data.main.temp_min;
+    //   const $maxTemp = data.main.temp_max;
+    //   const $wIcon = data.weather[0].icon; 
+      
+    let weatherIcon = {
+      "01" : "fas fa-sun",
+      "02" : "fas fa-cloud-sun",
+      "03" : "fas fa-cloud",
+      "04" : "fas fa-cloud-meatball",
+      "09" : "fas fa-cloud-sun-rain",
+      "10" : "fas fa-cloud-showers-heavy",
+      "11" : "fas fa-poo-storm",
+      "13" : "fas fa-snowflake",
+      "50" : "fas fa-smog", 
+    }
+    const apiURI = "http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=ca54c37ae5454afa24be2bdb5d789afa&units=metric";
+
+    $.ajax({
+      url : apiURI, 
+      type: 'GET', //타입(GET, POST, PATCH, PUT 등)
+      success : function(data){
+        const $Icon = data.weather[0].icon.substr(0,2) //0인덱스번호부터 두글자 04d => 04까지만 가져옴 
+        const $Temp = Math.floor(data.main.temp) + "C"
+        const $city = data.name;
+        $('.currIcon').append(`<i class = "${weatherIcon[$Icon]}"></i>`); 
+        $('.currTemp').append($Temp);
+        $('.city').append($city);
+        }
+    });
+
+  </script>
+  <style>
+    .weather{
+      width: 300px;
+      height: 150px;
+      text-align: center;
+      background: rgb(88, 103, 151);
+      color: white;
+    }
+    .weather div {
+      float: left;
+      height: 75px;
+      line-height: 75px;
+      width: 50%;
+    }
+    .weather > div.currIcon,
+    .weather > div.currTemp {
+      font-size: 50px;
+    }
+    .weather > div.city {
+      width: 100%;
+      font-size: 23px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="weather">
+    <div class="currIcon"> </div>
+    <div class="currTemp"> </div>
+    <div class="city">도시: </div>
+  </div>
+</body>
+</html>

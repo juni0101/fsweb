@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.js" ></script> <!-- 이게 제이쿼리주소 -->
+  <script>
+
+  //  $.getJSON("파일(날씨)경로", function(데이터로받음){
+  //   데이터가할일 적어주면됨
+  // });
+
+     $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=ca54c37ae5454afa24be2bdb5d789afa&units=metric", function(data){
+      const $cTemp = data.main.temp;
+      const $minTemp = data.main.temp_min;
+      const $maxTemp = data.main.temp_max;
+      const $wIcon = data.weather[0].icon;
+
+      $('.ctemp').append($cTemp); //현재온도를 .ctemp현재온도(텍스트): 뒤에 추가함
+      $('.clowtemp').append($minTemp); 
+      $('.chightemp').append($maxTemp); 
+      // $('.cicon').append($wIcon); 
+  //     $('.cicon').append("<img src='https://openweathermap.org/img/wn/"+$wIcon"+@2x.png'>");
+  // });
+      $('.cicon').append(`<img src='https://openweathermap.org/img/wn/${$wIcon}@2x.png'>`); 
+      const $now = new Date();
+      const $cDate = `${$now.getFullYear()}/${$now.getMonth()+1}/${$now.getDate()} ${$now.getHours()}:${$now.getMinutes()}`
+      console.log($cDate)
+      $('h2').prepend($cDate);
+
+     });
+
+  </script>
+</head>
+<body>
+  <h1>weather api</h1>
+  <h2> 날씨정보</h2>
+  <div class="ctemp">현재온도: </div>
+  <div class="clowtemp">최저온도: </div>
+  <div class="chightemp">최고온도: </div>
+  <div class="cicon">아이콘: </div>
+</body>
+</html>
